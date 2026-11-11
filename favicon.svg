@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Wiki Rooftop">
+  <rect width="64" height="64" rx="10" fill="#0b1022"/>
+  <circle cx="46" cy="16" r="7" fill="#f7e7c3"/>
+  <path d="M7 40h50v14H7z" fill="#1a1524"/>
+  <path d="M12 40V25l6-6 6 6v15z" fill="#2a2233"/>
+  <path d="M28 40V18l7-7 7 7v22z" fill="#2a2233"/>
+  <path d="M34 24h2v3h-2zm0 6h2v3h-2zm0 6h2v3h-2z" fill="#ffb45c"/>
+  <path d="M49 40V29h3v11z" fill="#3a2f3e"/>
+  <circle cx="50.5" cy="27" r="2" fill="#ff6a55"/>
+  <path d="M12 54h50" stroke="#ffb45c" stroke-width="2"/>
+</svg>

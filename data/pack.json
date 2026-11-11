@@ -1,0 +1,1369 @@
+{
+  "schema_version": 1,
+  "pack_id": "wiki-rooftop-dev-20",
+  "title": "Wiki Rooftop — Dev Pack",
+  "corpus": {
+    "path": "/home/dav/deck-rag/pilot3/index/dev.json",
+    "sha256": "74db5c6c721274c9b3634939307ead53667d1ad397e6504515a02d48d6a95299",
+    "bytes": 2573018,
+    "split": "dev",
+    "chunk_count": 896,
+    "article_count": 80,
+    "note": "Sampled pilot corpus. Only the selected excerpts are redistributed."
+  },
+  "retrieval": {
+    "tool": "tools/bm25.py",
+    "algorithm": "BM25",
+    "k1": 1.5,
+    "b": 0.75,
+    "avgdl": 387.320312,
+    "deterministic": true,
+    "queries": [
+      {
+        "entry_id": "wr-01",
+        "query": "beaver clearcutting damming ecosystem engineers",
+        "terms": [
+          "beaver",
+          "clearcutting",
+          "damming",
+          "ecosystem",
+          "engineers"
+        ],
+        "cited_chunk_id": "wiki:Ecosystem_engineer:c000",
+        "cited_rank": 1,
+        "top_k": 5,
+        "results": [
+          {
+            "rank": 1,
+            "score": 27.421194,
+            "chunk_id": "wiki:Ecosystem_engineer:c000",
+            "article_id": "wiki:Ecosystem_engineer",
+            "domain": "geography_environment"
+          },
+          {
+            "rank": 2,
+            "score": 20.859853,
+            "chunk_id": "wiki:Ecosystem_engineer:c003",
+            "article_id": "wiki:Ecosystem_engineer",
+            "domain": "geography_environment"
+          },
+          {
+            "rank": 3,
+            "score": 20.01627,
+            "chunk_id": "wiki:Ecosystem_engineer:c001",
+            "article_id": "wiki:Ecosystem_engineer",
+            "domain": "geography_environment"
+          },
+          {
+            "rank": 4,
+            "score": 19.766043,
+            "chunk_id": "wiki:Ecosystem_engineer:c005",
+            "article_id": "wiki:Ecosystem_engineer",
+            "domain": "geography_environment"
+          },
+          {
+            "rank": 5,
+            "score": 19.748213,
+            "chunk_id": "wiki:Ecosystem_engineer:c004",
+            "article_id": "wiki:Ecosystem_engineer",
+            "domain": "geography_environment"
+          }
+        ]
+      },
+      {
+        "entry_id": "wr-02",
+        "query": "forster resonance energy transfer single molecule",
+        "terms": [
+          "energy",
+          "forster",
+          "molecule",
+          "resonance",
+          "single",
+          "transfer"
+        ],
+        "cited_chunk_id": "wiki:Single-molecule_FRET:c000",
+        "cited_rank": 3,
+        "top_k": 5,
+        "results": [
+          {
+            "rank": 1,
+            "score": 25.2668,
+            "chunk_id": "wiki:Single-molecule_FRET:c015",
+            "article_id": "wiki:Single-molecule_FRET",
+            "domain": "chemistry_materials"
+          },
+          {
+            "rank": 2,
+            "score": 24.61624,
+            "chunk_id": "wiki:Single-molecule_FRET:c012",
+            "article_id": "wiki:Single-molecule_FRET",
+            "domain": "chemistry_materials"
+          },
+          {
+            "rank": 3,
+            "score": 21.888219,
+            "chunk_id": "wiki:Single-molecule_FRET:c000",
+            "article_id": "wiki:Single-molecule_FRET",
+            "domain": "chemistry_materials"
+          },
+          {
+            "rank": 4,
+            "score": 21.063474,
+            "chunk_id": "wiki:Single-molecule_FRET:c017",
+            "article_id": "wiki:Single-molecule_FRET",
+            "domain": "chemistry_materials"
+          },
+          {
+            "rank": 5,
+            "score": 17.58871,
+            "chunk_id": "wiki:Single-molecule_FRET:c007",
+            "article_id": "wiki:Single-molecule_FRET",
+            "domain": "chemistry_materials"
+          }
+        ]
+      },
+      {
+        "entry_id": "wr-03",
+        "query": "decapod ten legs crustacean anatomy",
+        "terms": [
+          "anatomy",
+          "crustacean",
+          "decapod",
+          "legs",
+          "ten"
+        ],
+        "cited_chunk_id": "wiki:Decapod_anatomy:c000",
+        "cited_rank": 1,
+        "top_k": 5,
+        "results": [
+          {
+            "rank": 1,
+            "score": 22.633105,
+            "chunk_id": "wiki:Decapod_anatomy:c000",
+            "article_id": "wiki:Decapod_anatomy",
+            "domain": "life_medicine"
+          },
+          {
+            "rank": 2,
+            "score": 18.814662,
+            "chunk_id": "wiki:Decapod_anatomy:c001",
+            "article_id": "wiki:Decapod_anatomy",
+            "domain": "life_medicine"
+          },
+          {
+            "rank": 3,
+            "score": 17.667924,
+            "chunk_id": "wiki:Molecular_anatomy:c000",
+            "article_id": "wiki:Molecular_anatomy",
+            "domain": "life_medicine"
+          },
+          {
+            "rank": 4,
+            "score": 4.929088,
+            "chunk_id": "wiki:Traditional_medicine:c006",
+            "article_id": "wiki:Traditional_medicine",
+            "domain": "life_medicine"
+          },
+          {
+            "rank": 5,
+            "score": 4.911961,
+            "chunk_id": "wiki:Alternative_medicine:c001",
+            "article_id": "wiki:Alternative_medicine",
+            "domain": "life_medicine"
+          }
+        ]
+      },
+      {
+        "entry_id": "wr-04",
+        "query": "transcendental number polynomial rational coefficients",
+        "terms": [
+          "coefficients",
+          "number",
+          "polynomial",
+          "rational",
+          "transcendental"
+        ],
+        "cited_chunk_id": "wiki:Transcendental_number_theory:c001",
+        "cited_rank": 2,
+        "top_k": 5,
+        "results": [
+          {
+            "rank": 1,
+            "score": 35.671705,
+            "chunk_id": "wiki:Transcendental_number_theory:c000",
+            "article_id": "wiki:Transcendental_number_theory",
+            "domain": "mathematics"
+          },
+          {
+            "rank": 2,
+            "score": 32.49141,
+            "chunk_id": "wiki:Transcendental_number_theory:c001",
+            "article_id": "wiki:Transcendental_number_theory",
+            "domain": "mathematics"
+          },
+          {
+            "rank": 3,
+            "score": 24.434576,
+            "chunk_id": "wiki:Transcendental_number_theory:c005",
+            "article_id": "wiki:Transcendental_number_theory",
+            "domain": "mathematics"
+          },
+          {
+            "rank": 4,
+            "score": 24.387269,
+            "chunk_id": "wiki:Transcendental_number_theory:c006",
+            "article_id": "wiki:Transcendental_number_theory",
+            "domain": "mathematics"
+          },
+          {
+            "rank": 5,
+            "score": 18.830715,
+            "chunk_id": "wiki:Transcendental_number_theory:c008",
+            "article_id": "wiki:Transcendental_number_theory",
+            "domain": "mathematics"
+          }
+        ]
+      },
+      {
+        "entry_id": "wr-05",
+        "query": "gandhi satyagraha nonviolent revolution india",
+        "terms": [
+          "gandhi",
+          "india",
+          "nonviolent",
+          "revolution",
+          "satyagraha"
+        ],
+        "cited_chunk_id": "wiki:Nonviolent_revolution:c001",
+        "cited_rank": 2,
+        "top_k": 5,
+        "results": [
+          {
+            "rank": 1,
+            "score": 32.086685,
+            "chunk_id": "wiki:Nonviolent_revolution:c002",
+            "article_id": "wiki:Nonviolent_revolution",
+            "domain": "history"
+          },
+          {
+            "rank": 2,
+            "score": 29.992108,
+            "chunk_id": "wiki:Nonviolent_revolution:c001",
+            "article_id": "wiki:Nonviolent_revolution",
+            "domain": "history"
+          },
+          {
+            "rank": 3,
+            "score": 28.10827,
+            "chunk_id": "wiki:Nonviolent_revolution:c003",
+            "article_id": "wiki:Nonviolent_revolution",
+            "domain": "history"
+          },
+          {
+            "rank": 4,
+            "score": 21.730432,
+            "chunk_id": "wiki:Nonviolent_revolution:c000",
+            "article_id": "wiki:Nonviolent_revolution",
+            "domain": "history"
+          },
+          {
+            "rank": 5,
+            "score": 17.434013,
+            "chunk_id": "wiki:Nonviolent_revolution:c007",
+            "article_id": "wiki:Nonviolent_revolution",
+            "domain": "history"
+          }
+        ]
+      },
+      {
+        "entry_id": "wr-06",
+        "query": "polymer electrolytic capacitor conductive electrolyte",
+        "terms": [
+          "capacitor",
+          "conductive",
+          "electrolyte",
+          "electrolytic",
+          "polymer"
+        ],
+        "cited_chunk_id": "wiki:Polymer_capacitor:c000",
+        "cited_rank": 2,
+        "top_k": 5,
+        "results": [
+          {
+            "rank": 1,
+            "score": 30.853659,
+            "chunk_id": "wiki:Polymer_capacitor:c029",
+            "article_id": "wiki:Polymer_capacitor",
+            "domain": "chemistry_materials"
+          },
+          {
+            "rank": 2,
+            "score": 29.781547,
+            "chunk_id": "wiki:Polymer_capacitor:c000",
+            "article_id": "wiki:Polymer_capacitor",
+            "domain": "chemistry_materials"
+          },
+          {
+            "rank": 3,
+            "score": 29.007124,
+            "chunk_id": "wiki:Polymer_capacitor:c006",
+            "article_id": "wiki:Polymer_capacitor",
+            "domain": "chemistry_materials"
+          },
+          {
+            "rank": 4,
+            "score": 27.822568,
+            "chunk_id": "wiki:Polymer_capacitor:c010",
+            "article_id": "wiki:Polymer_capacitor",
+            "domain": "chemistry_materials"
+          },
+          {
+            "rank": 5,
+            "score": 27.45829,
+            "chunk_id": "wiki:Polymer_capacitor:c004",
+            "article_id": "wiki:Polymer_capacitor",
+            "domain": "chemistry_materials"
+          }
+        ]
+      },
+      {
+        "entry_id": "wr-07",
+        "query": "lambda calculus church function abstraction",
+        "terms": [
+          "abstraction",
+          "calculus",
+          "church",
+          "function",
+          "lambda"
+        ],
+        "cited_chunk_id": "wiki:Lambda_calculus:c000",
+        "cited_rank": 3,
+        "top_k": 5,
+        "results": [
+          {
+            "rank": 1,
+            "score": 29.053723,
+            "chunk_id": "wiki:Lambda_calculus:c004",
+            "article_id": "wiki:Lambda_calculus",
+            "domain": "mathematics"
+          },
+          {
+            "rank": 2,
+            "score": 27.450215,
+            "chunk_id": "wiki:Lambda_calculus:c005",
+            "article_id": "wiki:Lambda_calculus",
+            "domain": "mathematics"
+          },
+          {
+            "rank": 3,
+            "score": 26.060488,
+            "chunk_id": "wiki:Lambda_calculus:c000",
+            "article_id": "wiki:Lambda_calculus",
+            "domain": "mathematics"
+          },
+          {
+            "rank": 4,
+            "score": 23.017777,
+            "chunk_id": "wiki:Lambda_calculus:c021",
+            "article_id": "wiki:Lambda_calculus",
+            "domain": "mathematics"
+          },
+          {
+            "rank": 5,
+            "score": 22.557068,
+            "chunk_id": "wiki:Lambda_calculus:c012",
+            "article_id": "wiki:Lambda_calculus",
+            "domain": "mathematics"
+          }
+        ]
+      },
+      {
+        "entry_id": "wr-08",
+        "query": "curvature osculating circle differential geometry",
+        "terms": [
+          "circle",
+          "curvature",
+          "differential",
+          "geometry",
+          "osculating"
+        ],
+        "cited_chunk_id": "wiki:Differential_geometry:c004",
+        "cited_rank": 1,
+        "top_k": 5,
+        "results": [
+          {
+            "rank": 1,
+            "score": 27.642354,
+            "chunk_id": "wiki:Differential_geometry:c004",
+            "article_id": "wiki:Differential_geometry",
+            "domain": "mathematics"
+          },
+          {
+            "rank": 2,
+            "score": 27.112516,
+            "chunk_id": "wiki:Differential_geometry:c003",
+            "article_id": "wiki:Differential_geometry",
+            "domain": "mathematics"
+          },
+          {
+            "rank": 3,
+            "score": 18.024039,
+            "chunk_id": "wiki:Differential_geometry:c015",
+            "article_id": "wiki:Differential_geometry",
+            "domain": "mathematics"
+          },
+          {
+            "rank": 4,
+            "score": 16.808388,
+            "chunk_id": "wiki:Differential_geometry:c005",
+            "article_id": "wiki:Differential_geometry",
+            "domain": "mathematics"
+          },
+          {
+            "rank": 5,
+            "score": 16.615444,
+            "chunk_id": "wiki:Differential_geometry:c000",
+            "article_id": "wiki:Differential_geometry",
+            "domain": "mathematics"
+          }
+        ]
+      },
+      {
+        "entry_id": "wr-09",
+        "query": "titanic replica blue star line 1912",
+        "terms": [
+          "1912",
+          "blue",
+          "line",
+          "replica",
+          "star",
+          "titanic"
+        ],
+        "cited_chunk_id": "wiki:Blue_Star_Line:c004",
+        "cited_rank": 1,
+        "top_k": 5,
+        "results": [
+          {
+            "rank": 1,
+            "score": 38.383942,
+            "chunk_id": "wiki:Blue_Star_Line:c004",
+            "article_id": "wiki:Blue_Star_Line",
+            "domain": "physics_astronomy"
+          },
+          {
+            "rank": 2,
+            "score": 21.608739,
+            "chunk_id": "wiki:MV_Brisbane_Star:c005",
+            "article_id": "wiki:MV_Brisbane_Star",
+            "domain": "physics_astronomy"
+          },
+          {
+            "rank": 3,
+            "score": 20.050221,
+            "chunk_id": "wiki:MV_California_Star_(1945):c003",
+            "article_id": "wiki:MV_California_Star_(1945)",
+            "domain": "physics_astronomy"
+          },
+          {
+            "rank": 4,
+            "score": 19.806714,
+            "chunk_id": "wiki:Blue_Star_Line:c003",
+            "article_id": "wiki:Blue_Star_Line",
+            "domain": "physics_astronomy"
+          },
+          {
+            "rank": 5,
+            "score": 18.928544,
+            "chunk_id": "wiki:Blue_Star_Line:c002",
+            "article_id": "wiki:Blue_Star_Line",
+            "domain": "physics_astronomy"
+          }
+        ]
+      },
+      {
+        "entry_id": "wr-10",
+        "query": "avicenna persian medical compilations",
+        "terms": [
+          "avicenna",
+          "compilations",
+          "medical",
+          "persian"
+        ],
+        "cited_chunk_id": "wiki:Traditional_medicine:c002",
+        "cited_rank": 1,
+        "top_k": 5,
+        "results": [
+          {
+            "rank": 1,
+            "score": 24.613457,
+            "chunk_id": "wiki:Traditional_medicine:c002",
+            "article_id": "wiki:Traditional_medicine",
+            "domain": "life_medicine"
+          },
+          {
+            "rank": 2,
+            "score": 12.439608,
+            "chunk_id": "wiki:Iranian_philosophy:c006",
+            "article_id": "wiki:Iranian_philosophy",
+            "domain": "arts_humanities"
+          },
+          {
+            "rank": 3,
+            "score": 11.509129,
+            "chunk_id": "wiki:Iranian_philosophy:c003",
+            "article_id": "wiki:Iranian_philosophy",
+            "domain": "arts_humanities"
+          },
+          {
+            "rank": 4,
+            "score": 11.310971,
+            "chunk_id": "wiki:Iranian_philosophy:c007",
+            "article_id": "wiki:Iranian_philosophy",
+            "domain": "arts_humanities"
+          },
+          {
+            "rank": 5,
+            "score": 10.773571,
+            "chunk_id": "wiki:Iranian_philosophy:c009",
+            "article_id": "wiki:Iranian_philosophy",
+            "domain": "arts_humanities"
+          }
+        ]
+      },
+      {
+        "entry_id": "wr-11",
+        "query": "tagore bengali nobel literature 1913",
+        "terms": [
+          "1913",
+          "bengali",
+          "literature",
+          "nobel",
+          "tagore"
+        ],
+        "cited_chunk_id": "wiki:Indian_literature:c001",
+        "cited_rank": 3,
+        "top_k": 5,
+        "results": [
+          {
+            "rank": 1,
+            "score": 31.810341,
+            "chunk_id": "wiki:Indian_literature:c004",
+            "article_id": "wiki:Indian_literature",
+            "domain": "arts_humanities"
+          },
+          {
+            "rank": 2,
+            "score": 31.144175,
+            "chunk_id": "wiki:Indian_literature:c005",
+            "article_id": "wiki:Indian_literature",
+            "domain": "arts_humanities"
+          },
+          {
+            "rank": 3,
+            "score": 28.037289,
+            "chunk_id": "wiki:Indian_literature:c001",
+            "article_id": "wiki:Indian_literature",
+            "domain": "arts_humanities"
+          },
+          {
+            "rank": 4,
+            "score": 14.588404,
+            "chunk_id": "wiki:Indian_literature:c012",
+            "article_id": "wiki:Indian_literature",
+            "domain": "arts_humanities"
+          },
+          {
+            "rank": 5,
+            "score": 10.960592,
+            "chunk_id": "wiki:Indian_literature:c010",
+            "article_id": "wiki:Indian_literature",
+            "domain": "arts_humanities"
+          }
+        ]
+      },
+      {
+        "entry_id": "wr-12",
+        "query": "affibody engineered protein antibody mimetic",
+        "terms": [
+          "affibody",
+          "antibody",
+          "engineered",
+          "mimetic",
+          "protein"
+        ],
+        "cited_chunk_id": "wiki:Affibody_molecule:c000",
+        "cited_rank": 1,
+        "top_k": 5,
+        "results": [
+          {
+            "rank": 1,
+            "score": 31.280134,
+            "chunk_id": "wiki:Affibody_molecule:c000",
+            "article_id": "wiki:Affibody_molecule",
+            "domain": "chemistry_materials"
+          },
+          {
+            "rank": 2,
+            "score": 29.628688,
+            "chunk_id": "wiki:Affibody_molecule:c006",
+            "article_id": "wiki:Affibody_molecule",
+            "domain": "chemistry_materials"
+          },
+          {
+            "rank": 3,
+            "score": 29.372514,
+            "chunk_id": "wiki:Affibody_molecule:c001",
+            "article_id": "wiki:Affibody_molecule",
+            "domain": "chemistry_materials"
+          },
+          {
+            "rank": 4,
+            "score": 26.819208,
+            "chunk_id": "wiki:Affibody_molecule:c007",
+            "article_id": "wiki:Affibody_molecule",
+            "domain": "chemistry_materials"
+          },
+          {
+            "rank": 5,
+            "score": 25.651903,
+            "chunk_id": "wiki:Affibody_molecule:c005",
+            "article_id": "wiki:Affibody_molecule",
+            "domain": "chemistry_materials"
+          }
+        ]
+      },
+      {
+        "entry_id": "wr-13",
+        "query": "ozone triatomic homonuclear molecule",
+        "terms": [
+          "homonuclear",
+          "molecule",
+          "ozone",
+          "triatomic"
+        ],
+        "cited_chunk_id": "wiki:Homonuclear_molecule:c000",
+        "cited_rank": 1,
+        "top_k": 5,
+        "results": [
+          {
+            "rank": 1,
+            "score": 36.904519,
+            "chunk_id": "wiki:Homonuclear_molecule:c000",
+            "article_id": "wiki:Homonuclear_molecule",
+            "domain": "chemistry_materials"
+          },
+          {
+            "rank": 2,
+            "score": 6.336485,
+            "chunk_id": "wiki:Photonic_molecule:c001",
+            "article_id": "wiki:Photonic_molecule",
+            "domain": "chemistry_materials"
+          },
+          {
+            "rank": 3,
+            "score": 6.271758,
+            "chunk_id": "wiki:Single-molecule_FRET:c017",
+            "article_id": "wiki:Single-molecule_FRET",
+            "domain": "chemistry_materials"
+          },
+          {
+            "rank": 4,
+            "score": 6.240238,
+            "chunk_id": "wiki:Dispersion_stabilized_molecules:c000",
+            "article_id": "wiki:Dispersion_stabilized_molecules",
+            "domain": "chemistry_materials"
+          },
+          {
+            "rank": 5,
+            "score": 6.226484,
+            "chunk_id": "wiki:Single-molecule_FRET:c000",
+            "article_id": "wiki:Single-molecule_FRET",
+            "domain": "chemistry_materials"
+          }
+        ]
+      },
+      {
+        "entry_id": "wr-14",
+        "query": "pharmacology science of drugs medications",
+        "terms": [
+          "drugs",
+          "medications",
+          "of",
+          "pharmacology",
+          "science"
+        ],
+        "cited_chunk_id": "wiki:Pharmacology:c000",
+        "cited_rank": 1,
+        "top_k": 5,
+        "results": [
+          {
+            "rank": 1,
+            "score": 18.612711,
+            "chunk_id": "wiki:Pharmacology:c000",
+            "article_id": "wiki:Pharmacology",
+            "domain": "life_medicine"
+          },
+          {
+            "rank": 2,
+            "score": 15.482613,
+            "chunk_id": "wiki:Pharmacology:c002",
+            "article_id": "wiki:Pharmacology",
+            "domain": "life_medicine"
+          },
+          {
+            "rank": 3,
+            "score": 15.453861,
+            "chunk_id": "wiki:Pharmacology:c011",
+            "article_id": "wiki:Pharmacology",
+            "domain": "life_medicine"
+          },
+          {
+            "rank": 4,
+            "score": 14.656377,
+            "chunk_id": "wiki:Pharmacology:c001",
+            "article_id": "wiki:Pharmacology",
+            "domain": "life_medicine"
+          },
+          {
+            "rank": 5,
+            "score": 14.108704,
+            "chunk_id": "wiki:Pharmacology:c006",
+            "article_id": "wiki:Pharmacology",
+            "domain": "life_medicine"
+          }
+        ]
+      },
+      {
+        "entry_id": "wr-15",
+        "query": "poetry slam competition performance",
+        "terms": [
+          "competition",
+          "performance",
+          "poetry",
+          "slam"
+        ],
+        "cited_chunk_id": "wiki:National_Poetry_Slam:c000",
+        "cited_rank": 1,
+        "top_k": 5,
+        "results": [
+          {
+            "rank": 1,
+            "score": 30.527455,
+            "chunk_id": "wiki:National_Poetry_Slam:c000",
+            "article_id": "wiki:National_Poetry_Slam",
+            "domain": "arts_humanities"
+          },
+          {
+            "rank": 2,
+            "score": 25.695336,
+            "chunk_id": "wiki:National_Poetry_Slam:c001",
+            "article_id": "wiki:National_Poetry_Slam",
+            "domain": "arts_humanities"
+          },
+          {
+            "rank": 3,
+            "score": 25.297773,
+            "chunk_id": "wiki:National_Poetry_Slam:c005",
+            "article_id": "wiki:National_Poetry_Slam",
+            "domain": "arts_humanities"
+          },
+          {
+            "rank": 4,
+            "score": 23.803102,
+            "chunk_id": "wiki:National_Poetry_Slam:c004",
+            "article_id": "wiki:National_Poetry_Slam",
+            "domain": "arts_humanities"
+          },
+          {
+            "rank": 5,
+            "score": 19.804554,
+            "chunk_id": "wiki:National_Poetry_Slam:c006",
+            "article_id": "wiki:National_Poetry_Slam",
+            "domain": "arts_humanities"
+          }
+        ]
+      },
+      {
+        "entry_id": "wr-16",
+        "query": "wilderness medicine remote austere expedition",
+        "terms": [
+          "austere",
+          "expedition",
+          "medicine",
+          "remote",
+          "wilderness"
+        ],
+        "cited_chunk_id": "wiki:Wilderness_medicine:c000",
+        "cited_rank": 1,
+        "top_k": 5,
+        "results": [
+          {
+            "rank": 1,
+            "score": 36.687248,
+            "chunk_id": "wiki:Wilderness_medicine:c000",
+            "article_id": "wiki:Wilderness_medicine",
+            "domain": "life_medicine"
+          },
+          {
+            "rank": 2,
+            "score": 36.626982,
+            "chunk_id": "wiki:Wilderness_medicine:c003",
+            "article_id": "wiki:Wilderness_medicine",
+            "domain": "life_medicine"
+          },
+          {
+            "rank": 3,
+            "score": 33.084914,
+            "chunk_id": "wiki:Wilderness_medicine:c005",
+            "article_id": "wiki:Wilderness_medicine",
+            "domain": "life_medicine"
+          },
+          {
+            "rank": 4,
+            "score": 32.387729,
+            "chunk_id": "wiki:Wilderness_medicine:c002",
+            "article_id": "wiki:Wilderness_medicine",
+            "domain": "life_medicine"
+          },
+          {
+            "rank": 5,
+            "score": 27.211669,
+            "chunk_id": "wiki:Wilderness_medicine:c004",
+            "article_id": "wiki:Wilderness_medicine",
+            "domain": "life_medicine"
+          }
+        ]
+      },
+      {
+        "entry_id": "wr-17",
+        "query": "photonic molecule photons bind matter",
+        "terms": [
+          "bind",
+          "matter",
+          "molecule",
+          "photonic",
+          "photons"
+        ],
+        "cited_chunk_id": "wiki:Photonic_molecule:c000",
+        "cited_rank": 1,
+        "top_k": 5,
+        "results": [
+          {
+            "rank": 1,
+            "score": 31.011441,
+            "chunk_id": "wiki:Photonic_molecule:c000",
+            "article_id": "wiki:Photonic_molecule",
+            "domain": "chemistry_materials"
+          },
+          {
+            "rank": 2,
+            "score": 24.481842,
+            "chunk_id": "wiki:Photonic_molecule:c002",
+            "article_id": "wiki:Photonic_molecule",
+            "domain": "chemistry_materials"
+          },
+          {
+            "rank": 3,
+            "score": 24.284753,
+            "chunk_id": "wiki:Photonic_molecule:c001",
+            "article_id": "wiki:Photonic_molecule",
+            "domain": "chemistry_materials"
+          },
+          {
+            "rank": 4,
+            "score": 15.599445,
+            "chunk_id": "wiki:Photonic_molecule:c005",
+            "article_id": "wiki:Photonic_molecule",
+            "domain": "chemistry_materials"
+          },
+          {
+            "rank": 5,
+            "score": 14.984934,
+            "chunk_id": "wiki:Photonic_molecule:c003",
+            "article_id": "wiki:Photonic_molecule",
+            "domain": "chemistry_materials"
+          }
+        ]
+      },
+      {
+        "entry_id": "wr-18",
+        "query": "time travel paradox self consistency",
+        "terms": [
+          "consistency",
+          "paradox",
+          "self",
+          "time",
+          "travel"
+        ],
+        "cited_chunk_id": "wiki:Quantum_mechanics_of_time_travel:c000",
+        "cited_rank": 3,
+        "top_k": 5,
+        "results": [
+          {
+            "rank": 1,
+            "score": 27.073241,
+            "chunk_id": "wiki:Quantum_mechanics_of_time_travel:c010",
+            "article_id": "wiki:Quantum_mechanics_of_time_travel",
+            "domain": "physics_astronomy"
+          },
+          {
+            "rank": 2,
+            "score": 25.668568,
+            "chunk_id": "wiki:Quantum_mechanics_of_time_travel:c006",
+            "article_id": "wiki:Quantum_mechanics_of_time_travel",
+            "domain": "physics_astronomy"
+          },
+          {
+            "rank": 3,
+            "score": 25.305249,
+            "chunk_id": "wiki:Quantum_mechanics_of_time_travel:c000",
+            "article_id": "wiki:Quantum_mechanics_of_time_travel",
+            "domain": "physics_astronomy"
+          },
+          {
+            "rank": 4,
+            "score": 22.743394,
+            "chunk_id": "wiki:Quantum_mechanics_of_time_travel:c002",
+            "article_id": "wiki:Quantum_mechanics_of_time_travel",
+            "domain": "physics_astronomy"
+          },
+          {
+            "rank": 5,
+            "score": 22.224198,
+            "chunk_id": "wiki:Quantum_mechanics_of_time_travel:c007",
+            "article_id": "wiki:Quantum_mechanics_of_time_travel",
+            "domain": "physics_astronomy"
+          }
+        ]
+      },
+      {
+        "entry_id": "wr-19",
+        "query": "arithmetic topology prime ideals knots",
+        "terms": [
+          "arithmetic",
+          "ideals",
+          "knots",
+          "prime",
+          "topology"
+        ],
+        "cited_chunk_id": "wiki:Arithmetic_topology:c000",
+        "cited_rank": 1,
+        "top_k": 5,
+        "results": [
+          {
+            "rank": 1,
+            "score": 33.361646,
+            "chunk_id": "wiki:Arithmetic_topology:c000",
+            "article_id": "wiki:Arithmetic_topology",
+            "domain": "mathematics"
+          },
+          {
+            "rank": 2,
+            "score": 25.206068,
+            "chunk_id": "wiki:Glossary_of_areas_of_mathematics:c003",
+            "article_id": "wiki:Glossary_of_areas_of_mathematics",
+            "domain": "mathematics"
+          },
+          {
+            "rank": 3,
+            "score": 24.479988,
+            "chunk_id": "wiki:Arithmetic_topology:c001",
+            "article_id": "wiki:Arithmetic_topology",
+            "domain": "mathematics"
+          },
+          {
+            "rank": 4,
+            "score": 21.022955,
+            "chunk_id": "wiki:Commutative_algebra:c001",
+            "article_id": "wiki:Commutative_algebra",
+            "domain": "mathematics"
+          },
+          {
+            "rank": 5,
+            "score": 19.160346,
+            "chunk_id": "wiki:Commutative_algebra:c005",
+            "article_id": "wiki:Commutative_algebra",
+            "domain": "mathematics"
+          }
+        ]
+      },
+      {
+        "entry_id": "wr-20",
+        "query": "culture educational anthropology classrooms",
+        "terms": [
+          "anthropology",
+          "classrooms",
+          "culture",
+          "educational"
+        ],
+        "cited_chunk_id": "wiki:Educational_anthropology:c000",
+        "cited_rank": 1,
+        "top_k": 5,
+        "results": [
+          {
+            "rank": 1,
+            "score": 23.317592,
+            "chunk_id": "wiki:Educational_anthropology:c000",
+            "article_id": "wiki:Educational_anthropology",
+            "domain": "social_science"
+          },
+          {
+            "rank": 2,
+            "score": 17.501412,
+            "chunk_id": "wiki:Educational_anthropology:c004",
+            "article_id": "wiki:Educational_anthropology",
+            "domain": "social_science"
+          },
+          {
+            "rank": 3,
+            "score": 17.210791,
+            "chunk_id": "wiki:Educational_anthropology:c005",
+            "article_id": "wiki:Educational_anthropology",
+            "domain": "social_science"
+          },
+          {
+            "rank": 4,
+            "score": 16.941775,
+            "chunk_id": "wiki:Educational_anthropology:c001",
+            "article_id": "wiki:Educational_anthropology",
+            "domain": "social_science"
+          },
+          {
+            "rank": 5,
+            "score": 16.941165,
+            "chunk_id": "wiki:Educational_anthropology:c003",
+            "article_id": "wiki:Educational_anthropology",
+            "domain": "social_science"
+          }
+        ]
+      }
+    ]
+  },
+  "attribution": {
+    "source": "Wikipedia (English)",
+    "license": "CC BY-SA 4.0",
+    "note": "Short excerpts for a local word game. Article titles and URLs are kept with each entry."
+  },
+  "entries": [
+    {
+      "id": "wr-01",
+      "answer": "BEAVER",
+      "clue": "Rodent that fells trees and builds dams, cited as the original model for species that reshape whole habitats.",
+      "article_id": "wiki:Ecosystem_engineer",
+      "source_title": "Ecosystem engineer",
+      "source_url": "https://en.wikipedia.org/wiki/Ecosystem_engineer",
+      "domain": "geography_environment",
+      "chunk_id": "wiki:Ecosystem_engineer:c000",
+      "source_excerpt": "Beavers are the original model for ecosystem engineers; in the process of clearcutting and damming, beavers alter their ecosystem extensively.",
+      "source_hash": "cb462c63e99ab85afed8f2da38345a8a94219255473a323ba9e29bc2ed7afe6f",
+      "chunk_sha256": "9cfba4181af43c1e27f5261abd18c0919f9befa736a69466bfaa64660872b698",
+      "retrieval_query": "beaver clearcutting damming ecosystem engineers",
+      "retrieval_rank": 1,
+      "attribution": "Wikipedia, “Ecosystem engineer” — CC BY-SA 4.0 (local pilot corpus)"
+    },
+    {
+      "id": "wr-02",
+      "answer": "FRET",
+      "clue": "Acronym for the non-radiative transfer of excited-state energy between two fluorophores, used as a nanoscale ruler.",
+      "article_id": "wiki:Single-molecule_FRET",
+      "source_title": "Single-molecule FRET",
+      "source_url": "https://en.wikipedia.org/wiki/Single-molecule_FRET",
+      "domain": "chemistry_materials",
+      "chunk_id": "wiki:Single-molecule_FRET:c000",
+      "source_excerpt": "Single-molecule fluorescence (or Förster) resonance energy transfer (or smFRET) is a biophysical technique used to measure distances at the 1-10 nanometer scale in single molecules, typically biomolecules.",
+      "source_hash": "f3123e70f3b1ad3c85ad9cd4e286d80f98b3214ab3c4f3d9be41a9e9fdc2f7e2",
+      "chunk_sha256": "36719580ea679bf7556b773f90c467b61d7900cbd660d237339b5c8f8aa9c1e3",
+      "retrieval_query": "forster resonance energy transfer single molecule",
+      "retrieval_rank": 3,
+      "attribution": "Wikipedia, “Single-molecule FRET” — CC BY-SA 4.0 (local pilot corpus)"
+    },
+    {
+      "id": "wr-03",
+      "answer": "DECAPOD",
+      "clue": "Ten-footed crustacean group whose name literally means “ten legs”.",
+      "article_id": "wiki:Decapod_anatomy",
+      "source_title": "Decapod anatomy",
+      "source_url": "https://en.wikipedia.org/wiki/Decapod_anatomy",
+      "domain": "life_medicine",
+      "chunk_id": "wiki:Decapod_anatomy:c000",
+      "source_excerpt": "Pereiopods are primarily walking legs and are also used for gathering food. They are also the ten legs from which decapods take their name.",
+      "source_hash": "8ad926e3581c72f1239aa9788cd115d60a643ad40deb76fc9ed560d38fc39667",
+      "chunk_sha256": "58354156c6b7a00fe195daed87524692fb40b8f37ec43b2b15192a78856f2907",
+      "retrieval_query": "decapod ten legs crustacean anatomy",
+      "retrieval_rank": 1,
+      "attribution": "Wikipedia, “Decapod anatomy” — CC BY-SA 4.0 (local pilot corpus)"
+    },
+    {
+      "id": "wr-04",
+      "answer": "TRANSCENDENTAL",
+      "clue": "Describes a number that is not the root of any nonzero polynomial with rational coefficients.",
+      "article_id": "wiki:Transcendental_number_theory",
+      "source_title": "Transcendental number theory",
+      "source_url": "https://en.wikipedia.org/wiki/Transcendental_number_theory",
+      "domain": "mathematics",
+      "chunk_id": "wiki:Transcendental_number_theory:c001",
+      "source_excerpt": "If no such polynomial exists then the number is called transcendental.",
+      "source_hash": "74d0fa03a243dfb4ab51fd0b9d88fbfd9807af09cec251bd242f13cef103f085",
+      "chunk_sha256": "b5c0cb92ffa3658a19e7952bb3877f9d7d86e61fa037dca3eed967c47c12b771",
+      "retrieval_query": "transcendental number polynomial rational coefficients",
+      "retrieval_rank": 2,
+      "attribution": "Wikipedia, “Transcendental number theory” — CC BY-SA 4.0 (local pilot corpus)"
+    },
+    {
+      "id": "wr-05",
+      "answer": "GANDHI",
+      "clue": "Indian leader whose satyagraha philosophy made civil resistance a mass strategy.",
+      "article_id": "wiki:Nonviolent_revolution",
+      "source_title": "Nonviolent revolution",
+      "source_url": "https://en.wikipedia.org/wiki/Nonviolent_revolution",
+      "domain": "history",
+      "chunk_id": "wiki:Nonviolent_revolution:c001",
+      "source_excerpt": "Nonviolent revolution was popularized in the 20th century by the satyagraha philosophy of Mahatma Gandhi, who guided the people of India to independence from Britain.",
+      "source_hash": "164bb6833a046fa244687a17cf6505da08aef2a0836a2447c15f91eefd9243c7",
+      "chunk_sha256": "c4d6edcda73ee7ec9d96bf73b24f1a8f3b7f7afb4212f6c96c5115a924fca923",
+      "retrieval_query": "gandhi satyagraha nonviolent revolution india",
+      "retrieval_rank": 2,
+      "attribution": "Wikipedia, “Nonviolent revolution” — CC BY-SA 4.0 (local pilot corpus)"
+    },
+    {
+      "id": "wr-06",
+      "answer": "CAPACITOR",
+      "clue": "Two-terminal component that stores electrical charge; this article’s type replaces the liquid electrolyte with a conductive polymer.",
+      "article_id": "wiki:Polymer_capacitor",
+      "source_title": "Polymer capacitor",
+      "source_url": "https://en.wikipedia.org/wiki/Polymer_capacitor",
+      "domain": "chemistry_materials",
+      "chunk_id": "wiki:Polymer_capacitor:c000",
+      "source_excerpt": "A polymer capacitor, or more accurately a polymer electrolytic capacitor, is an electrolytic capacitor (e-cap) with a solid conductive polymer electrolyte.",
+      "source_hash": "746331ef0d27ea8451539a8140c0c2a7c31207ab06202996c1a53ca76b1e46fa",
+      "chunk_sha256": "19166f1bb0d27a1ef342d4c39015ad034f361bdf637e01e617ec3eec28dcf17a",
+      "retrieval_query": "polymer electrolytic capacitor conductive electrolyte",
+      "retrieval_rank": 2,
+      "attribution": "Wikipedia, “Polymer capacitor” — CC BY-SA 4.0 (local pilot corpus)"
+    },
+    {
+      "id": "wr-07",
+      "answer": "LAMBDA",
+      "clue": "Greek letter that names Church’s formal system for function abstraction and application.",
+      "article_id": "wiki:Lambda_calculus",
+      "source_title": "Lambda calculus",
+      "source_url": "https://en.wikipedia.org/wiki/Lambda_calculus",
+      "domain": "mathematics",
+      "chunk_id": "wiki:Lambda_calculus:c000",
+      "source_excerpt": "In mathematical logic, the lambda calculus (also written as λ-calculus) is a formal system for expressing computation based on function abstraction and application using variable binding and substitution.",
+      "source_hash": "e91c34a349acd1598bd0f2d209307f99b6805083160d7f0628687b7a9a1b3ad7",
+      "chunk_sha256": "61475d9f9f4c9487e6d3efcd11dedc5d9a534b685232100bead0d3681e2f2328",
+      "retrieval_query": "lambda calculus church function abstraction",
+      "retrieval_rank": 3,
+      "attribution": "Wikipedia, “Lambda calculus” — CC BY-SA 4.0 (local pilot corpus)"
+    },
+    {
+      "id": "wr-08",
+      "answer": "CURVATURE",
+      "clue": "Measure of how a curve or surface bends, studied through osculating circles and principal directions.",
+      "article_id": "wiki:Differential_geometry",
+      "source_title": "Differential geometry",
+      "source_url": "https://en.wikipedia.org/wiki/Differential_geometry",
+      "domain": "mathematics",
+      "chunk_id": "wiki:Differential_geometry:c004",
+      "source_excerpt": "Importantly Clairaut introduced the terminology of curvature and double curvature, essentially the notion of principal curvatures later studied by Gauss and others.",
+      "source_hash": "2a3e1640d94ab6b745827bcb224aa288c7102e0b46079901b574050d81b0a109",
+      "chunk_sha256": "fc276bc5970006dc5a86f394daf97612367ea6616eea81930c8b62d8afe4a1c0",
+      "retrieval_query": "curvature osculating circle differential geometry",
+      "retrieval_rank": 1,
+      "attribution": "Wikipedia, “Differential geometry” — CC BY-SA 4.0 (local pilot corpus)"
+    },
+    {
+      "id": "wr-09",
+      "answer": "TITANIC",
+      "clue": "Ocean liner that sank in 1912; a modern replica proposal borrows its name.",
+      "article_id": "wiki:Blue_Star_Line",
+      "source_title": "Blue Star Line",
+      "source_url": "https://en.wikipedia.org/wiki/Blue_Star_Line",
+      "domain": "physics_astronomy",
+      "chunk_id": "wiki:Blue_Star_Line:c004",
+      "source_excerpt": "The Titanic II, a replica ship proposal of the original Titanic that sank in 1912, is a Blue Star Line Cruises ship owned by Australian billionaire/businessman Clive Palmer who started the plan on April 14, 2012.",
+      "source_hash": "b9fcfc90a77cba145518507d1a0a32d742879c77a0067a53a93057cf64579a28",
+      "chunk_sha256": "6838cdf83acf118179607ee70a6c18ad449e3852180476de291a08915e1d9469",
+      "retrieval_query": "titanic replica blue star line 1912",
+      "retrieval_rank": 1,
+      "attribution": "Wikipedia, “Blue Star Line” — CC BY-SA 4.0 (local pilot corpus)"
+    },
+    {
+      "id": "wr-10",
+      "answer": "AVICENNA",
+      "clue": "Persian polymath whose medical compilations were translated into Latin Europe.",
+      "article_id": "wiki:Traditional_medicine",
+      "source_title": "Traditional medicine",
+      "source_url": "https://en.wikipedia.org/wiki/Traditional_medicine",
+      "domain": "life_medicine",
+      "chunk_id": "wiki:Traditional_medicine:c002",
+      "source_excerpt": "These early Greek and Roman compilations became the backbone of European medical theory and were translated by the Persian Avicenna (Ibn Sīnā, 980–1037), the Persian Rhazes (Rāzi, 865–925) and the Jewish Maimonides.",
+      "source_hash": "8955adccb4dc3fa9211a734ba51dbbc0b849553647fb0960fafeafe59234158c",
+      "chunk_sha256": "b55d3d69fc593624f7137a4e09cc7193cdf914dbedfb71861b4e094fe4a4d70a",
+      "retrieval_query": "avicenna persian medical compilations",
+      "retrieval_rank": 1,
+      "attribution": "Wikipedia, “Traditional medicine” — CC BY-SA 4.0 (local pilot corpus)"
+    },
+    {
+      "id": "wr-11",
+      "answer": "TAGORE",
+      "clue": "Bengali poet who became India’s first Nobel laureate in literature in 1913.",
+      "article_id": "wiki:Indian_literature",
+      "source_title": "Indian literature",
+      "source_url": "https://en.wikipedia.org/wiki/Indian_literature",
+      "domain": "arts_humanities",
+      "chunk_id": "wiki:Indian_literature:c001",
+      "source_excerpt": "In 1913, Bengali poet Rabindranath Tagore became India's first Nobel laureate in literature.",
+      "source_hash": "d56950e22452ad8fd565163d2042c8b4120299b6cc0db643853090e96a7fbd35",
+      "chunk_sha256": "a5f2570ceee5fdcba35a00fd539e44abeca9435d4bda18b44c8149f85c071a61",
+      "retrieval_query": "tagore bengali nobel literature 1913",
+      "retrieval_rank": 3,
+      "attribution": "Wikipedia, “Indian literature” — CC BY-SA 4.0 (local pilot corpus)"
+    },
+    {
+      "id": "wr-12",
+      "answer": "AFFIBODY",
+      "clue": "Small engineered protein scaffold that imitates antibodies as a binding reagent.",
+      "article_id": "wiki:Affibody_molecule",
+      "source_title": "Affibody molecule",
+      "source_url": "https://en.wikipedia.org/wiki/Affibody_molecule",
+      "domain": "chemistry_materials",
+      "chunk_id": "wiki:Affibody_molecule:c000",
+      "source_excerpt": "Affibody molecules are small, robust proteins engineered to bind to a large number of target proteins or peptides with high affinity, imitating monoclonal antibodies, and are therefore a member of the family of antibody mimetics.",
+      "source_hash": "b2b0a70679e4206d2d4033693080dd410647cfdb074396872bec2685598871a1",
+      "chunk_sha256": "78ceecd7199a7bd191fd3abf0c3bf1017d29829a8440530c63e964c14edeafcf",
+      "retrieval_query": "affibody engineered protein antibody mimetic",
+      "retrieval_rank": 1,
+      "attribution": "Wikipedia, “Affibody molecule” — CC BY-SA 4.0 (local pilot corpus)"
+    },
+    {
+      "id": "wr-13",
+      "answer": "OZONE",
+      "clue": "Triatomic allotrope of oxygen, written O3.",
+      "article_id": "wiki:Homonuclear_molecule",
+      "source_title": "Homonuclear molecule",
+      "source_url": "https://en.wikipedia.org/wiki/Homonuclear_molecule",
+      "domain": "chemistry_materials",
+      "chunk_id": "wiki:Homonuclear_molecule:c000",
+      "source_excerpt": "Ozone (O3) is a common triatomic homonuclear molecule.",
+      "source_hash": "93cb5fe59555ca5754b764e42157bc331a64c738cc9c17c1e64c90f19d5fbc17",
+      "chunk_sha256": "94037d2b77ecafbdcb80aa63300bcb225a60b5e48bc9c1afaea386565900d8c1",
+      "retrieval_query": "ozone triatomic homonuclear molecule",
+      "retrieval_rank": 1,
+      "attribution": "Wikipedia, “Homonuclear molecule” — CC BY-SA 4.0 (local pilot corpus)"
+    },
+    {
+      "id": "wr-14",
+      "answer": "PHARMACOLOGY",
+      "clue": "Discipline studying the origin, composition and biological action of drugs.",
+      "article_id": "wiki:Pharmacology",
+      "source_title": "Pharmacology",
+      "source_url": "https://en.wikipedia.org/wiki/Pharmacology",
+      "domain": "life_medicine",
+      "chunk_id": "wiki:Pharmacology:c000",
+      "source_excerpt": "Pharmacology is the science of drugs and medications, including a substance's origin, composition and interaction with biological systems; specifically through pharmacokinetics, pharmacodynamics, therapeutic use, and toxicology.",
+      "source_hash": "53ec7c1e6a50cda7db6623d71dcc8cc5a198f972c0288abe2d14f662e80ae82a",
+      "chunk_sha256": "d2078abc3cb05f0e8fd531b0b90643619a683a0bffae65133158bfb94f2643ec",
+      "retrieval_query": "pharmacology science of drugs medications",
+      "retrieval_rank": 1,
+      "attribution": "Wikipedia, “Pharmacology” — CC BY-SA 4.0 (local pilot corpus)"
+    },
+    {
+      "id": "wr-15",
+      "answer": "SLAM",
+      "clue": "Competitive poetry event where teams perform and are judged; the US national version ran until 2018.",
+      "article_id": "wiki:National_Poetry_Slam",
+      "source_title": "National Poetry Slam",
+      "source_url": "https://en.wikipedia.org/wiki/National_Poetry_Slam",
+      "domain": "arts_humanities",
+      "chunk_id": "wiki:National_Poetry_Slam:c000",
+      "source_excerpt": "The National Poetry Slam (NPS) was a performance poetry competition where teams from across the United States, Canada, and, occasionally, Europe and Australia, participate in a large-scale poetry slam.",
+      "source_hash": "15ff5fd3581f0487e10f6284b8914133f20b1e90ecc97388440c323759036f76",
+      "chunk_sha256": "2d0f85f4422f326c7bec5233744b53aca46bbf72ca8b578cb8ee2c27aa67a041",
+      "retrieval_query": "poetry slam competition performance",
+      "retrieval_rank": 1,
+      "attribution": "Wikipedia, “National Poetry Slam” — CC BY-SA 4.0 (local pilot corpus)"
+    },
+    {
+      "id": "wr-16",
+      "answer": "WILDERNESS",
+      "clue": "Medical specialty concerned with care in remote, austere and expedition environments.",
+      "article_id": "wiki:Wilderness_medicine",
+      "source_title": "Wilderness medicine",
+      "source_url": "https://en.wikipedia.org/wiki/Wilderness_medicine",
+      "domain": "life_medicine",
+      "chunk_id": "wiki:Wilderness_medicine:c000",
+      "source_excerpt": "Wilderness medicine is a medical specialty concerned with medical care in remote, wilderness and expedition environments.",
+      "source_hash": "ff6654ef9e84777ad4e9e1e04b575277b25be204f525b3e46859097acff56ea3",
+      "chunk_sha256": "4cfd4077345251cdce1fa26502a957445a3e0175c0c88d06c7ade137269b2348",
+      "retrieval_query": "wilderness medicine remote austere expedition",
+      "retrieval_rank": 1,
+      "attribution": "Wikipedia, “Wilderness medicine” — CC BY-SA 4.0 (local pilot corpus)"
+    },
+    {
+      "id": "wr-17",
+      "answer": "PHOTON",
+      "clue": "Massless quantum of light that can bind with others to form a “molecule”.",
+      "article_id": "wiki:Photonic_molecule",
+      "source_title": "Photonic molecule",
+      "source_url": "https://en.wikipedia.org/wiki/Photonic_molecule",
+      "domain": "chemistry_materials",
+      "chunk_id": "wiki:Photonic_molecule:c000",
+      "source_excerpt": "Photonic molecules are a form of matter in which photons bind together to form \"molecules\".",
+      "source_hash": "961f81de488601f0c13aa1e1b1b459da73b894d1f1874ed50add5a5bfdcd891f",
+      "chunk_sha256": "19bafd7da3795bdc538feb58e545ca94c9ea3f2c1cffea0ee4b1a40dc815be61",
+      "retrieval_query": "photonic molecule photons bind matter",
+      "retrieval_rank": 1,
+      "attribution": "Wikipedia, “Photonic molecule” — CC BY-SA 4.0 (local pilot corpus)"
+    },
+    {
+      "id": "wr-18",
+      "answer": "PARADOX",
+      "clue": "A historical contradiction that time travellers must avoid, according to the self-consistency principle.",
+      "article_id": "wiki:Quantum_mechanics_of_time_travel",
+      "source_title": "Quantum mechanics of time travel",
+      "source_url": "https://en.wikipedia.org/wiki/Quantum_mechanics_of_time_travel",
+      "domain": "physics_astronomy",
+      "chunk_id": "wiki:Quantum_mechanics_of_time_travel:c000",
+      "source_excerpt": "According to this principle, any changes made by a time traveler in the past must not create historical paradoxes.",
+      "source_hash": "d45bf3310df5d1db6d087df6014259b6078c8cde7858f578df712acfae99fd66",
+      "chunk_sha256": "85100a5075f36fba9c5d0301257e4fcb9a88e4a67fe8ef0f0917812dc0235e63",
+      "retrieval_query": "time travel paradox self consistency",
+      "retrieval_rank": 3,
+      "attribution": "Wikipedia, “Quantum mechanics of time travel” — CC BY-SA 4.0 (local pilot corpus)"
+    },
+    {
+      "id": "wr-19",
+      "answer": "KNOT",
+      "clue": "Closed curve in a 3-manifold; arithmetic topology pairs prime ideals with these.",
+      "article_id": "wiki:Arithmetic_topology",
+      "source_title": "Arithmetic topology",
+      "source_url": "https://en.wikipedia.org/wiki/Arithmetic_topology",
+      "domain": "mathematics",
+      "chunk_id": "wiki:Arithmetic_topology:c000",
+      "source_excerpt": "Ideals in the ring of integers correspond to links, and prime ideals correspond to knots.",
+      "source_hash": "879f24642529911fb3e8010f225fcddd010b5d5a7b38c74d5f2cfaa519e5dd30",
+      "chunk_sha256": "82a0d0cca7ce1e1eeb05d5a5478e53f796b7f3fc3bd7f579287c06c9e0874bbf",
+      "retrieval_query": "arithmetic topology prime ideals knots",
+      "retrieval_rank": 1,
+      "attribution": "Wikipedia, “Arithmetic topology” — CC BY-SA 4.0 (local pilot corpus)"
+    },
+    {
+      "id": "wr-20",
+      "answer": "CULTURE",
+      "clue": "Shared beliefs and practices whose role in education is studied by educational anthropologists.",
+      "article_id": "wiki:Educational_anthropology",
+      "source_title": "Educational anthropology",
+      "source_url": "https://en.wikipedia.org/wiki/Educational_anthropology",
+      "domain": "social_science",
+      "chunk_id": "wiki:Educational_anthropology:c000",
+      "source_excerpt": "Educational anthropology, or the anthropology of education, is a subfield of sociocultural anthropology that focuses on the role of culture in education and how educational settings shape social processes and cultural relations.",
+      "source_hash": "928a1075f435df4a60bd917b323d2d7a8a9ab73b3d3a24df24e005da47ae8c4a",
+      "chunk_sha256": "1d189c00e055f1e9d861d877b2e927eaa65b3b93f5e35094a60ff0fe9a440c80",
+      "retrieval_query": "culture educational anthropology classrooms",
+      "retrieval_rank": 1,
+      "attribution": "Wikipedia, “Educational anthropology” — CC BY-SA 4.0 (local pilot corpus)"
+    }
+  ]
+}
