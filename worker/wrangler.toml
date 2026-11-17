@@ -1,0 +1,14 @@
+name = "play-score"
+main = "worker.js"
+compatibility_date = "2026-11-01"
+account_id = "6f8647004f6d51d04797d4b6328c3af1"
+
+# Create once:  wrangler kv namespace create SCORES
+# then paste the returned id below.
+[[kv_namespaces]]
+binding = "SCORES"
+id = "edee1e7c5ce1481a9c5692e52513d67c"
+
+[vars]
+# keep the secret out of this file:
+#   wrangler secret put SCORE_SECRET
