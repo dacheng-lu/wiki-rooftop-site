@@ -28,7 +28,8 @@ function card(e) {
   const ol = el("ol");
   for (const c of e.claims) {
     const li = el("li");
-    li.append(el("div", {}, c.claim));
+    li.append(el("div", {}, c.claim_zh || c.claim));
+    if (c.claim_zh) li.append(el("div", { style: "color:#8fa0bd;font-size:12.5px" }, c.claim));
     const det = el("details");
     det.append(el("summary", {}, "原文引用"));
     det.append(el("blockquote", {}, c.quote));
