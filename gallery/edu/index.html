@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日图文 — Play</title>
+<style>
+:root{--bg:#0b1022;--card:#141a30;--line:#26304d;--text:#eef2ff;--muted:#9fb0cc;--gold:#d4af37;--ok:#3fb27f;--warn:#c26b3a}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#0b1022;color:var(--text);font:16px/1.65 -apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif}
+main{max-width:1100px;margin:0 auto;padding:32px 20px 80px}
+header{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;margin-bottom:8px}
+h1{font-size:26px}
+.sub{color:var(--muted);font-size:14px;margin-bottom:26px}
+.grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
+article{border:1px solid var(--line);border-radius:16px;background:var(--card);overflow:hidden;display:flex;flex-direction:column;min-width:0}
+img{width:100%;max-width:100%;aspect-ratio:1;object-fit:cover;display:block;background:#0f1424}
+.body{padding:16px 16px 18px;display:flex;flex-direction:column;gap:10px;flex:1}
+.rev{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;background:#2b3a5c;color:#c8b06a;font-size:11px;font-weight:600;vertical-align:middle}
+h2{font-size:19px}
+ol{list-style:none;display:flex;flex-direction:column;gap:8px}
+li{font-size:14px;color:#dbe4f7}
+details{margin-top:2px}
+summary{cursor:pointer;color:var(--muted);font-size:12px}
+blockquote{border-left:2px solid var(--gold);padding-left:10px;margin-top:6px;color:var(--muted);font-size:13px}
+.score{margin-top:auto;border-top:1px solid var(--line);padding-top:12px;display:flex;flex-direction:column;gap:8px}
+.row{display:flex;align-items:center;gap:8px;justify-content:space-between}
+.row span{font-size:12px;color:var(--muted);min-width:78px}
+.btns{display:flex;gap:4px}
+button{cursor:pointer;width:30px;height:30px;border-radius:8px;border:1px solid var(--line);background:#0f1526;color:var(--text);font-size:13px}
+button[aria-pressed=true]{background:var(--gold);color:#1a1405;border-color:var(--gold);font-weight:700}
+button:disabled{opacity:.45;cursor:default}
+.status{font-size:12px;color:var(--muted);min-height:16px}
+.status.ok{color:var(--ok)} .status.err{color:var(--warn)}
+.avg{font-size:12px;color:var(--ok)}
+footer{margin-top:30px;color:var(--muted);font-size:13px}
+a{color:var(--muted)}
+</style>
+</head>
+<body data-prefix="edu-">
+<main>
+  <header><h1>每日图文 · 教学版</h1><a href="../">← Play</a></header>
+  <p class="sub">每条由本机 4B 模型从离线维基抽取，3 条事实、逐字引用、一张配图。打分只需点击。</p>
+  <div class="grid" id="grid"></div>
+  <footer id="foot">加载中…</footer>
+</main>
+<script src="gallery.js"></script>
+</body>
+</html>

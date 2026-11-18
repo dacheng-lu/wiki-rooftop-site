@@ -1,5 +1,7 @@
 /* Daily gallery: click-to-score, three dimensions, one POST per entry. */
 const API = "https://play-score.ludacheng199876.workers.dev";
+const ITEM_PREFIX = document.body.dataset.prefix || "";
+const itemId = (e) => ITEM_PREFIX + e.id;
 const DIMS = [
   ["match", "图文匹配"],
   ["quality", "图片质量"],
@@ -76,7 +78,7 @@ function card(e) {
         const r = await fetch(`${API}/api/score`, {
           method: "POST",
           headers: { "content-type": "application/json" },
-          body: JSON.stringify({ item: e.id, dims: chosen, nonce: e.nonce }),
+          body: JSON.stringify({ item: itemId(e), dims: chosen, nonce: e.nonce }),
         });
         const j = await r.json();
         if (!r.ok) throw new Error(j.error || r.status);
@@ -96,9 +98,9 @@ function card(e) {
 
   async function refreshAvg() {
     try {
-      const r = await fetch(`${API}/api/scores?item=${encodeURIComponent(e.id)}`);
+      const r = await fetch(`${API}/api/scores?item=${encodeURIComponent(itemId(e))}`);
       const j = await r.json();
-      const a = j.items?.[e.id];
+      const a = j.items?.[itemId(e)];
       if (a) avg.textContent = `均分 ${a.match} / ${a.quality} / ${a.translation}（${a.n} 人）`;
     } catch { /* offline is fine */ }
   }
