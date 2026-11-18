@@ -165,7 +165,7 @@
    "nonce": "b1955c20ff2b1517"
   },
   {
-   "id": "voice-gsv-v5turbo-en1",
+   "id": "voice-gsv-v5turbo-en1-refv2",
    "model": "GPT-SoVITS v5 turbo",
    "lang": "en",
    "sentence": "EN1",
@@ -180,10 +180,10 @@
     "f0": 240,
     "floor_db": -75.0
    },
-   "nonce": "62fd42e47da03515"
+   "nonce": null
   },
   {
-   "id": "voice-gsv-v5turbo-en2",
+   "id": "voice-gsv-v5turbo-en2-refv2",
    "model": "GPT-SoVITS v5 turbo",
    "lang": "en",
    "sentence": "EN2",
@@ -198,7 +198,7 @@
     "f0": 238,
     "floor_db": -87.6
    },
-   "nonce": "8089169f2175e396"
+   "nonce": null
   },
   {
    "id": "voice-gsv-v4-s1-p0",

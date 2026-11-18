@@ -12,7 +12,7 @@ main{max-width:1100px;margin:0 auto;padding:32px 20px 80px}
 header{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;margin-bottom:8px}
 h1{font-size:26px}
 .sub{color:var(--muted);font-size:14px;margin-bottom:26px}
-.grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
+.grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr))}
 article{border:1px solid var(--line);border-radius:16px;background:var(--card);overflow:hidden;display:flex;flex-direction:column;min-width:0}
 img{width:100%;max-width:100%;aspect-ratio:1;object-fit:cover;display:block;background:#0f1424}
 .body{padding:16px 16px 18px;display:flex;flex-direction:column;gap:10px;flex:1}
@@ -24,7 +24,7 @@ details{margin-top:2px}
 summary{cursor:pointer;color:var(--muted);font-size:12px}
 blockquote{border-left:2px solid var(--gold);padding-left:10px;margin-top:6px;color:var(--muted);font-size:13px}
 .score{margin-top:auto;border-top:1px solid var(--line);padding-top:12px;display:flex;flex-direction:column;gap:8px}
-.row{display:flex;align-items:center;gap:8px;justify-content:space-between}
+.row{display:flex;align-items:center;gap:8px;justify-content:space-between;flex-wrap:wrap}
 .row span{font-size:12px;color:var(--muted);min-width:78px}
 .btns{display:flex;gap:4px}
 button{cursor:pointer;width:30px;height:30px;border-radius:8px;border:1px solid var(--line);background:#0f1526;color:var(--text);font-size:13px}
@@ -35,15 +35,25 @@ button:disabled{opacity:.45;cursor:default}
 .avg{font-size:12px;color:var(--ok)}
 footer{margin-top:30px;color:var(--muted);font-size:13px}
 a{color:var(--muted)}
+.play-link{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;
+  gap:16px;padding:16px 18px;margin:0 0 24px;color:var(--text);
+  background:#171e36;border:1px solid #3a4669;border-radius:14px;text-decoration:none}
+.play-link strong{color:#f6d997}.play-link:hover{border-color:#d4af37}
+.play-link:focus-visible{outline:2px solid #f6d997;outline-offset:4px}
+.play-link small{color:var(--muted);font-size:13px}
 </style>
 </head>
 <body>
 <main>
   <header><h1>每日图文</h1><div><a href="voice/">声音对比 →</a> · <a href="../">← Play</a></div></header>
   <p class="sub">每条由本机 4B 模型从离线维基抽取，3 条事实、逐字引用、一张配图。打分只需点击。</p>
+  <a class="play-link" href="play/">
+    <strong>客户一小时后到</strong>
+    <small>四条交付路线，选一条试试 →</small>
+  </a>
   <div class="grid" id="grid"></div>
   <footer id="foot">加载中…</footer>
 </main>
-<script src="gallery.js"></script>
+<script type="module" src="gallery.js"></script>
 </body>
 </html>

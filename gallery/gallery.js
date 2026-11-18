@@ -1,5 +1,5 @@
 /* Daily gallery: click-to-score, three dimensions, one POST per entry. */
-const API = "https://play-score.ludacheng199876.workers.dev";
+import { createScorePanel } from "./scoring.mjs";
 const DIMS = [
   ["match", "图文匹配"],
   ["quality", "图片质量"],
@@ -7,8 +7,7 @@ const DIMS = [
 ];
 const KEY = "play.score.v1";
 
-const state = JSON.parse(localStorage.getItem(KEY) || "{}");
-const save = () => localStorage.setItem(KEY, JSON.stringify(state));
+const scorePanel = createScorePanel({ key: KEY, dimensions: DIMS, el, countLabel: "人" });
 
 function el(tag, attrs = {}, ...kids) {
   const n = document.createElement(tag);
@@ -40,72 +39,8 @@ function card(e) {
   }
   body.append(ol);
 
-  const score = el("div", { class: "score" });
-  const chosen = { ...(state[e.id]?.dims || {}) };
-  const status = el("div", { class: "status" });
-  const avg = el("div", { class: "avg" });
-
-  for (const [key, label] of DIMS) {
-    const row = el("div", { class: "row" });
-    row.append(el("span", {}, label));
-    const btns = el("div", { class: "btns" });
-    for (let v = 1; v <= 5; v++) {
-      const b = el("button", { type: "button", "aria-pressed": String(chosen[key] === v) }, String(v));
-      b.addEventListener("click", () => {
-        chosen[key] = v;
-        [...btns.children].forEach((x) => x.setAttribute("aria-pressed", String(x.textContent === String(v))));
-        submit();
-      });
-      btns.append(b);
-    }
-    row.append(btns);
-    score.append(row);
-  }
-  score.append(status, avg);
-
-  let timer = null;
-  let inflight = false;
-  async function submit() {
-    clearTimeout(timer);
-    timer = setTimeout(async () => {
-      if (inflight) return;
-      inflight = true;
-      status.className = "status";
-      status.textContent = "提交中…";
-      try {
-        const r = await fetch(`${API}/api/score`, {
-          method: "POST",
-          headers: { "content-type": "application/json" },
-          body: JSON.stringify({ item: e.id, dims: chosen, nonce: e.nonce }),
-        });
-        const j = await r.json();
-        if (!r.ok) throw new Error(j.error || r.status);
-        state[e.id] = { dims: { ...chosen }, ts: Date.now() };
-        save();
-        status.className = "status ok";
-        status.textContent = "已记录";
-        refreshAvg();
-      } catch (err) {
-        status.className = "status err";
-        status.textContent = `未记录：${err.message}`;
-      } finally {
-        inflight = false;
-      }
-    }, 700);
-  }
-
-  async function refreshAvg() {
-    try {
-      const r = await fetch(`${API}/api/scores?item=${encodeURIComponent(e.id)}`);
-      const j = await r.json();
-      const a = j.items?.[e.id];
-      if (a) avg.textContent = `均分 ${a.match} / ${a.quality} / ${a.translation}（${a.n} 人）`;
-    } catch { /* offline is fine */ }
-  }
-
-  body.append(score);
+  body.append(scorePanel(e));
   art.append(img, body);
-  refreshAvg();
   return art;
 }
 
@@ -114,6 +49,7 @@ async function main() {
   let data;
   try {
     const r = await fetch("entries.json", { cache: "no-store" });
+    if (!r.ok) throw new Error(r.status);
     data = await r.json();
   } catch {
     document.getElementById("foot").textContent = "还没有条目（entries.json 未生成）。";

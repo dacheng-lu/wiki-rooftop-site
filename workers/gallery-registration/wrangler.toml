@@ -1,0 +1,21 @@
+name = "play-gallery-registration"
+main = "worker.mjs"
+compatibility_date = "2026-11-18"
+workers_dev = true
+preview_urls = false
+
+[vars]
+GALLERY_ORIGIN = "https://play.dev-lu.com"
+
+[[d1_databases]]
+binding = "REGISTRATIONS"
+database_name = "play-gallery-registration"
+database_id = "00000000-0000-0000-0000-000000000000"
+
+[[ratelimits]]
+name = "REGISTRATION_LIMIT"
+namespace_id = "149921"
+simple = { limit = 10, period = 60 }
+
+[triggers]
+crons = ["17 3 * * *"]
