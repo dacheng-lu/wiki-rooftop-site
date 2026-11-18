@@ -12,6 +12,8 @@ main{max-width:980px;margin:0 auto;padding:32px 20px 80px}
 header{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
 h1{font-size:25px}
 .sub{color:var(--muted);font-size:14px;margin:8px 0 26px}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+.filters button{width:auto;padding:8px 14px;font-size:13px}
 .list{display:flex;flex-direction:column;gap:14px}
 article{border:1px solid var(--line);border-radius:14px;background:var(--card);padding:16px}
 .top{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:baseline}
@@ -36,6 +38,12 @@ a{color:var(--muted)}
 <main>
   <header><h1>声音对比</h1><a href="../">← 每日图文</a></header>
   <p class="sub">同一段参考声音、同一组中文句子，五个本地模型各生成三条。点分数即刻记录 —— 像不像、自然度、干净度各 1–5。</p>
+  <div class="filters" id="filters" role="group" aria-label="音高筛选">
+    <button type="button" data-pitch="all" aria-pressed="true">全部</button>
+    <button type="button" data-pitch="0" aria-pressed="false">原音</button>
+    <button type="button" data-pitch="-2" aria-pressed="false">−2 半音</button>
+    <button type="button" data-pitch="-4" aria-pressed="false">−4 半音</button>
+  </div>
   <div class="list" id="list"></div>
   <footer id="foot">加载中…</footer>
 </main>
