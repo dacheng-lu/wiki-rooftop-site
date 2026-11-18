@@ -36,13 +36,13 @@ a{color:var(--muted)}
 </head>
 <body>
 <main>
-  <header><h1>声音对比</h1><a href="../">← 每日图文</a></header>
-  <p class="sub">同一段参考声音、同一组中文句子，五个本地模型各生成三条。点分数即刻记录 —— 像不像、自然度、干净度各 1–5。</p>
+  <header><h1>声音对比 · S.J.</h1><a href="../">← 每日图文</a></header>
+  <p class="sub">声源代号 <b>S.J.</b>。同一段参考录音，五个本地模型分别生成中文与英文样本；另有两条降调路线（后期变调 / 先把参考音压低再合成）。点分数即刻记录 —— 像不像、自然度、干净度各 1–5。</p>
   <div class="filters" id="filters" role="group" aria-label="音高筛选">
-    <button type="button" data-pitch="all" aria-pressed="true">全部</button>
-    <button type="button" data-pitch="0" aria-pressed="false">原音</button>
-    <button type="button" data-pitch="-2" aria-pressed="false">−2 半音</button>
-    <button type="button" data-pitch="-4" aria-pressed="false">−4 半音</button>
+    <button type="button" data-filter="all" aria-pressed="true">全部</button>
+    <button type="button" data-filter="zh" aria-pressed="false">中文</button>
+    <button type="button" data-filter="en" aria-pressed="false">English</button>
+    <button type="button" data-filter="ref" aria-pressed="false">参考音降调</button>
   </div>
   <div class="list" id="list"></div>
   <footer id="foot">加载中…</footer>

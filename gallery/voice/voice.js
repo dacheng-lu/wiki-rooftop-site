@@ -30,10 +30,12 @@ function fmt(m) {
 function card(e) {
   const art = el("article");
   const top = el("div", { class: "top" });
-  const label = e.pitch === 0 ? "原音" : `${e.pitch} 半音`;
+  const label = e.method === "ref" ? `参考音 −${e.shift} 半音`
+    : e.method === "post" ? `后期 −${-e.pitch} 半音`
+    : e.lang === "en" ? "English" : "原音";
   top.append(el("div", { class: "model" }, `${e.model} · ${e.sentence} · ${label}`));
   top.append(el("div", { class: "meta" }, fmt(e.metrics)));
-  art.dataset.pitch = String(e.pitch);
+  art.dataset.filter = `${e.lang} ${e.method === "ref" ? "ref" : "base"}`;
   art.append(top);
   art.append(el("div", { class: "text" }, e.text));
 
@@ -90,10 +92,17 @@ function card(e) {
 
   async function refresh() {
     try {
-      const r = await fetch(`${API}/api/scores?item=${encodeURIComponent(e.id)}`);
-      const j = await r.json();
-      const a = j.items?.[e.id];
-      if (a) avg.textContent = `均分 ${a.match} / ${a.quality} / ${a.translation}（${a.n} 人）`;
+      const ids = e.legacy ? [e.id, e.legacy] : [e.id];
+      const parts = await Promise.all(ids.map(async (id) => {
+        const r = await fetch(`${API}/api/scores?item=${encodeURIComponent(id)}`);
+        const j = await r.json();
+        return j.items?.[id] || null;
+      }));
+      const rows = parts.filter(Boolean);
+      if (!rows.length) return;
+      const n = rows.reduce((s, a) => s + a.n, 0);
+      const mean = (k) => (rows.reduce((s, a) => s + a[k] * a.n, 0) / n).toFixed(1);
+      avg.textContent = `均分 ${mean("match")} / ${mean("quality")} / ${mean("translation")}（${n} 次）`;
     } catch { /* offline ok */ }
   }
   refresh();
@@ -114,17 +123,18 @@ async function main() {
 
   const filters = document.getElementById("filters");
   filters?.addEventListener("click", (ev) => {
-    const btn = ev.target.closest("button[data-pitch]");
+    const btn = ev.target.closest("button[data-filter]");
     if (!btn) return;
-    const want = btn.dataset.pitch;
+    const want = btn.dataset.filter;
     [...filters.querySelectorAll("button")].forEach((b) =>
       b.setAttribute("aria-pressed", String(b === btn)));
     for (const art of list.querySelectorAll("article")) {
-      art.hidden = want !== "all" && art.dataset.pitch !== want;
+      const tags = art.dataset.filter.split(" ");
+      art.hidden = want !== "all" && !tags.includes(want);
     }
   });
   document.getElementById("foot").textContent =
-    `${data.count} 个样本 · 生成于 ${data.built_at} · 参考声音为同一段私人录音，未上传`;
+    `${data.count} 个样本 · 生成于 ${data.built_at} · 声源 S.J. 的参考录音只在本机，未上传`;
 }
 
 main();
