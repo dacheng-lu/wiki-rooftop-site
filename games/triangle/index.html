@@ -886,6 +886,41 @@
       font-size: 12px;
       color: #787296;
     }
+
+    /* Result card: the front face must define the height, otherwise absolutely
+       positioned faces overflow onto the action buttons on narrow screens. */
+    .result-flip-stage {
+      min-height: 0;
+      flex: none;
+    }
+    .result-flip-stage .card-3d-inner {
+      height: auto;
+      display: grid;
+    }
+    .result-flip-stage .card-face {
+      position: relative;
+      inset: auto;
+      grid-area: 1 / 1;
+    }
+    .result-flip-stage .card-face.back {
+      position: absolute;
+      inset: 0;
+    }
+    .result-actions {
+      margin-top: 18px;
+      padding-bottom: calc(8px + env(safe-area-inset-bottom, 0px));
+    }
+    @media (max-width: 480px) {
+      .result-actions {
+        flex-direction: column;
+      }
+      .result-actions .btn-gold,
+      .result-actions .btn-outline {
+        width: 100%;
+        margin-left: 0 !important;
+        justify-content: center;
+      }
+    }
   </style>
 </head>
 <body>
