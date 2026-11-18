@@ -724,6 +724,20 @@
       -webkit-text-fill-color: transparent;
     }
 
+    .res-portrait {
+      display: block;
+      width: 116px;
+      height: 116px;
+      margin: 10px auto 12px;
+      border: 1px solid rgba(212, 175, 55, 0.35);
+      border-radius: 10px;
+      background: #0b1022;
+      image-rendering: pixelated;
+      object-fit: cover;
+    }
+    @media (max-width: 420px) {
+      .res-portrait { width: 92px; height: 92px; }
+    }
     .res-sigil-box {
       width: 52px;
       height: 52px;
@@ -1122,6 +1136,7 @@
                     <div id="res-sigil" class="res-sigil-box"></div>
                   </div>
 
+                  <img id="res-portrait" class="res-portrait" alt="" width="128" height="128" loading="lazy">
                   <div id="res-tags" class="res-tags-row"></div>
 
                   <div class="res-box">

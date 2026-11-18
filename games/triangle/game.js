@@ -1056,6 +1056,13 @@
         document.getElementById("res-blindspot").textContent = loc.blindspot;
         document.getElementById("res-sigil").innerHTML = getTotemSVG(arch.sigil);
 
+        const portrait = document.getElementById("res-portrait");
+        if (portrait) {
+          const file = state.archetypeKey.toLowerCase().replace(/_/g, "-");
+          portrait.src = "img/" + file + ".png";
+          portrait.alt = loc.title;
+        }
+
         const tagsWrap = document.getElementById("res-tags");
         tagsWrap.innerHTML = loc.tags.map(function (tag) {
           return '<span class="res-tag-chip">' + tag + '</span>';
