@@ -45,6 +45,46 @@ async function hmac(secret, msg) {
   return [...new Uint8Array(sig)].map((b) => b.toString(16).padStart(2, "0")).join("").slice(0, 16);
 }
 
+
+// --- aggregate document -------------------------------------------------------
+// Cloudflare's free tier allows 1,000 KV list() operations per day, and one page
+// load used to spend one. The aggregate now lives in a single key, keyed by rater
+// so that re-scoring replaces instead of double counting.
+const AGG_KEY = "agg:v1";
+
+function summarise(entry) {
+  const raters = Object.values(entry.raters || {});
+  const n = raters.length;
+  if (!n) return null;
+  const mean = (k) => +(raters.reduce((s, r) => s + (r[k] || 0), 0) / n).toFixed(2);
+  return { n, match: mean("match"), quality: mean("quality"), translation: mean("translation"),
+           last: raters.reduce((a, r) => (r.ts > a ? r.ts : a), "") };
+}
+
+function present(doc) {
+  const items = {};
+  for (const [item, entry] of Object.entries(doc.items || {})) {
+    const sum = summarise(entry);
+    if (sum) items[item] = sum;
+  }
+  return { items, rows: doc.rows || [], updated: doc.updated || null };
+}
+
+async function readAggregate(env) {
+  const raw = await env.SCORES.get(AGG_KEY);
+  if (!raw) return { items: {}, rows: [], updated: null };
+  try { return JSON.parse(raw); } catch { return { items: {}, rows: [], updated: null }; }
+}
+
+async function bumpAggregate(env, item, dims, ts, rater) {
+  const doc = await readAggregate(env);
+  const entry = (doc.items[item] ||= { raters: {} });
+  entry.raters[rater] = { ...dims, ts };
+  doc.updated = ts;
+  doc.rows = ([...(doc.rows || []), { item, ts, ...dims }]).slice(-200);
+  await env.SCORES.put(AGG_KEY, JSON.stringify(doc));
+}
+
 const clamp = (v) => (Number.isFinite(+v) ? Math.min(5, Math.max(1, Math.round(+v))) : null);
 
 export default {
@@ -77,27 +117,38 @@ export default {
       await env.SCORES.put(key, JSON.stringify({ item, dims: clean, ts }), {
         metadata: { item, ts, ...clean, rater },
       });
+      await bumpAggregate(env, item, clean, ts, rater);
       return json({ ok: true, key, replaced: true }, 200, req);
     }
 
     if (url.pathname === "/api/scores") {
+      const doc = present(await readAggregate(env));
       const item = url.searchParams.get("item");
-      const prefix = item ? `s:${item}:` : "s:";
-      const list = await env.SCORES.list({ prefix, limit: 1000 });
+      if (item) {
+        const one = doc.items[item];
+        return json({ items: one ? { [item]: one } : {}, rows: [] }, 200, req);
+      }
+      return json(doc, 200, req);
+    }
+
+    // One-off repair: rebuild the aggregate from the raw score keys. Costs list()
+    // operations, so it is protected and only used when the daily quota allows.
+    if (url.pathname === "/api/rebuild" && req.method === "POST") {
+      let body = {};
+      try { body = await req.json(); } catch { /* empty body */ }
+      if (String(body.key || "") !== String(env.SCORE_SECRET || "").slice(0, 12)) {
+        return json({ error: "forbidden" }, 403, req);
+      }
+      const list = await env.SCORES.list({ prefix: "s:", limit: 1000 });
       const rows = list.keys.map((k) => k.metadata).filter(Boolean);
-      const agg = {};
+      const doc = { items: {}, rows: rows.slice(-200), updated: new Date().toISOString() };
       for (const r of rows) {
-        const a = (agg[r.item] ||= { n: 0, match: 0, quality: 0, translation: 0 });
-        a.n += 1;
-        a.match += r.match || 0; a.quality += r.quality || 0; a.translation += r.translation || 0;
+        const entry = (doc.items[r.item] ||= { raters: {} });
+        entry.raters[r.rater || "legacy"] = { match: r.match, quality: r.quality, translation: r.translation, ts: r.ts };
       }
-      for (const k of Object.keys(agg)) {
-        const a = agg[k];
-        a.match = +(a.match / a.n).toFixed(2);
-        a.quality = +(a.quality / a.n).toFixed(2);
-        a.translation = +(a.translation / a.n).toFixed(2);
-      }
-      return json({ items: agg, rows: rows.slice(-200) }, 200, req);
+      await env.SCORES.put(AGG_KEY, JSON.stringify(doc));
+      const shown = present(doc);
+      return json({ ok: true, keys: rows.length, items: Object.keys(shown.items).length }, 200, req);
     }
 
     return json({ error: "not found" }, 404, req);

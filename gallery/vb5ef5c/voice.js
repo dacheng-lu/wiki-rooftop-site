@@ -119,7 +119,23 @@ async function main() {
     document.getElementById("foot").textContent = "还没有样本。";
     return;
   }
-  for (const e of data.entries || []) list.append(card(e));
+  // Only show what has not been rated yet: one fetch of all scores, then filter.
+  let scored = new Set();
+  try {
+    const r = await fetch(`${API}/api/scores`, { cache: "no-store" });
+    const j = await r.json();
+    scored = new Set(Object.entries(j.items || {}).filter(([, v]) => v.n > 0).map(([k]) => k));
+  } catch { /* offline: show everything */ }
+
+  let shown = 0;
+  for (const e of data.entries || []) {
+    if (scored.has(e.id) || (e.legacy && scored.has(e.legacy))) continue;
+    list.append(card(e));
+    shown += 1;
+  }
+  if (!shown) {
+    list.append(el("p", { class: "status" }, "全部已评分。想重听旧的，在下面切换。"));
+  }
 
   const filters = document.getElementById("filters");
   filters?.addEventListener("click", (ev) => {
@@ -134,7 +150,7 @@ async function main() {
     }
   });
   document.getElementById("foot").textContent =
-    `${data.count} 个样本 · 生成于 ${data.built_at} · 声源 S.J. 的参考录音只在本机，未上传`;
+    `${shown} 条待评 / 共 ${data.count} 条 · 生成于 ${data.built_at} · 参考录音只在本机`;
 }
 
 main();
