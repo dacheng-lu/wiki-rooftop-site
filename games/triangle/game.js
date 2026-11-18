@@ -895,6 +895,9 @@
         document.getElementById("ui-blindspot-label").textContent = t.blindspotLabel;
         document.getElementById("ui-shadow-unlocked").textContent = t.shadowUnlocked;
         document.getElementById("ui-flip-to-front-btn").textContent = t.flipToFrontBtn;
+        const dl = document.getElementById("btn-download-card");
+        if (dl) dl.addEventListener("click", function (e) { e.stopPropagation(); downloadArchetypeCard(); });
+
         document.getElementById("btn-flip-toggle").textContent = t.btnFlip;
         document.getElementById("btn-copy-result").textContent = t.btnCopy;
         document.getElementById("btn-restart-game").textContent = t.btnRestart;
@@ -977,7 +980,42 @@
         });
       }
 
+      function revealChoiceCard(cardIndex) {
+        const card = QUESTIONS[state.step].cards[cardIndex];
+        if (!card) return;
+        const box = document.getElementById("card-preview");
+        const img = document.getElementById("cp-img");
+        if (!box || !img) return;
+        img.src = "cards/" + card.symbol + ".png";
+        img.alt = card.arcana[state.lang] || "";
+        document.getElementById("cp-arcana").textContent = card.arcana[state.lang] || "";
+        document.getElementById("cp-title").textContent = card.title[state.lang] || "";
+        box.hidden = false;
+        return box;
+      }
+
       function handleCardPick(cardIndex) {
+        if (state.isFlipping) return;
+        // first click: show the card large, advance only after the reader dismisses it
+        const box = revealChoiceCard(cardIndex);
+        if (box) {
+          const close = function () {
+            box.hidden = true;
+            box.removeEventListener("click", close);
+            document.removeEventListener("keydown", onKey);
+            advanceAfterPick(cardIndex);
+          };
+          const onKey = function (e) {
+            if (e.key === "Escape" || e.key === "Enter" || e.key === " ") { e.preventDefault(); close(); }
+          };
+          box.addEventListener("click", close);
+          document.addEventListener("keydown", onKey);
+          return;
+        }
+        advanceAfterPick(cardIndex);
+      }
+
+      function advanceAfterPick(cardIndex) {
         if (state.isFlipping) return;
         state.isFlipping = true;
 
@@ -1067,6 +1105,97 @@
         tagsWrap.innerHTML = loc.tags.map(function (tag) {
           return '<span class="res-tag-chip">' + tag + '</span>';
         }).join("");
+      }
+
+      function downloadArchetypeCard() {
+        if (!state.archetypeKey) return;
+        const arch = ARCHETYPES[state.archetypeKey];
+        const loc = arch[state.lang];
+        const W = 1080, H = 1350;
+        const cv = document.createElement("canvas");
+        cv.width = W; cv.height = H;
+        const ctx = cv.getContext("2d");
+
+        const bg = ctx.createLinearGradient(0, 0, W, H);
+        bg.addColorStop(0, "#1b1440");
+        bg.addColorStop(0.55, "#0d0a22");
+        bg.addColorStop(1, "#05040f");
+        ctx.fillStyle = bg; ctx.fillRect(0, 0, W, H);
+
+        // faint star field, deterministic so every export matches
+        ctx.fillStyle = "rgba(246,230,180,0.55)";
+        let seed = 20261118;
+        for (let i = 0; i < 160; i++) {
+          seed = (seed * 1103515245 + 12345) & 0x7fffffff;
+          const x = seed % W;
+          seed = (seed * 1103515245 + 12345) & 0x7fffffff;
+          const y = seed % H;
+          const r = ((seed >> 8) % 3) * 0.5 + 0.5;
+          ctx.globalAlpha = 0.25 + ((seed >> 4) % 40) / 100;
+          ctx.fillRect(x, y, r, r);
+        }
+        ctx.globalAlpha = 1;
+
+        // gold frame
+        ctx.strokeStyle = "rgba(212,175,55,0.75)";
+        ctx.lineWidth = 4;
+        ctx.strokeRect(48, 48, W - 96, H - 96);
+        ctx.strokeStyle = "rgba(246,230,180,0.25)";
+        ctx.lineWidth = 1;
+        ctx.strokeRect(66, 66, W - 132, H - 132);
+
+        // portrait
+        const img = new Image();
+        img.onload = function () {
+          const size = 460;
+          ctx.imageSmoothingEnabled = false;
+          ctx.drawImage(img, (W - size) / 2, 120, size, size);
+          ctx.strokeStyle = "rgba(212,175,55,0.6)";
+          ctx.lineWidth = 3;
+          ctx.strokeRect((W - size) / 2, 120, size, size);
+          drawText();
+        };
+        img.src = "img/" + state.archetypeKey.toLowerCase().replace(/_/g, "-") + ".png";
+
+        function drawText() {
+          ctx.textAlign = "center";
+          ctx.fillStyle = "#d4af37";
+          ctx.font = "600 30px Georgia, 'Songti SC', serif";
+          ctx.fillText(arch.code, W / 2, 650);
+
+          ctx.fillStyle = "#f6e6b4";
+          ctx.font = "700 68px Georgia, 'Songti SC', serif";
+          wrap(loc.title, W / 2, 750, 860, 78);
+
+          ctx.fillStyle = "#b9b3cc";
+          ctx.font = "400 30px Georgia, 'Songti SC', serif";
+          wrap(loc.formula, W / 2, 890, 820, 42);
+
+          const tags = (loc.tags || []).join("   ");
+          ctx.fillStyle = "#8f88ab";
+          ctx.font = "400 26px Georgia, 'Songti SC', serif";
+          ctx.fillText(tags, W / 2, 1010);
+
+          ctx.fillStyle = "rgba(246,230,180,0.55)";
+          ctx.font = "400 24px Georgia, serif";
+          ctx.fillText("play.dev-lu.com/games/triangle", W / 2, 1240);
+
+          const a = document.createElement("a");
+          a.download = "archetype-" + state.archetypeKey.toLowerCase().replace(/_/g, "-") + ".png";
+          a.href = cv.toDataURL("image/png");
+          a.click();
+        }
+
+        function wrap(text, cx, y, maxW, lh) {
+          const chars = String(text).split("");
+          let line = "", lines = [];
+          for (const ch of chars) {
+            if (ctx.measureText(line + ch).width > maxW && line) { lines.push(line); line = ch; }
+            else line += ch;
+          }
+          if (line) lines.push(line);
+          lines.slice(0, 3).forEach((l, i) => ctx.fillText(l, cx, y + i * lh));
+        }
       }
 
       function drawTriangleRadar(smart, diligent, obedient) {
