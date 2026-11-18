@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /gallery/vb5ef5c/
+Disallow: /gallery/voice/
