@@ -756,7 +756,110 @@
             strength: "Unerschütterliche innere Gelassenheit und Immunität gegen künstliche Hektik.",
             blindspot: "Manchmal so entspannt, dass eine Aussicht verpasst wird, für die man sich kurz strecken müsste."
           }
-        }
+        },
+      STEADY_ORDER: {
+          code: "II · IV · CRUISER",
+          sigil: "hourglass",
+          zh: {
+            formula: "省力 + 守序 ＝ 静水巡航者",
+            title: "静水巡航者",
+            tags: ["#按部就班", "#不抢跑", "#稳定输出", "#情绪省电"],
+            desc: "你不需要把每件事都做到最亮，但你会把该做的准时做完。你尊重流程，也懂得给自己留余地：不抢跑、不硬撑、不在无谓的地方消耗。别人以为你只是低调，其实你在用最低的摩擦走最长的路。",
+            prescription: "偶尔主动揽一次「没人想做但重要」的活，你的稳定会第一次被人看见。",
+            roast: "「不是我慢，是我把力气留在了真正要用的那一天。」",
+            strength: "长期稳定的交付能力，几乎不会因为状态起伏而掉链子。",
+            blindspot: "太习惯按既定节奏走，遇到需要临场改道的机会时容易慢半拍。"
+          },
+          en: {
+            formula: "Low Burn + Order = Quiet Cruiser",
+            title: "The Quiet Cruiser",
+            tags: ["#Steady", "#NoSprint", "#Reliable", "#LowDrama"],
+            desc: "You do not need every task to shine; you need it finished on time. You respect the process and you protect your own margins: no sprinting, no grinding, no spending energy where it buys nothing. People read it as modesty. It is the lowest-friction route through a long road.",
+            prescription: "Take on one unglamorous task nobody wants. Your reliability will finally be visible.",
+            roast: "“I am not slow. I am saving the effort for the day it matters.”",
+            strength: "Consistent delivery that barely moves with your mood.",
+            blindspot: "So used to the planned pace that a sudden change of course can catch you half a beat late."
+          },
+          de: {
+            formula: "Wenig Aufwand + Ordnung = Ruhiger Kreuzer",
+            title: "Der ruhige Kreuzer",
+            tags: ["#Planmäßig", "#KeinSprint", "#Verlässlich", "#Nervenschonend"],
+            desc: "Nicht jede Aufgabe muss glänzen, aber jede muss pünktlich fertig sein. Du respektierst Verfahren und schützt deine Reserven: kein Vorpreschen, kein Durchbeißen, keine Energie an Stellen, die nichts einbringen. Andere nennen es Bescheidenheit. Es ist der reibungsärmste Weg über eine lange Strecke.",
+            prescription: "Übernimm einmal eine unspektakuläre, aber wichtige Aufgabe. Dann wird deine Verlässlichkeit sichtbar.",
+            roast: "„Ich bin nicht langsam – ich hebe die Kraft für den Tag auf, an dem es zählt.“",
+            strength: "Gleichmäßige Lieferung, die kaum mit der Stimmung schwankt.",
+            blindspot: "So sehr im geplanten Takt, dass ein plötzlicher Kurswechsel dich einen halben Schritt zu spät erwischt."
+          }
+        },
+      RULE_KEEPER: {
+          code: "III · V · KEEPER",
+          sigil: "pillar",
+          zh: {
+            formula: "老实 + 守序 ＝ 规矩守门人",
+            title: "规矩守门人",
+            tags: ["#说到做到", "#标准在线", "#不玩花活", "#可托付"],
+            desc: "你不靠小聪明取胜，你靠「这事儿交给我就行」。规则对你不是束缚，而是让事情可预期的方式。你会把标准执行到位，把承诺兑现，把交接做干净——团队里最先被信任的往往是你，虽然掌声总落在别处。",
+            prescription: "把「我一直这么做的」写下来说清楚，你的经验值得变成别人能复用的规则。",
+            roast: "「我没什么天才想法，但你敢把关键的事交给我，这本身就是一种天才。」",
+            strength: "极高的可托付度，交出去的事几乎不需要复查。",
+            blindspot: "过分依赖既有标准，遇到规则本身失效时会先执行、后怀疑。"
+          },
+          en: {
+            formula: "Honest + Order = Reliable Keeper",
+            title: "The Reliable Keeper",
+            tags: ["#KeepsWord", "#OnStandard", "#NoTricks", "#Trustworthy"],
+            desc: "You do not win on cleverness; you win on “give it to me.” Rules are not a cage to you — they are how things stay predictable. You hold the standard, keep the promise, hand over clean work. You are usually the first person trusted and the last one applauded.",
+            prescription: "Write down the “this is how I always do it” once. Your experience deserves to become a rule others can reuse.",
+            roast: "“I have no genius ideas. But you hand me the thing that matters — that is its own kind of genius.”",
+            strength: "Extremely high trustworthiness; handed work rarely needs re-checking.",
+            blindspot: "Over-reliance on existing standards: when the rule itself is broken, you execute before you doubt."
+          },
+          de: {
+            formula: "Ehrlich + Ordnung = Verlässlicher Hüter",
+            title: "Der verlässliche Hüter",
+            tags: ["#WortGehalten", "#NormTreue", "#KeineTricks", "#Vertrauenswürdig"],
+            desc: "Du gewinnst nicht durch Cleverness, sondern durch „gib es mir“. Regeln sind für dich kein Käfig, sondern die Bedingung dafür, dass Dinge berechenbar bleiben. Du hältst den Standard, hältst das Versprechen, übergibst sauber. Man vertraut dir zuerst und klatscht dir zuletzt.",
+            prescription: "Schreib das „so mache ich das immer“ einmal auf. Deine Erfahrung verdient, eine wiederverwendbare Regel zu werden.",
+            roast: "„Ich habe keine genialen Ideen. Aber du gibst mir das Wichtige – das ist eine eigene Art von Genie.“",
+            strength: "Sehr hohe Verlässlichkeit; übergebene Arbeit muss selten nachgeprüft werden.",
+            blindspot: "Zu viel Vertrauen in bestehende Standards: Wenn die Regel selbst kaputt ist, führst du erst aus und zweifelst später."
+          }
+        },
+      CHARGER: {
+          code: "V · II · CHARGER",
+          sigil: "anvil",
+          zh: {
+            formula: "肯干 + 敢破 ＝ 冲锋工匠",
+            title: "冲锋工匠",
+            tags: ["#先做再说", "#现场解决", "#不信流程", "#能扛事"],
+            desc: "你不太买「必须先走完流程」的账。事情卡住时，你的第一反应是上手把它推开，而不是再开一次会。你愿意出力，也不怕承担责任，代价是有时会在规则上留下毛边——但你确实把东西做出来了，而且比大多数人快。",
+            prescription: "每次硬闯之前，先花两分钟写一句「为什么必须绕开」，事后你会省下大量解释成本。",
+            roast: "「流程是为了防止出错，可我要是等流程批下来，这事早就黄了。」",
+            strength: "极强的推动力与现场解决能力，僵局里最需要的那个人。",
+            blindspot: "习惯用蛮力越过规则，长期会在组织里积累看不见的摩擦。"
+          },
+          en: {
+            formula: "Grit + Rule-Breaking = Front-Line Maker",
+            title: "The Front-Line Maker",
+            tags: ["#DoFirst", "#FixOnSite", "#NoProcess", "#CarriesWeight"],
+            desc: "You do not buy the idea that every step must be approved first. When something is stuck, your instinct is to push it, not to schedule another meeting. You bring effort and you take responsibility; the price is rough edges around the rules. But the thing gets built, and faster than most.",
+            prescription: "Before you force a shortcut, spend two minutes writing why it was necessary. You will save yourself a week of explaining.",
+            roast: "“Process exists to prevent mistakes. If I wait for the approval, the whole thing is dead.”",
+            strength: "Enormous drive and on-site problem solving; the person a deadlock needs.",
+            blindspot: "Forcing past rules builds invisible friction across an organisation over time."
+          },
+          de: {
+            formula: "Einsatz + Regelbruch = Macher an der Front",
+            title: "Der Macher an der Front",
+            tags: ["#ErstMachen", "#VorOrtLösen", "#KeinProzess", "#TrägtLast"],
+            desc: "Du glaubst nicht, dass jeder Schritt zuerst genehmigt werden muss. Wenn etwas blockiert, schiebst du es an, statt ein weiteres Meeting anzusetzen. Du bringst Einsatz und übernimmst Verantwortung; der Preis sind raue Kanten an den Regeln. Aber das Ding wird gebaut – und schneller als bei den meisten.",
+            prescription: "Bevor du eine Abkürzung erzwingst, schreib zwei Minuten auf, warum sie nötig war. Das spart dir später eine Woche Erklärungen.",
+            roast: "„Prozesse verhindern Fehler. Wenn ich auf die Freigabe warte, ist die Sache längst tot.“",
+            strength: "Enormer Antrieb und Problemlösung vor Ort; der Mensch, den eine Sackgasse braucht.",
+            blindspot: "Regeln mit Kraft zu übergehen erzeugt über die Zeit unsichtbare Reibung im ganzen Umfeld."
+          }
+        },
+
       };
 
       /* =====================================================================
@@ -1065,16 +1168,16 @@
         const level = (rawScores.smart + rawScores.diligent + rawScores.obedient) / 60;
         const spread = Math.max(s, d, o) - Math.min(s, d, o);
 
-        if (Math.min(s, d, o) >= 38 && spread <= 20) {
-          state.archetypeKey = "HEXAGON";        // no weak corner: ~5% of plays
-        } else if (level <= 0.33 && Math.max(s, d, o) <= 70) {
-          state.archetypeKey = "CHAOS_FREE";     // disengaged on every axis: ~2%
+        // Eight archetypes, each reachable: balanced profiles split by level,
+        // unbalanced ones by their weakest corner and by the runner-up axis.
+        if (spread <= 20) {
+          state.archetypeKey = (s + d + o) / 3 >= 40 ? "HEXAGON" : "CHAOS_FREE";
         } else if (d <= s && d <= o) {
-          state.archetypeKey = "SMART_OBEDIENT";
+          state.archetypeKey = s >= o ? "SMART_OBEDIENT" : "STEADY_ORDER";
         } else if (s <= d && s <= o) {
-          state.archetypeKey = "DILIGENT_OBEDIENT";
+          state.archetypeKey = d >= o ? "DILIGENT_OBEDIENT" : "RULE_KEEPER";
         } else {
-          state.archetypeKey = "SMART_DILIGENT";
+          state.archetypeKey = s >= d ? "SMART_DILIGENT" : "CHARGER";
         }
 
         switchScreen("result");
