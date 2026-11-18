@@ -1,6 +1,6 @@
 {
- "built_at": "2026-11-18T10:02:40",
- "count": 66,
+ "built_at": "2026-11-18T14:25:29",
+ "count": 69,
  "entries": [
   {
    "id": "voice-gsv-v5turbo-en1",
@@ -163,6 +163,60 @@
     "floor_db": -66.4
    },
    "nonce": "b1955c20ff2b1517"
+  },
+  {
+   "id": "voice-gsv-v5turbo-pros1",
+   "model": "GPT-SoVITS v5 turbo",
+   "lang": "en",
+   "sentence": "A",
+   "pitch": 0,
+   "method": "prosody",
+   "shift": 0,
+   "text": "The way you speak changes how people listen. Give it a try.",
+   "audio": "audio/gsv-v5turbo_pr1.mp3",
+   "metrics": {
+    "dur": 3.88,
+    "sim": 0.829,
+    "f0": 234,
+    "floor_db": -97.2
+   },
+   "nonce": "4ef07893b11db0ce"
+  },
+  {
+   "id": "voice-gsv-v5turbo-pros2",
+   "model": "GPT-SoVITS v5 turbo",
+   "lang": "en",
+   "sentence": "B",
+   "pitch": 0,
+   "method": "prosody",
+   "shift": 0,
+   "text": "The way you speak, changes how people listen. Give it a try.",
+   "audio": "audio/gsv-v5turbo_pr2.mp3",
+   "metrics": {
+    "dur": 5.44,
+    "sim": 0.798,
+    "f0": 235,
+    "floor_db": -180.0
+   },
+   "nonce": "b75bb065d062b3bc"
+  },
+  {
+   "id": "voice-gsv-v5turbo-pros3",
+   "model": "GPT-SoVITS v5 turbo",
+   "lang": "en",
+   "sentence": "C",
+   "pitch": 0,
+   "method": "prosody",
+   "shift": 0,
+   "text": "The way you speak. It changes how people listen. Give it a try.",
+   "audio": "audio/gsv-v5turbo_pr3.mp3",
+   "metrics": {
+    "dur": 4.54,
+    "sim": 0.856,
+    "f0": 238,
+    "floor_db": -97.3
+   },
+   "nonce": "091c8ff90da4c29a"
   },
   {
    "id": "voice-gsv-v5turbo-en1",
