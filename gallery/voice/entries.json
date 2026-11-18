@@ -1,0 +1,231 @@
+{
+ "built_at": "2026-11-18T08:30:12",
+ "count": 15,
+ "entries": [
+  {
+   "id": "voice-gsv-v4-s1",
+   "model": "GPT-SoVITS v4",
+   "sentence": "s1",
+   "text": "冰川是大量积雪经过多年压实后形成的巨大冰体，会缓慢向低处流动。",
+   "audio": "audio/gsv-v4_s1.mp3",
+   "metrics": {
+    "dur": 6.61,
+    "sim": 0.892,
+    "f0": 264,
+    "harm": 0.236,
+    "floor_db": -48.1
+   },
+   "nonce": "83bee1a8e069e217"
+  },
+  {
+   "id": "voice-gsv-v4-s2",
+   "model": "GPT-SoVITS v4",
+   "sentence": "s2",
+   "text": "蜜蜂通过舞蹈向同伴传递花蜜的方向和距离，这种行为被称为摇摆舞。",
+   "audio": "audio/gsv-v4_s2.mp3",
+   "metrics": {
+    "dur": 8.45,
+    "sim": 0.9,
+    "f0": 276,
+    "harm": 0.291,
+    "floor_db": -69.2
+   },
+   "nonce": "06ea93b10092a5f9"
+  },
+  {
+   "id": "voice-gsv-v4-s3",
+   "model": "GPT-SoVITS v4",
+   "sentence": "s3",
+   "text": "间歇泉每隔一段时间喷出热水和蒸汽，间隔长短取决于地下的管道结构。",
+   "audio": "audio/gsv-v4_s3.mp3",
+   "metrics": {
+    "dur": 8.2,
+    "sim": 0.918,
+    "f0": 270,
+    "harm": 0.262,
+    "floor_db": -63.8
+   },
+   "nonce": "8c8f11ff964d7576"
+  },
+  {
+   "id": "voice-gsv-v5dev-s1",
+   "model": "GPT-SoVITS v5 dev",
+   "sentence": "s1",
+   "text": "冰川是大量积雪经过多年压实后形成的巨大冰体，会缓慢向低处流动。",
+   "audio": "audio/gsv-v5dev_s1.mp3",
+   "metrics": {
+    "dur": 6.61,
+    "sim": 0.917,
+    "f0": 270,
+    "harm": 0.348,
+    "floor_db": -45.6
+   },
+   "nonce": "2fe259eb9deefe71"
+  },
+  {
+   "id": "voice-gsv-v5dev-s2",
+   "model": "GPT-SoVITS v5 dev",
+   "sentence": "s2",
+   "text": "蜜蜂通过舞蹈向同伴传递花蜜的方向和距离，这种行为被称为摇摆舞。",
+   "audio": "audio/gsv-v5dev_s2.mp3",
+   "metrics": {
+    "dur": 8.45,
+    "sim": 0.923,
+    "f0": 281,
+    "harm": 0.339,
+    "floor_db": -61.6
+   },
+   "nonce": "66ee495330883664"
+  },
+  {
+   "id": "voice-gsv-v5dev-s3",
+   "model": "GPT-SoVITS v5 dev",
+   "sentence": "s3",
+   "text": "间歇泉每隔一段时间喷出热水和蒸汽，间隔长短取决于地下的管道结构。",
+   "audio": "audio/gsv-v5dev_s3.mp3",
+   "metrics": {
+    "dur": 8.21,
+    "sim": 0.922,
+    "f0": 277,
+    "harm": 0.241,
+    "floor_db": -60.5
+   },
+   "nonce": "d8ac09ecef1fd1a6"
+  },
+  {
+   "id": "voice-gsv-v5turbo-s1",
+   "model": "GPT-SoVITS v5 turbo",
+   "sentence": "s1",
+   "text": "冰川是大量积雪经过多年压实后形成的巨大冰体，会缓慢向低处流动。",
+   "audio": "audio/gsv-v5turbo_s1.mp3",
+   "metrics": {
+    "dur": 6.61,
+    "sim": 0.885,
+    "f0": 264,
+    "harm": 0.342,
+    "floor_db": -44.3
+   },
+   "nonce": "2e6b09e3d408455f"
+  },
+  {
+   "id": "voice-gsv-v5turbo-s2",
+   "model": "GPT-SoVITS v5 turbo",
+   "sentence": "s2",
+   "text": "蜜蜂通过舞蹈向同伴传递花蜜的方向和距离，这种行为被称为摇摆舞。",
+   "audio": "audio/gsv-v5turbo_s2.mp3",
+   "metrics": {
+    "dur": 8.45,
+    "sim": 0.911,
+    "f0": 273,
+    "harm": 0.383,
+    "floor_db": -60.4
+   },
+   "nonce": "98e13423dea6dec0"
+  },
+  {
+   "id": "voice-gsv-v5turbo-s3",
+   "model": "GPT-SoVITS v5 turbo",
+   "sentence": "s3",
+   "text": "间歇泉每隔一段时间喷出热水和蒸汽，间隔长短取决于地下的管道结构。",
+   "audio": "audio/gsv-v5turbo_s3.mp3",
+   "metrics": {
+    "dur": 8.21,
+    "sim": 0.9,
+    "f0": 270,
+    "harm": 0.309,
+    "floor_db": -58.8
+   },
+   "nonce": "244e6ff29151b245"
+  },
+  {
+   "id": "voice-ming-s1",
+   "model": "Ming-3.0 0.5B",
+   "sentence": "s1",
+   "text": "冰川是大量积雪经过多年压实后形成的巨大冰体，会缓慢向低处流动。",
+   "audio": "audio/ming_s1.mp3",
+   "metrics": {
+    "dur": 6.3,
+    "sim": 0.923,
+    "f0": 258,
+    "harm": 0.259,
+    "floor_db": -39.4
+   },
+   "nonce": "5a9ac62d5b0b2231"
+  },
+  {
+   "id": "voice-ming-s2",
+   "model": "Ming-3.0 0.5B",
+   "sentence": "s2",
+   "text": "蜜蜂通过舞蹈向同伴传递花蜜的方向和距离，这种行为被称为摇摆舞。",
+   "audio": "audio/ming_s2.mp3",
+   "metrics": {
+    "dur": 8.2,
+    "sim": 0.911,
+    "f0": 259,
+    "harm": 0.244,
+    "floor_db": -43.3
+   },
+   "nonce": "d45eff08eb953da7"
+  },
+  {
+   "id": "voice-ming-s3",
+   "model": "Ming-3.0 0.5B",
+   "sentence": "s3",
+   "text": "间歇泉每隔一段时间喷出热水和蒸汽，间隔长短取决于地下的管道结构。",
+   "audio": "audio/ming_s3.mp3",
+   "metrics": {
+    "dur": 6.2,
+    "sim": 0.902,
+    "f0": 286,
+    "harm": 0.166,
+    "floor_db": -37.9
+   },
+   "nonce": "584dc194cd43c4fa"
+  },
+  {
+   "id": "voice-qwen-s1",
+   "model": "Qwen3-TTS 0.6B",
+   "sentence": "s1",
+   "text": "冰川是大量积雪经过多年压实后形成的巨大冰体，会缓慢向低处流动。",
+   "audio": "audio/qwen_s1.mp3",
+   "metrics": {
+    "dur": 6.8,
+    "sim": 0.885,
+    "f0": 238,
+    "harm": 0.268,
+    "floor_db": -47.8
+   },
+   "nonce": "8c81273a86473a46"
+  },
+  {
+   "id": "voice-qwen-s2",
+   "model": "Qwen3-TTS 0.6B",
+   "sentence": "s2",
+   "text": "蜜蜂通过舞蹈向同伴传递花蜜的方向和距离，这种行为被称为摇摆舞。",
+   "audio": "audio/qwen_s2.mp3",
+   "metrics": {
+    "dur": 6.88,
+    "sim": 0.874,
+    "f0": 262,
+    "harm": 0.388,
+    "floor_db": -47.8
+   },
+   "nonce": "b13154a0d41bf974"
+  },
+  {
+   "id": "voice-qwen-s3",
+   "model": "Qwen3-TTS 0.6B",
+   "sentence": "s3",
+   "text": "间歇泉每隔一段时间喷出热水和蒸汽，间隔长短取决于地下的管道结构。",
+   "audio": "audio/qwen_s3.mp3",
+   "metrics": {
+    "dur": 7.84,
+    "sim": 0.9,
+    "f0": 248,
+    "harm": 0.252,
+    "floor_db": -52.9
+   },
+   "nonce": "060bd2501d8146f3"
+  }
+ ]
+}
