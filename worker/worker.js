@@ -69,16 +69,15 @@ export default {
       if (Object.values(clean).every((v) => v === null)) return json({ error: "no scores" }, 400, req);
 
       const ip = req.headers.get("cf-connecting-ip") || "0";
-      const rlKey = `rl:${item}:${await hmac(env.SCORE_SECRET, ip)}`;
-      if (await env.SCORES.get(rlKey)) return json({ error: "rate limited", retry_after_s: 60 }, 429, req);
-      await env.SCORES.put(rlKey, "1", { expirationTtl: 60 });
+      const rater = (await hmac(env.SCORE_SECRET, ip)).slice(0, 12);
 
+      // one row per (item, rater): re-scoring replaces the previous value
       const ts = new Date().toISOString();
-      const key = `s:${item}:${ts}:${crypto.randomUUID().slice(0, 8)}`;
+      const key = `s:${item}:${rater}`;
       await env.SCORES.put(key, JSON.stringify({ item, dims: clean, ts }), {
-        metadata: { item, ts, ...clean },
+        metadata: { item, ts, ...clean, rater },
       });
-      return json({ ok: true, key }, 200, req);
+      return json({ ok: true, key, replaced: true }, 200, req);
     }
 
     if (url.pathname === "/api/scores") {
