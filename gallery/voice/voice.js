@@ -30,8 +30,10 @@ function fmt(m) {
 function card(e) {
   const art = el("article");
   const top = el("div", { class: "top" });
-  top.append(el("div", { class: "model" }, e.model));
+  const label = e.pitch === 0 ? "原音" : `${e.pitch} 半音`;
+  top.append(el("div", { class: "model" }, `${e.model} · ${e.sentence} · ${label}`));
   top.append(el("div", { class: "meta" }, fmt(e.metrics)));
+  art.dataset.pitch = String(e.pitch);
   art.append(top);
   art.append(el("div", { class: "text" }, e.text));
 
@@ -109,6 +111,18 @@ async function main() {
     return;
   }
   for (const e of data.entries || []) list.append(card(e));
+
+  const filters = document.getElementById("filters");
+  filters?.addEventListener("click", (ev) => {
+    const btn = ev.target.closest("button[data-pitch]");
+    if (!btn) return;
+    const want = btn.dataset.pitch;
+    [...filters.querySelectorAll("button")].forEach((b) =>
+      b.setAttribute("aria-pressed", String(b === btn)));
+    for (const art of list.querySelectorAll("article")) {
+      art.hidden = want !== "all" && art.dataset.pitch !== want;
+    }
+  });
   document.getElementById("foot").textContent =
     `${data.count} 个样本 · 生成于 ${data.built_at} · 参考声音为同一段私人录音，未上传`;
 }
