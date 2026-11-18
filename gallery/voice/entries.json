@@ -1,6 +1,6 @@
 {
- "built_at": "2026-11-18T09:23:21",
- "count": 58,
+ "built_at": "2026-11-18T10:02:40",
+ "count": 66,
  "entries": [
   {
    "id": "voice-gsv-v5turbo-en1",
@@ -163,6 +163,42 @@
     "floor_db": -66.4
    },
    "nonce": "b1955c20ff2b1517"
+  },
+  {
+   "id": "voice-gsv-v5turbo-en1",
+   "model": "GPT-SoVITS v5 turbo",
+   "lang": "en",
+   "sentence": "EN1",
+   "pitch": 0,
+   "method": "refv2",
+   "shift": 0,
+   "text": "Glaciers are vast bodies of ice formed when snow is compressed over many years, and they flow slowly downhill.",
+   "audio": "audio/gsv-v5turbo_en1_v2.mp3",
+   "metrics": {
+    "dur": 6.4,
+    "sim": 0.814,
+    "f0": 240,
+    "floor_db": -75.0
+   },
+   "nonce": "62fd42e47da03515"
+  },
+  {
+   "id": "voice-gsv-v5turbo-en2",
+   "model": "GPT-SoVITS v5 turbo",
+   "lang": "en",
+   "sentence": "EN2",
+   "pitch": 0,
+   "method": "refv2",
+   "shift": 0,
+   "text": "Honeybees pass on the direction and distance of nectar to their hive mates through a movement called the waggle dance.",
+   "audio": "audio/gsv-v5turbo_en2_v2.mp3",
+   "metrics": {
+    "dur": 6.88,
+    "sim": 0.813,
+    "f0": 238,
+    "floor_db": -87.6
+   },
+   "nonce": "8089169f2175e396"
   },
   {
    "id": "voice-gsv-v4-s1-p0",
@@ -1060,6 +1096,114 @@
     "floor_db": -44.9
    },
    "nonce": "5db060b0d3e1896f"
+  },
+  {
+   "id": "voice-gsv-v5turbo-zh1-v2",
+   "model": "GPT-SoVITS v5 turbo",
+   "lang": "zh",
+   "sentence": "ZH1",
+   "pitch": 0,
+   "method": "refv2",
+   "shift": 0,
+   "text": "冰川是大量积雪经过多年压实后形成的巨大冰体，会缓慢向低处流动。",
+   "audio": "audio/gsv-v5turbo_s1_v2.mp3",
+   "metrics": {
+    "dur": 7.96,
+    "sim": 0.659,
+    "f0": 246,
+    "floor_db": -72.5
+   },
+   "nonce": "e4ae6d0cec683b0a"
+  },
+  {
+   "id": "voice-gsv-v5turbo-zh2-v2",
+   "model": "GPT-SoVITS v5 turbo",
+   "lang": "zh",
+   "sentence": "ZH2",
+   "pitch": 0,
+   "method": "refv2",
+   "shift": 0,
+   "text": "蜜蜂通过舞蹈向同伴传递花蜜的方向和距离，这种行为被称为摇摆舞。",
+   "audio": "audio/gsv-v5turbo_s2_v2.mp3",
+   "metrics": {
+    "dur": 7.76,
+    "sim": 0.657,
+    "f0": 243,
+    "floor_db": -62.1
+   },
+   "nonce": "01e82cbfdac898bd"
+  },
+  {
+   "id": "voice-gsv-v5turbo-zh3-v2",
+   "model": "GPT-SoVITS v5 turbo",
+   "lang": "zh",
+   "sentence": "ZH3",
+   "pitch": 0,
+   "method": "refv2",
+   "shift": 0,
+   "text": "间歇泉每隔一段时间喷出热水和蒸汽，间隔长短取决于地下的管道结构。",
+   "audio": "audio/gsv-v5turbo_s3_v2.mp3",
+   "metrics": {
+    "dur": 7.48,
+    "sim": 0.656,
+    "f0": 238,
+    "floor_db": -65.3
+   },
+   "nonce": "fab78a6d2dd93f82"
+  },
+  {
+   "id": "voice-qwen-zh1-v2",
+   "model": "Qwen3-TTS 0.6B",
+   "lang": "zh",
+   "sentence": "ZH1",
+   "pitch": 0,
+   "method": "refv2",
+   "shift": 0,
+   "text": "冰川是大量积雪经过多年压实后形成的巨大冰体，会缓慢向低处流动。",
+   "audio": "audio/qwen_s1_v2.mp3",
+   "metrics": {
+    "dur": 6.48,
+    "sim": 0.616,
+    "f0": 249,
+    "floor_db": -85.0
+   },
+   "nonce": "d95cac7a882e019f"
+  },
+  {
+   "id": "voice-qwen-zh2-v2",
+   "model": "Qwen3-TTS 0.6B",
+   "lang": "zh",
+   "sentence": "ZH2",
+   "pitch": 0,
+   "method": "refv2",
+   "shift": 0,
+   "text": "蜜蜂通过舞蹈向同伴传递花蜜的方向和距离，这种行为被称为摇摆舞。",
+   "audio": "audio/qwen_s2_v2.mp3",
+   "metrics": {
+    "dur": 6.88,
+    "sim": 0.619,
+    "f0": 223,
+    "floor_db": -108.3
+   },
+   "nonce": "28bb0ceb04ae9a5c"
+  },
+  {
+   "id": "voice-qwen-zh3-v2",
+   "model": "Qwen3-TTS 0.6B",
+   "lang": "zh",
+   "sentence": "ZH3",
+   "pitch": 0,
+   "method": "refv2",
+   "shift": 0,
+   "text": "间歇泉每隔一段时间喷出热水和蒸汽，间隔长短取决于地下的管道结构。",
+   "audio": "audio/qwen_s3_v2.mp3",
+   "metrics": {
+    "dur": 7.28,
+    "sim": 0.589,
+    "f0": 239,
+    "floor_db": -64.0
+   },
+   "nonce": "a96d6f1e75bd659d"
   }
  ]
 }
