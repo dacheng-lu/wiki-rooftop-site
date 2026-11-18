@@ -1,0 +1,1194 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>自我分析卡牌游戏 · 不可能的三角</title>
+  <style>
+    :root {
+      --bg-deep: #090814;
+      --bg-mid: #13102b;
+      --bg-card: rgba(20, 17, 44, 0.88);
+      --gold-light: #f6e6b4;
+      --gold-main: #d4af37;
+      --gold-dark: #9c7a1c;
+      --text-main: #f8f4e8;
+      --text-muted: #a6a0c2;
+      --accent-purple: #7c5dfa;
+      --radius-xl: 22px;
+      --radius-lg: 16px;
+      --shadow-gold: 0 12px 36px rgba(0, 0, 0, 0.55), 0 0 24px rgba(212, 175, 55, 0.14);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html, body {
+      min-height: 100%;
+      background: radial-gradient(circle at 20% 15%, #1d1742 0%, #0d0b1e 48%, #070610 100%);
+      color: var(--text-main);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Georgia, serif;
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    /* 背景星空画布 */
+    #starfield {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* 主容器 */
+    .app-shell {
+      position: relative;
+      z-index: 1;
+      max-width: 1040px;
+      min-height: 100vh;
+      margin: 0 auto;
+      padding: 16px 18px 36px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* 顶部固定状态栏 */
+    .topbar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 12px 16px;
+      margin-bottom: 24px;
+      background: rgba(16, 13, 36, 0.78);
+      border: 1px solid rgba(212, 175, 55, 0.28);
+      border-radius: 999px;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35);
+    }
+
+    .brand-group {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 0;
+    }
+
+    .brand-emblem {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      border: 1px solid rgba(212, 175, 55, 0.55);
+      background: rgba(212, 175, 55, 0.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: var(--gold-light);
+    }
+
+    .brand-text-wrap {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-sub {
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold-main);
+    }
+
+    .brand-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--gold-light);
+      letter-spacing: 0.04em;
+    }
+
+    .topbar-right {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-left: auto;
+    }
+
+    .top-progress-pill {
+      display: none;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--gold-light);
+      padding: 5px 12px;
+      border-radius: 999px;
+      background: rgba(212, 175, 55, 0.14);
+      border: 1px solid rgba(212, 175, 55, 0.35);
+    }
+
+    .top-progress-pill.active {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    /* 三语切换胶囊 */
+    .lang-pill {
+      display: inline-flex;
+      align-items: center;
+      padding: 3px;
+      border-radius: 999px;
+      background: rgba(9, 8, 22, 0.9);
+      border: 1px solid rgba(212, 175, 55, 0.38);
+    }
+
+    .lang-btn {
+      border: none;
+      background: transparent;
+      color: var(--text-muted);
+      font-size: 12px;
+      font-weight: 600;
+      padding: 5px 11px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+
+    .lang-btn:hover {
+      color: var(--gold-light);
+    }
+
+    .lang-btn.active {
+      background: linear-gradient(135deg, #f6e6b4 0%, #d4af37 100%);
+      color: #120f24;
+      box-shadow: 0 0 12px rgba(212, 175, 55, 0.45);
+    }
+
+    /* 通用金边塔罗面板 */
+    .tarot-panel {
+      background: linear-gradient(155deg, rgba(28, 23, 58, 0.88) 0%, rgba(14, 12, 32, 0.94) 100%);
+      border: 1px solid rgba(212, 175, 55, 0.38);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow-gold);
+      position: relative;
+    }
+
+    .tarot-panel::before {
+      content: "";
+      position: absolute;
+      inset: 6px;
+      border: 1px solid rgba(246, 230, 180, 0.12);
+      border-radius: calc(var(--radius-xl) - 5px);
+      pointer-events: none;
+    }
+
+    /* 视图切换控制 */
+    .screen {
+      display: none;
+      flex: 1;
+      animation: fadeUp 0.48s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    }
+
+    .screen.active {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(14px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* ==================== 1. 欢迎页 ==================== */
+    .welcome-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 28px;
+      align-items: center;
+      padding: 12px 0;
+    }
+
+    @media (min-width: 860px) {
+      .welcome-grid {
+        grid-template-columns: 320px 1fr;
+        gap: 40px;
+      }
+    }
+
+    .hero-tarot-card {
+      width: 100%;
+      max-width: 300px;
+      height: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      text-align: center;
+      animation: floatCard 5s ease-in-out infinite;
+    }
+
+    @keyframes floatCard {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-8px); }
+    }
+
+    .hero-card-corners {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      color: rgba(246, 230, 180, 0.72);
+    }
+
+    .hero-astrolabe {
+      width: 185px;
+      height: 185px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .spin-ring {
+      position: absolute;
+      inset: 0;
+      animation: spinSlow 28s linear infinite;
+    }
+
+    @keyframes spinSlow {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    .welcome-copy {
+      text-align: center;
+    }
+
+    @media (min-width: 860px) {
+      .welcome-copy {
+        text-align: left;
+      }
+    }
+
+    .badge-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 12px;
+      color: var(--gold-light);
+      background: rgba(212, 175, 55, 0.12);
+      border: 1px solid rgba(212, 175, 55, 0.35);
+      margin-bottom: 16px;
+    }
+
+    .hero-heading {
+      font-size: clamp(26px, 4vw, 40px);
+      font-weight: 700;
+      line-height: 1.25;
+      background: linear-gradient(135deg, #fff6d6 0%, #e4c15a 55%, #b88a1e 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 16px;
+    }
+
+    .hero-desc {
+      font-size: 15px;
+      color: #d6d0eb;
+      margin-bottom: 14px;
+      max-width: 620px;
+    }
+
+    .hero-desc strong {
+      color: var(--gold-light);
+      font-weight: 600;
+    }
+
+    .triad-legend {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin: 22px 0 26px;
+      max-width: 560px;
+    }
+
+    @media (max-width: 859px) {
+      .triad-legend {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    .legend-item {
+      padding: 12px 8px;
+      border-radius: var(--radius-lg);
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(212, 175, 55, 0.22);
+      text-align: center;
+    }
+
+    .legend-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--gold-light);
+    }
+
+    .legend-sub {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-top: 3px;
+    }
+
+    /* 烫金按钮 */
+    .btn-gold {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 15px 32px;
+      border: none;
+      border-radius: var(--radius-lg);
+      background: linear-gradient(135deg, #f8e9be 0%, #d4af37 55%, #b5891d 100%);
+      color: #141026;
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      cursor: pointer;
+      box-shadow: 0 8px 28px rgba(212, 175, 55, 0.35);
+      transition: transform 0.22s ease, box-shadow 0.22s ease, filter 0.22s ease;
+    }
+
+    .btn-gold:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.06);
+      box-shadow: 0 12px 34px rgba(212, 175, 55, 0.48);
+    }
+
+    .btn-gold:active {
+      transform: translateY(0);
+    }
+
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 20px;
+      border-radius: 14px;
+      background: rgba(212, 175, 55, 0.08);
+      border: 1px solid rgba(212, 175, 55, 0.4);
+      color: var(--gold-light);
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.22s ease;
+    }
+
+    .btn-outline:hover {
+      background: rgba(212, 175, 55, 0.18);
+      border-color: var(--gold-light);
+    }
+
+    /* ==================== 2. 答题页 ==================== */
+    .quiz-header {
+      max-width: 760px;
+      width: 100%;
+      margin: 0 auto 22px;
+      text-align: center;
+    }
+
+    .quiz-meta-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      font-size: 13px;
+      color: var(--gold-light);
+    }
+
+    .btn-prev-step {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(212, 175, 55, 0.28);
+      color: var(--text-muted);
+      font-size: 12px;
+      padding: 5px 12px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .btn-prev-step:hover:not(:disabled) {
+      color: var(--gold-light);
+      border-color: var(--gold-main);
+    }
+
+    .btn-prev-step:disabled {
+      opacity: 0.35;
+      cursor: not-allowed;
+    }
+
+    .progress-track {
+      width: 100%;
+      height: 6px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 999px;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+
+    .progress-fill {
+      height: 100%;
+      width: 14.28%;
+      background: linear-gradient(90deg, #8b6ef3, #e6c665);
+      border-radius: 999px;
+      transition: width 0.4s ease;
+    }
+
+    .question-tag {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-size: 12px;
+      color: #c8beff;
+      background: rgba(124, 93, 250, 0.18);
+      border: 1px solid rgba(124, 93, 250, 0.38);
+      margin-bottom: 10px;
+    }
+
+    .question-title {
+      font-size: clamp(20px, 3vw, 28px);
+      font-weight: 700;
+      color: #fff9e6;
+      line-height: 1.4;
+      margin-bottom: 8px;
+    }
+
+    .question-hint {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    /* 3张选项牌网格 */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+      max-width: 960px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    @media (min-width: 768px) {
+      .cards-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 22px;
+      }
+    }
+
+    .perspective-box {
+      perspective: 1200px;
+      height: 310px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 767px) {
+      .perspective-box {
+        height: 245px;
+      }
+    }
+
+    .card-3d-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d;
+      transition: transform 0.52s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .card-3d-inner.is-flipped {
+      transform: rotateY(180deg);
+    }
+
+    .card-face {
+      position: absolute;
+      inset: 0;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      border-radius: var(--radius-xl);
+      padding: 20px 18px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-align: center;
+      transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .perspective-box:hover .card-face.front {
+      transform: translateY(-5px);
+      border-color: var(--gold-light);
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.6), 0 0 26px rgba(212, 175, 55, 0.28);
+    }
+
+    .card-face.back {
+      transform: rotateY(180deg);
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(155deg, #2a2159 0%, #14102d 100%);
+      border-color: var(--gold-light);
+    }
+
+    .option-top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      color: rgba(246, 230, 180, 0.72);
+    }
+
+    .option-totem {
+      width: 58px;
+      height: 58px;
+      margin: 0 auto 10px;
+      border-radius: 16px;
+      background: rgba(212, 175, 55, 0.09);
+      border: 1px solid rgba(212, 175, 55, 0.35);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold-light);
+    }
+
+    .option-arcana {
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      color: var(--gold-main);
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .option-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: #fff9e6;
+      line-height: 1.38;
+      margin-bottom: 6px;
+    }
+
+    .option-sub {
+      font-size: 12.5px;
+      color: var(--text-muted);
+      line-height: 1.45;
+    }
+
+    .option-footer {
+      font-size: 11px;
+      color: rgba(246, 230, 180, 0.75);
+      padding-top: 8px;
+      border-top: 1px solid rgba(212, 175, 55, 0.14);
+    }
+
+    /* ==================== 3. 结果分析页 ==================== */
+    .result-head {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    .result-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    @media (min-width: 900px) {
+      .result-grid {
+        grid-template-columns: 400px 1fr;
+      }
+    }
+
+    .radar-panel {
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .radar-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding-bottom: 12px;
+      border-bottom: 1px solid rgba(212, 175, 55, 0.18);
+    }
+
+    .radar-svg-wrap {
+      width: 100%;
+      max-width: 310px;
+      margin: 0 auto;
+    }
+
+    .stat-bars {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .stat-row-top {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12.5px;
+      margin-bottom: 5px;
+    }
+
+    .stat-bar-bg {
+      width: 100%;
+      height: 7px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 999px;
+      overflow: hidden;
+    }
+
+    .stat-bar-fill {
+      height: 100%;
+      border-radius: 999px;
+      transition: width 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    /* 结果3D翻转大卡 */
+    .result-right-col {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .result-flip-stage {
+      perspective: 1400px;
+      flex: 1;
+      min-height: 450px;
+      cursor: pointer;
+    }
+
+    .result-flip-stage .card-face {
+      text-align: left;
+      padding: 26px 24px;
+    }
+
+    .result-flip-stage .card-face.back {
+      align-items: stretch;
+      justify-content: space-between;
+    }
+
+    .res-top-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .res-formula-pill {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--gold-light);
+      background: rgba(212, 175, 55, 0.16);
+      border: 1px solid rgba(212, 175, 55, 0.35);
+      margin-bottom: 8px;
+    }
+
+    .res-archetype-title {
+      font-size: clamp(24px, 3.2vw, 32px);
+      font-weight: 700;
+      background: linear-gradient(135deg, #fff8dc 0%, #e4c15a 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .res-sigil-box {
+      width: 52px;
+      height: 52px;
+      border-radius: 16px;
+      border: 1px solid rgba(212, 175, 55, 0.45);
+      background: rgba(212, 175, 55, 0.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold-light);
+      flex-shrink: 0;
+    }
+
+    .res-tags-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+
+    .res-tag-chip {
+      padding: 4px 10px;
+      border-radius: 8px;
+      font-size: 12px;
+      color: #f3e8c8;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(212, 175, 55, 0.24);
+    }
+
+    .res-box {
+      padding: 15px 16px;
+      border-radius: var(--radius-lg);
+      background: rgba(255, 255, 255, 0.035);
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      margin-bottom: 12px;
+    }
+
+    .res-box-label {
+      font-size: 11.5px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--gold-main);
+      margin-bottom: 6px;
+    }
+
+    .res-box-text {
+      font-size: 14.5px;
+      color: #e9e4f5;
+      line-height: 1.65;
+    }
+
+    .res-flip-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 12px;
+      border-top: 1px solid rgba(212, 175, 55, 0.18);
+      font-size: 12px;
+      color: var(--gold-light);
+    }
+
+    /* 背面潜意识双栏 */
+    .shadow-monologue {
+      padding: 16px;
+      border-radius: var(--radius-lg);
+      background: rgba(0, 0, 0, 0.35);
+      border: 1px solid rgba(212, 175, 55, 0.28);
+      font-style: italic;
+      font-size: 15px;
+      color: #fff6d6;
+      line-height: 1.6;
+      margin: 12px 0;
+    }
+
+    .shadow-duo {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+
+    @media (min-width: 600px) {
+      .shadow-duo {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .shadow-mini-card {
+      padding: 14px;
+      border-radius: var(--radius-lg);
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    .shadow-mini-card.gift {
+      background: rgba(16, 185, 129, 0.1);
+      border: 1px solid rgba(52, 211, 153, 0.3);
+    }
+
+    .shadow-mini-card.trap {
+      background: rgba(244, 63, 94, 0.1);
+      border: 1px solid rgba(251, 113, 133, 0.3);
+    }
+
+    .result-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .result-actions .btn-gold {
+      padding: 12px 22px;
+      font-size: 14px;
+    }
+
+    /* 提示气泡 */
+    .toast-banner {
+      position: fixed;
+      top: 18px;
+      left: 50%;
+      transform: translate(-50%, -24px);
+      z-index: 99;
+      padding: 10px 20px;
+      border-radius: 999px;
+      background: rgba(22, 18, 48, 0.96);
+      border: 1px solid var(--gold-main);
+      color: var(--gold-light);
+      font-size: 13px;
+      font-weight: 600;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.3s ease;
+    }
+
+    .toast-banner.show {
+      opacity: 1;
+      transform: translate(-50%, 0);
+    }
+
+    .app-footer {
+      margin-top: 28px;
+      padding-top: 14px;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      text-align: center;
+      font-size: 12px;
+      color: #787296;
+    }
+  </style>
+</head>
+<body>
+  <!-- 星空粒子画布 -->
+  <canvas id="starfield"></canvas>
+
+  <!-- 顶部轻提示框 -->
+  <div id="toast" class="toast-banner" role="status" aria-live="polite"></div>
+
+  <div class="app-shell">
+    <!-- ==================== 顶部固定栏 ==================== -->
+    <header class="topbar">
+      <div class="brand-group">
+        <div class="brand-emblem" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <polygon points="12 3 21 19 3 19"></polygon>
+            <circle cx="12" cy="13.5" r="2.2"></circle>
+          </svg>
+        </div>
+        <div class="brand-text-wrap">
+          <span class="brand-sub">ARCANA OF TRILEMMA</span>
+          <span id="ui-brand-title" class="brand-title">自我分析卡牌游戏 · 不可能的三角</span>
+        </div>
+      </div>
+
+      <div class="topbar-right">
+        <div id="top-progress-pill" class="top-progress-pill">
+          <span id="top-step-num">1</span> / <span>7</span>
+        </div>
+
+        <div class="lang-pill" role="group" aria-label="Language Switcher">
+          <button type="button" class="lang-btn" data-lang="de">DE</button>
+          <button type="button" class="lang-btn" data-lang="en">EN</button>
+          <button type="button" class="lang-btn active" data-lang="zh">中文</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- ==================== 1. 欢迎页 ==================== -->
+    <main id="screen-welcome" class="screen active">
+      <div class="welcome-grid">
+        <!-- 左侧：烫金星盘塔罗主卡 -->
+        <div class="tarot-panel hero-tarot-card">
+          <div class="hero-card-corners">
+            <span id="ui-card-v1">I · 聪明</span>
+            <span>✦</span>
+            <span id="ui-card-v2">II · 努力</span>
+          </div>
+
+          <div class="hero-astrolabe">
+            <svg class="spin-ring" viewBox="0 0 200 200">
+              <circle cx="100" cy="100" r="88" fill="none" stroke="#d4af37" stroke-width="0.8" stroke-dasharray="4 4" opacity="0.65"></circle>
+              <circle cx="100" cy="100" r="70" fill="none" stroke="#8b6ef3" stroke-width="0.7" opacity="0.6"></circle>
+              <polygon points="100,16 173,142 27,142" fill="none" stroke="#f6e6b4" stroke-width="0.8" opacity="0.6"></polygon>
+              <polygon points="100,184 173,58 27,58" fill="none" stroke="#8b6ef3" stroke-width="0.8" opacity="0.45"></polygon>
+            </svg>
+
+            <svg width="118" height="118" viewBox="0 0 120 120">
+              <defs>
+                <linearGradient id="tarotGold" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#fff6d6"></stop>
+                  <stop offset="50%" stop-color="#d4af37"></stop>
+                  <stop offset="100%" stop-color="#9c7a1c"></stop>
+                </linearGradient>
+              </defs>
+              <polygon points="60,14 106,96 14,96" fill="rgba(212,175,55,0.1)" stroke="url(#tarotGold)" stroke-width="2.4"></polygon>
+              <circle cx="60" cy="14" r="4" fill="#fff6d6"></circle>
+              <circle cx="106" cy="96" r="4" fill="#fff6d6"></circle>
+              <circle cx="14" cy="96" r="4" fill="#fff6d6"></circle>
+              <path d="M40 66 Q60 48 80 66 Q60 84 40 66 Z" fill="none" stroke="url(#tarotGold)" stroke-width="1.8"></path>
+              <circle cx="60" cy="66" r="6" fill="url(#tarotGold)"></circle>
+            </svg>
+          </div>
+
+          <div>
+            <div id="ui-card-v3" style="font-size:11px; letter-spacing:0.22em; color:rgba(246,230,180,0.75); margin-bottom:4px;">III · 守序</div>
+            <div id="ui-card-caption" style="font-size:13.5px; color:#f6e6b4; letter-spacing:0.08em;">不可能三角 · 灵魂观测牌</div>
+          </div>
+        </div>
+
+        <!-- 右侧：叙事引导与开始按钮 -->
+        <div class="welcome-copy">
+          <div id="ui-welcome-badge" class="badge-tag">✦ 心理学投射与人格光谱测试</div>
+
+          <h1 id="ui-welcome-heading" class="hero-heading">自我分析卡牌游戏：不可能的三角</h1>
+
+          <p id="ui-welcome-p1" class="hero-desc">
+            世间流传着一条隐秘的人性法则：<strong>「聪明、努力、守序」</strong>构成了一个几乎不可能同时填满的三角定律——往往集齐两项，就会自然生长出第三项的反面：<strong>钝感（憨）、松弛（懒）或 破序（桀骜不驯）</strong>。
+          </p>
+
+          <p id="ui-welcome-p2" class="hero-desc" style="font-size:14px; color:#a6a0c2;">
+            接下来，你将进入 7 幕直觉情景。请凭第一感觉翻开属于你的命运卡牌，观测你的灵魂三角究竟向何处倾斜，抑或解锁传说中的「隐藏觉醒形态」。
+          </p>
+
+          <div class="triad-legend">
+            <div class="legend-item">
+              <div id="ui-dim1-title" class="legend-title">智慧 · 聪明</div>
+              <div id="ui-dim1-sub" class="legend-sub">vs 钝感大智若愚</div>
+            </div>
+            <div class="legend-item">
+              <div id="ui-dim2-title" class="legend-title">行动 · 努力</div>
+              <div id="ui-dim2-sub" class="legend-sub">vs 松弛节能主义</div>
+            </div>
+            <div class="legend-item">
+              <div id="ui-dim3-title" class="legend-title">法则 · 守序</div>
+              <div id="ui-dim3-sub" class="legend-sub">vs 破序桀骜不羁</div>
+            </div>
+          </div>
+
+          <div style="display:flex; flex-wrap:wrap; align-items:center; gap:14px; justify-content:center;" id="welcome-cta-row">
+            <button type="button" id="btn-start-game" class="btn-gold">
+              <span id="ui-start-btn">抽取命运之牌</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+              </svg>
+            </button>
+            <span id="ui-start-hint" style="font-size:12.5px; color:#a6a0c2;">共 7 幕直觉抉择 · 约 60 秒</span>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- ==================== 2. 7幕卡牌测试页 ==================== -->
+    <section id="screen-quiz" class="screen" aria-label="Quiz Section">
+      <div class="quiz-header">
+        <div class="quiz-meta-row">
+          <button type="button" id="btn-prev-step" class="btn-prev-step">← 上一题</button>
+          <span id="question-roman" style="letter-spacing:0.2em; font-weight:700;">CHAPTER I</span>
+          <span><strong id="question-current">1</strong> / 7</span>
+        </div>
+
+        <div class="progress-track">
+          <div id="progress-fill" class="progress-fill"></div>
+        </div>
+
+        <div id="question-tag" class="question-tag">突发迷雾谜题</div>
+        <h2 id="question-title" class="question-title">题目加载中...</h2>
+        <p id="question-hint" class="question-hint">闭眼呼吸一秒，选择最贴近你本能反应的那张牌</p>
+      </div>
+
+      <div id="cards-grid" class="cards-grid"></div>
+    </section>
+
+    <!-- ==================== 3. 结果分析页 ==================== -->
+    <section id="screen-result" class="screen" aria-label="Result Section">
+      <div class="result-head">
+        <div class="badge-tag" style="margin-bottom:10px;">✦ SOUL TRILEMMA DECODED ✦</div>
+        <h2 id="ui-res-heading" class="hero-heading" style="margin-bottom:6px;">你的灵魂三角图谱已显影</h2>
+        <p id="ui-res-subheading" style="font-size:13.5px; color:#a6a0c2;">点击右侧「专属人格卡牌」可翻转查看潜意识背面吐槽</p>
+      </div>
+
+      <div class="result-grid">
+        <!-- 左侧：动态 SVG 不可能的三角星盘 -->
+        <div class="tarot-panel radar-panel">
+          <div class="radar-header">
+            <div>
+              <h3 id="ui-radar-title" style="font-size:16px; font-weight:700; color:#f6e6b4;">不可能三角能量分布</h3>
+              <p id="ui-radar-sub" style="font-size:12px; color:#a6a0c2;">三顶点平衡与反面特质偏移</p>
+            </div>
+            <span id="res-code-badge" style="font-size:11px; padding:4px 9px; border-radius:8px; background:rgba(212,175,55,0.14); color:#f6e6b4; border:1px solid rgba(212,175,55,0.35);">ARCANA</span>
+          </div>
+
+          <div class="radar-svg-wrap">
+            <svg viewBox="0 0 320 300" style="width:100%; height:auto; overflow:visible;">
+              <defs>
+                <radialGradient id="polyEnergy" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stop-color="#f6e6b4" stop-opacity="0.62"></stop>
+                  <stop offset="100%" stop-color="#7c5dfa" stop-opacity="0.25"></stop>
+                </radialGradient>
+              </defs>
+
+              <circle cx="160" cy="162" r="118" fill="none" stroke="rgba(212,175,55,0.16)" stroke-width="1" stroke-dasharray="3 4"></circle>
+              <polygon points="160,42 264,222 56,222" fill="rgba(255,255,255,0.02)" stroke="rgba(212,175,55,0.42)" stroke-width="1.3"></polygon>
+              <polygon points="160,82 229,202 91,202" fill="none" stroke="rgba(212,175,55,0.2)" stroke-width="0.9" stroke-dasharray="3 3"></polygon>
+              <polygon points="160,122 195,182 125,182" fill="none" stroke="rgba(212,175,55,0.16)" stroke-width="0.9"></polygon>
+
+              <line x1="160" y1="162" x2="160" y2="42" stroke="rgba(212,175,55,0.22)" stroke-width="1"></line>
+              <line x1="160" y1="162" x2="264" y2="222" stroke="rgba(212,175,55,0.22)" stroke-width="1"></line>
+              <line x1="160" y1="162" x2="56" y2="222" stroke="rgba(212,175,55,0.22)" stroke-width="1"></line>
+
+              <text id="svg-edge-rebel" x="230" y="122" fill="#9a94b8" font-size="9.5" text-anchor="middle" transform="rotate(60, 230, 122)">低守序 → 破序/桀骜</text>
+              <text id="svg-edge-lazy" x="90" y="122" fill="#9a94b8" font-size="9.5" text-anchor="middle" transform="rotate(-60, 90, 122)">低努力 → 松弛/佛系</text>
+              <text id="svg-edge-naive" x="160" y="242" fill="#9a94b8" font-size="9.5" text-anchor="middle">低聪明 → 钝感/赤诚</text>
+
+              <!-- 动态能量多边形 -->
+              <polygon id="user-triangle-poly" points="160,162 160,162 160,162" fill="url(#polyEnergy)" stroke="#f6e6b4" stroke-width="2.4" style="transition: all 0.9s cubic-bezier(0.22, 1, 0.36, 1);"></polygon>
+
+              <circle id="dot-smart" cx="160" cy="162" r="5" fill="#fff6d6" stroke="#d4af37" stroke-width="2" style="transition: all 0.9s cubic-bezier(0.22, 1, 0.36, 1);"></circle>
+              <circle id="dot-diligent" cx="160" cy="162" r="5" fill="#fff6d6" stroke="#d4af37" stroke-width="2" style="transition: all 0.9s cubic-bezier(0.22, 1, 0.36, 1);"></circle>
+              <circle id="dot-obedient" cx="160" cy="162" r="5" fill="#fff6d6" stroke="#d4af37" stroke-width="2" style="transition: all 0.9s cubic-bezier(0.22, 1, 0.36, 1);"></circle>
+
+              <text id="svg-vertex-smart" x="160" y="22" fill="#f6e6b4" font-size="12.5" font-weight="bold" text-anchor="middle">聪明 · 智慧</text>
+              <text id="score-smart-label" x="160" y="36" fill="#d6d0eb" font-size="10.5" text-anchor="middle">0%</text>
+
+              <text id="svg-vertex-diligent" x="275" y="242" fill="#f6e6b4" font-size="12.5" font-weight="bold" text-anchor="middle">努力 · 行动</text>
+              <text id="score-diligent-label" x="275" y="256" fill="#d6d0eb" font-size="10.5" text-anchor="middle">0%</text>
+
+              <text id="svg-vertex-obedient" x="45" y="242" fill="#f6e6b4" font-size="12.5" font-weight="bold" text-anchor="middle">守序 · 法则</text>
+              <text id="score-obedient-label" x="45" y="256" fill="#d6d0eb" font-size="10.5" text-anchor="middle">0%</text>
+            </svg>
+          </div>
+
+          <div class="stat-bars">
+            <div>
+              <div class="stat-row-top">
+                <span id="ui-bar-smart-label" style="color:#f6e6b4;">智慧值 (聪明度)</span>
+                <span id="bar-smart-text">0%</span>
+              </div>
+              <div class="stat-bar-bg">
+                <div id="bar-smart" class="stat-bar-fill" style="width:0%; background:linear-gradient(90deg, #d4af37, #fff0b8);"></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="stat-row-top">
+                <span id="ui-bar-diligent-label" style="color:#c4b5fd;">行动力 (努力度)</span>
+                <span id="bar-diligent-text">0%</span>
+              </div>
+              <div class="stat-bar-bg">
+                <div id="bar-diligent" class="stat-bar-fill" style="width:0%; background:linear-gradient(90deg, #7c5dfa, #c4b5fd);"></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="stat-row-top">
+                <span id="ui-bar-obedient-label" style="color:#6ee7b7;">秩序感 (守序度)</span>
+                <span id="bar-obedient-text">0%</span>
+              </div>
+              <div class="stat-bar-bg">
+                <div id="bar-obedient" class="stat-bar-fill" style="width:0%; background:linear-gradient(90deg, #10b981, #a7f3d0);"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 右侧：3D 正反双面人格卡牌 + 操作按钮 -->
+        <div class="result-right-col">
+          <div id="result-flip-stage" class="result-flip-stage" role="button" tabindex="0" aria-label="Flip Archetype Card">
+            <div id="result-card-inner" class="card-3d-inner">
+              <!-- 正面 -->
+              <div class="card-face front tarot-panel">
+                <div>
+                  <div class="res-top-row">
+                    <div>
+                      <span id="res-formula" class="res-formula-pill">聪明 + 守序 ＝ 佛系节能大师</span>
+                      <h3 id="res-title" class="res-archetype-title">灵性摸鱼大祭司</h3>
+                    </div>
+                    <div id="res-sigil" class="res-sigil-box"></div>
+                  </div>
+
+                  <div id="res-tags" class="res-tags-row"></div>
+
+                  <div class="res-box">
+                    <div id="ui-res-persona-label" class="res-box-label">✦ 灵魂侧写 · Persona Analysis</div>
+                    <p id="res-desc" class="res-box-text">解析生成中...</p>
+                  </div>
+
+                  <div class="res-box" style="background:rgba(124,93,250,0.08); border-color:rgba(212,175,55,0.22); margin-bottom:0;">
+                    <div id="ui-res-rx-label" class="res-box-label" style="color:#c8beff;">✧ 今日灵魂处方</div>
+                    <p id="res-prescription" class="res-box-text" style="font-size:13.5px;">处方加载中...</p>
+                  </div>
+                </div>
+
+                <div class="res-flip-footer">
+                  <span id="ui-flip-to-back-hint">点击卡牌任意处翻转查看「潜意识背面」</span>
+                  <span id="ui-flip-to-back-btn" style="font-weight:700;">翻转牌面 ↻</span>
+                </div>
+              </div>
+
+              <!-- 背面：潜意识独白 -->
+              <div class="card-face back tarot-panel">
+                <div>
+                  <div style="display:flex; justify-content:space-between; align-items:center; padding-bottom:10px; border-bottom:1px solid rgba(212,175,55,0.2);">
+                    <span style="font-size:11px; letter-spacing:0.22em; color:var(--gold-main);">SUBCONSCIOUS SHADOW</span>
+                    <span id="ui-shadow-badge" style="font-size:11.5px; padding:3px 10px; border-radius:999px; background:rgba(124,93,250,0.22); color:#dcd4ff;">潜意识暗面</span>
+                  </div>
+
+                  <h4 id="ui-shadow-heading" style="font-size:17px; font-weight:700; color:#f6e6b4; margin-top:14px;">
+                    「如果把你的内心独白翻译成大白话……」
+                  </h4>
+
+                  <div id="res-roast" class="shadow-monologue">“潜意识独白加载中...”</div>
+
+                  <div class="shadow-duo">
+                    <div class="shadow-mini-card gift">
+                      <div id="ui-strength-label" style="font-weight:700; color:#6ee7b7; margin-bottom:5px;">▲ 隐藏天赋高光</div>
+                      <p id="res-strength" style="color:#e2e8f0;"></p>
+                    </div>
+                    <div class="shadow-mini-card trap">
+                      <div id="ui-blindspot-label" style="font-weight:700; color:#fda4af; margin-bottom:5px;">▼ 给自己的温柔提醒</div>
+                      <p id="res-blindspot" style="color:#e2e8f0;"></p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="res-flip-footer">
+                  <span id="ui-shadow-unlocked">已解锁潜意识全息档案</span>
+                  <span id="ui-flip-to-front-btn" style="font-weight:700;">翻回正面 ↺</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="result-actions">
+            <button type="button" id="btn-flip-toggle" class="btn-outline">↻ 翻转潜意识背面</button>
+            <button type="button" id="btn-copy-result" class="btn-gold">✦ 一键复制测试结果</button>
+            <button type="button" id="btn-restart-game" class="btn-outline" style="margin-left:auto;">重新占卜</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer id="ui-footer" class="app-footer">
+      自我分析卡牌游戏 · 灵感源于「不可能的三角定律」 · 愿你接纳每一面的自己
+    </footer>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>

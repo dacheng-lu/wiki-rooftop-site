@@ -1,180 +1,57 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#0b1022">
-  <meta name="description" content="Wiki Rooftop: a five-round word-guessing game with clues traced to Wikipedia excerpts.">
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <title>Wiki Rooftop — a word observatory</title>
-  <link rel="stylesheet" href="styles.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Play — Dacheng Lu</title>
+<meta name="description" content="Small games and daily experiments, generated and checked on a local machine.">
+<link rel="icon" href="rooftop/favicon.svg" type="image/svg+xml">
+<style>
+:root{--bg:#0b1022;--card:#141a30;--line:#26304d;--text:#eef2ff;--muted:#9fb0cc;--gold:#d4af37}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:radial-gradient(circle at 20% 0%,#182348 0,#0b1022 55%,#070b16 100%);color:var(--text);
+ min-height:100vh;font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif}
+main{max-width:960px;margin:0 auto;padding:clamp(32px,7vw,88px) clamp(20px,5vw,40px)}
+.kicker{font-size:11px;letter-spacing:.22em;color:var(--gold);text-transform:uppercase}
+h1{font-size:clamp(30px,5vw,46px);margin:14px 0 10px;line-height:1.15;font-weight:650}
+.lead{color:var(--muted);max-width:640px}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));margin-top:40px}
+a.card{display:block;padding:22px;border:1px solid var(--line);border-radius:16px;background:var(--card);
+ color:inherit;text-decoration:none;transition:transform .15s ease,border-color .15s ease}
+a.card:hover,a.card:focus-visible{transform:translateY(-2px);border-color:var(--gold);outline:none}
+.card small{color:var(--gold);font-size:11px;letter-spacing:.18em}
+.card h2{font-size:20px;margin:8px 0 6px}
+.card p{color:var(--muted);font-size:14px}
+.soon{opacity:.55}
+footer{margin-top:44px;color:var(--muted);font-size:13px}
+footer a{color:var(--muted)}
+</style>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to the game</a>
+<main>
+  <div class="kicker">PLAY / 试验场</div>
+  <h1>小游戏与每日实验</h1>
+  <p class="lead">A 4B model and a 4&nbsp;GB GPU generate these; every image and translation is scored by a human click, and low scores are regenerated.</p>
 
-  <div class="scene" aria-hidden="true">
-    <div class="sky-glow"></div>
-    <div class="stars stars-a"></div>
-    <div class="stars stars-b"></div>
-    <div class="moon"></div>
-    <div class="cloud cloud-a"></div>
-    <div class="cloud cloud-b"></div>
-    <div class="skyline">
-      <div class="building b1"><span class="windows"></span></div>
-      <div class="building b2"><span class="windows"></span></div>
-      <div class="building b3"><span class="windows"></span></div>
-      <div class="building b4"><span class="windows"></span></div>
-      <div class="building b5"><span class="windows"></span></div>
-      <div class="building b6"><span class="windows"></span></div>
-      <div class="building b7"><span class="windows"></span></div>
-    </div>
-    <div class="roof">
-      <div class="parapet"></div>
-      <div class="string-lights"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
-      <div class="watertower">
-        <div class="tank"></div>
-        <div class="leg leg-a"></div>
-        <div class="leg leg-b"></div>
-        <div class="ladder"></div>
-      </div>
-      <div class="antenna">
-        <div class="mast"></div>
-        <div class="cross cross-a"></div>
-        <div class="cross cross-b"></div>
-        <div class="beacon"></div>
-      </div>
-      <div class="ac-unit">
-        <div class="fan"></div>
-        <div class="vent"></div>
-      </div>
-      <div class="dish"><div class="dish-face"></div><div class="dish-arm"></div></div>
-      <div class="mira">
-        <div class="mira-antenna"></div>
-        <div class="mira-head"><span class="eye eye-a"></span><span class="eye eye-b"></span></div>
-        <div class="mira-body"></div>
-        <div class="mira-foot"></div>
-      </div>
-      <div class="roof-sign">ARCHIVE<br><span>ROOF ACCESS</span></div>
+  <div class="grid">
+    <a class="card" href="rooftop/">
+      <small>GAME / 01</small>
+      <h2>Wiki Rooftop</h2>
+      <p>Five rounds of word guessing. Every clue is traced to a Wikipedia excerpt.</p>
+    </a>
+    <a class="card" href="games/triangle/">
+      <small>GAME / 02 · 中文</small>
+      <h2>不可能的三角</h2>
+      <p>自我分析卡牌游戏：把选择摊开，看你在三种价值之间如何取舍。</p>
+    </a>
+    <div class="card soon" aria-disabled="true">
+      <small>GALLERY · COMING</small>
+      <h2>每日图文</h2>
+      <p>Daily entries with generated art and Chinese translation, click-to-score.</p>
     </div>
   </div>
 
-  <main id="main" class="shell">
-    <header class="topbar">
-      <div class="brand">
-        <span class="brand-mark" aria-hidden="true">WR</span>
-        <div class="brand-text">
-          <h1>Wiki Rooftop</h1>
-          <p>word observatory · five rounds</p>
-        </div>
-      </div>
-      <div class="pack-chip" id="pack-chip">loading archive…</div>
-    </header>
-
-    <section id="screen-start" class="screen start-screen" aria-labelledby="start-title">
-      <div class="start-grid">
-        <div class="start-copy">
-          <p class="kicker">Rooftop terminal · channel 05</p>
-          <h2 id="start-title">Guess the word<br><span>before the lights go out.</span></h2>
-          <p class="lede">A clue climbs out of the archive. Six bulbs on the roof. One word in the dark.</p>
-          <ul class="rules">
-            <li><b>Five rounds.</b> One hidden word each, three to sixteen letters.</li>
-            <li><b>Six roof lights.</b> A new wrong letter costs one. Repeated letters cost nothing.</li>
-            <li><b>Score.</b> Solve for 100 points plus 10 per light still burning.</li>
-            <li><b>Proof.</b> Every round ends with the source excerpt behind its clue.</li>
-          </ul>
-          <div class="start-actions">
-            <button id="btn-start" class="btn btn-primary" type="button" disabled>Open the observatory</button>
-            <span id="load-status" class="load-status" role="status">Loading content…</span>
-          </div>
-        </div>
-        <aside class="start-card">
-          <p class="card-label">Tonight’s board</p>
-          <div class="big-number">05</div>
-          <p class="big-caption">rounds · one word each</p>
-          <dl class="stat-list">
-            <div><dt>Clues</dt><dd id="stat-entries">—</dd></div>
-            <div><dt>Source chunks</dt><dd id="stat-chunks">—</dd></div>
-            <div><dt>Max score</dt><dd>800</dd></div>
-          </dl>
-          <p class="fine">Content: Wikipedia excerpts, CC BY-SA 4.0. Every answer keeps its article, chunk and excerpt hash.</p>
-        </aside>
-      </div>
-    </section>
-
-    <section id="screen-play" class="screen play-screen" aria-labelledby="play-title" hidden>
-      <h2 id="play-title" class="sr-only" tabindex="-1">Play the round</h2>
-      <div class="hud">
-        <div class="hud-block">
-          <span class="hud-label">Round</span>
-          <div id="round-pips" class="pips" aria-label="Round 1 of 5"></div>
-        </div>
-        <div class="hud-block">
-          <span class="hud-label">Score</span>
-          <strong id="score" class="hud-score">0</strong>
-        </div>
-        <div class="hud-block">
-          <span class="hud-label">Roof lights</span>
-          <div id="health" class="health" role="img" aria-label="6 of 6 lights burning"></div>
-        </div>
-      </div>
-
-      <div class="card clue-card">
-        <p class="card-label">Clue <span id="round-label" class="round-label">01 / 05</span></p>
-        <p id="clue" class="clue"></p>
-        <div id="slots" class="slots" aria-label="Hidden answer"></div>
-        <p id="message" class="message" aria-live="polite">Choose a letter.</p>
-      </div>
-
-      <div class="keyboard-wrap">
-        <div id="keyboard" class="keyboard" role="group" aria-label="Letter guesses"></div>
-        <p class="fine keyboard-hint">Type A–Z or tap the keys. Duplicate letters are free.</p>
-      </div>
-
-      <div id="result-panel" class="result-panel" hidden>
-        <div class="result-card" role="dialog" aria-labelledby="result-title">
-          <p class="card-label" id="result-kicker">Round complete</p>
-          <h3 id="result-title">Word recovered</h3>
-          <p id="result-answer-line" class="result-answer"></p>
-          <div class="source-box">
-            <p class="source-label">Archive excerpt · <span id="source-title"></span></p>
-            <blockquote id="source-excerpt"></blockquote>
-            <p id="source-attribution" class="fine"></p>
-          </div>
-          <button id="btn-next" class="btn btn-primary" type="button">Next round</button>
-        </div>
-      </div>
-    </section>
-
-    <section id="screen-summary" class="screen summary-screen" aria-labelledby="summary-title" hidden>
-      <div class="summary-card">
-        <p class="kicker">Session closed</p>
-        <h2 id="summary-title">The roof holds.</h2>
-        <p class="summary-score"><span id="final-score">0</span><span class="summary-max"> / 800</span></p>
-        <p id="summary-line" class="lede"></p>
-        <ol id="summary-list" class="summary-list"></ol>
-        <div class="start-actions">
-          <button id="btn-restart" class="btn btn-primary" type="button">New session</button>
-          <button id="btn-title" class="btn btn-ghost" type="button">Back to start</button>
-        </div>
-      </div>
-    </section>
-
-    <section id="screen-error" class="screen error-screen" aria-labelledby="error-title" hidden>
-      <div class="error-card" role="alert">
-        <p class="kicker">Content error</p>
-        <h2 id="error-title">The archive did not load.</h2>
-        <p>The game needs <code>data/pack.json</code> and refuses to start without a valid, traceable pack.</p>
-        <pre id="error-detail"></pre>
-        <button id="btn-retry" class="btn btn-primary" type="button">Retry load</button>
-      </div>
-    </section>
-
-    <footer class="foot">
-      Original rooftop build · no external assets · excerpts retain article attribution.
-    </footer>
-  </main>
-
-  <script src="game-core.js"></script>
-  <script src="app.js"></script>
+  <footer><a href="https://dev-lu.com">dev-lu.com</a> · <a href="https://github.com/dacheng-lu">GitHub</a></footer>
+</main>
 </body>
 </html>

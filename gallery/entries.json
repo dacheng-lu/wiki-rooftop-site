@@ -1,0 +1,690 @@
+{
+ "built_at": "2026-11-18T01:19:05",
+ "count": 28,
+ "entries": [
+  {
+   "id": "冰川",
+   "title": "冰川",
+   "source": "冰川",
+   "lang": "zh",
+   "claims": [
+    {
+     "claim": "冰川（英語：glacier）是指大量冰塊堆積形成如同河川般的地理景觀。",
+     "quote": "巴芬島 冰河 出海口 \n 北歐 冰島 的冰川 \n 冰川 （英語： glacier ）是指大量 冰塊 堆積形成如同 河川 般的地理景觀。"
+    },
+    {
+     "claim": "冰川是地球上最大的淡水資源，也是地球上繼海洋以後最大的天然水庫。",
+     "quote": "冰川是 地球 上最大的 淡水 資源，也是地球上繼 海洋 以後最大的天然 水庫 。"
+    },
+    {
+     "claim": "冰川是一巨大的流動固體，是在高寒地區由層層積雪堆疊而成的巨大冰川冰。",
+     "quote": "是一巨大的流動固體，是在高寒地區由層層積雪堆疊而成的巨大冰川冰。"
+    }
+   ],
+   "dropped_claims": 0,
+   "image": "img/冰川.png",
+   "nonce": "314b73d86ddf2453",
+   "built_at": "2026-11-18T01:19:05",
+   "seconds": 18.3
+  },
+  {
+   "id": "沙漠",
+   "title": "沙漠",
+   "source": "沙漠",
+   "lang": "zh",
+   "claims": [
+    {
+     "claim": "沙漠（英語：Erg），亦作砂漠，全称沙质荒漠，在中文语境里常与荒漠（英語：Desert）混用，是一种在地球乾燥氣候影響下所產生的地貌，約佔地球陸地總面積的21%。",
+     "quote": "古 丝绸之路 上的沙漠 \n 撒哈拉沙漠 \n 沙漠 （英語： Erg ），亦作 砂漠 ，全称 沙质荒漠 ，在中文语境里常与 荒漠 （英語： Desert ）混用，是一种在地球乾燥氣候影響下所產生的地貌，約佔 地球 陸地 总面積的21%。"
+    },
+    {
+     "claim": "沙漠地區一般年平均降雨量低於250毫米（mm），被沙質土壤所覆蓋，植被稀疏。",
+     "quote": "沙漠地區一般年平均降雨量低於250毫米（mm），被沙質土壤所覆蓋，植被稀疏。"
+    },
+    {
+     "claim": "它因地表徑流稀少，在明顯的風力作用下擁有非常獨特的地勢。",
+     "quote": "它因地表徑流稀少，在明顯的風力作用下擁有非常獨特的地勢。"
+    }
+   ],
+   "dropped_claims": 0,
+   "image": "img/沙漠.png",
+   "nonce": "c7ac14521e8ff000",
+   "built_at": "2026-11-18T01:18:47",
+   "seconds": 18.7
+  },
+  {
+   "id": "蜜蜂屬",
+   "title": "蜜蜂屬",
+   "source": "蜜蜂屬",
+   "lang": "zh",
+   "claims": [
+    {
+     "claim": "蜜蜂屬内已被认可的现生物种仅有8个，其中最知名的是西方蜜蜂（Apis mellifera），在全球被广泛驯化用以生产蜂蜜和蜂蜡制品。",
+     "quote": "蜜蜂屬内已被认可的 现生 物种 仅有8个，其中最知名的是 西方蜜蜂 （ Apis mellifera ），在全球被广泛 驯化 用以生产蜂蜜和蜂蜡制品；"
+    },
+    {
+     "claim": "蜜蜂屬的體表密被細毛，会产生轻微的静电，使花朵雄蕊中的花粉吸附在牠的身上，並通过後續的活動將花粉傳送至其他同種花朵的雌蕊中。",
+     "quote": "牠的體表密被細毛，会产生轻微的 静电 ，使花朵 雄蕊 中的 花粉 吸附在牠的身上，並通过後續的活動將花粉傳送至其他同種花朵的 雌蕊 中。"
+    },
+    {
+     "claim": "蜜蜂是昆虫养殖最主要的对象，也是农业最重要的益虫，是農糧作物的重要授粉者，不僅是生態系不可或缺的角色，更維繫全球糧食安全。",
+     "quote": "蜜蜂是 昆虫养殖 最主要的对象，也是 农业 最重要的 益虫 ，是 農糧 作物 的重要 授粉 者，不僅是 生態系 不可或缺的角色，更維繫全球 糧食安全 。"
+    }
+   ],
+   "dropped_claims": 0,
+   "image": "img/蜜蜂屬.png",
+   "nonce": "bd7ece2ee0ef3338",
+   "built_at": "2026-11-18T01:18:28",
+   "seconds": 19.8
+  },
+  {
+   "id": "茶",
+   "title": "茶",
+   "source": "茶",
+   "lang": "zh",
+   "claims": [
+    {
+     "claim": "茶，为对茶树的嫩叶与芽进行加工制成的饮品，是全球三大无酒精饮料之一。",
+     "quote": "茶 在盖碗中冲泡的 龙井茶 类型 热饮或冷饮 起源地 古中国 始创时间 最早见于《 神农本草经 》，但可能起源更早 \n 中国传统制茶技艺及其相关习俗 聯合國教科文組織非物質文化遺產 国家 中国 参考编码 1884 地区 亞洲和太平洋地區 入册历史 入選年份 2022年 \n 茶 ，为对 茶樹 的嫩叶与芽进行加工制成的饮品，是全球三大无酒精饮料之一。"
+    },
+    {
+     "claim": "2022 年全球茶叶产量达 657 万吨，中国（产量 335 万吨）、印度（产量 139 万吨）为两大主产国。",
+     "quote": "据国际茶叶委员会统计，2022年全球茶叶产量达657万吨，消费覆盖160余个国家和地区，其中 中国 （产量335万吨）、 印度 （产量139万吨）为两大主产国，而 英国 、 土耳其 、 摩洛哥 等国人均年消费量超2公斤。"
+    },
+    {
+     "claim": "从植物学视角看，茶树一般认为原产于中国西南地区，野生种可追溯至第三纪渐新世。",
+     "quote": "从植物学视角看，茶树一般认为原产于 中国西南地区 ，野生种可追溯至 第三紀 渐新世 。"
+    }
+   ],
+   "dropped_claims": 0,
+   "image": "img/茶.png",
+   "nonce": "a04da9997e631043",
+   "built_at": "2026-11-18T01:18:08",
+   "seconds": 19.3
+  },
+  {
+   "id": "牦牛",
+   "title": "牦牛",
+   "source": "牦牛",
+   "lang": "zh",
+   "claims": [
+    {
+     "claim": "牦牛（学名：Bos grunniens）是一种生活在青藏高原及其周边海拔 4000 米以上地区的长毛牛属动物。",
+     "quote": "牦牛 \n\n 牦牛 \n\n 牦牛 \n\n 保护状况 \n\n 易危 （ IUCN 3.1 ） \n\n 科学分类 \n\n 界： \n\n 动物界 Animalia \n\n 门： \n\n 脊索动物门 Chordata \n\n 纲： \n\n 哺乳纲 Mammalia \n\n 目： \n\n 偶蹄目 Artiodactyla \n\n 科： \n\n 牛科 Bovidae \n\n 属： \n\n 牛属 Bos \n\n 种：\n\n 牦牛 B. grunniens \n\n 二名法 \n\n Bos grunniens \n Linnaeus , 1766 \n\n 亚种\n\n 家牦牛 Bos grunniens grunniens \n\n 野氂牛 Bos grunniens mutus \n\n 異名 \n\n Bos bunnelli Frick, 1937\n\n 牦牛 （ 學名 ： Bos grunniens ， 藏語 ： གཡག་ ， 威利转写 ： g.yag ， 藏语拼音 ： Yag ），又作 犛牛 ，是一种生活在 青藏高原 及其周边海拔4000米以上地区的长毛 牛属 动物。"
+    },
+    {
+     "claim": "牦牛是易危物种。",
+     "quote": "Ruijun, Long. The yak 2., revised and enlarged. Bangkok: FAO Regional Office for Asia and Pacific. [ 2024-05-14 ] . ISBN 92-5-104965-3. \n\n 分类：​ IUCN红色名录易危物种 \n 隐藏分类：​ 物种微格式条目\n 含有拉丁語的條目\n 含有標準藏語的條目\n CS1英语来源 (en)\n\n This page is issued from Wikipedia . The text is available under Creative Commons Attribution-Share Alike 4.0 unless otherwise noted. Additional terms may apply for the media files."
+    },
+    {
+     "claim": "Bos grunniens Linnaeus, 1766 是 GBIF 数据库中的条目。",
+     "quote": "Jianlin, Han;"
+    }
+   ],
+   "dropped_claims": 0,
+   "image": "img/牦牛.png",
+   "nonce": "ab0bd1d9ce98d970",
+   "built_at": "2026-11-18T01:17:49",
+   "seconds": 16.9
+  },
+  {
+   "id": "火山雷",
+   "title": "火山雷",
+   "source": "火山雷",
+   "lang": "zh",
+   "claims": [
+    {
+     "claim": "火山雷是火山喷出物摩擦产生的静电产生的闪电。",
+     "quote": "火山雷 \n\n 火山雷 \n\n 火山雷 \n 火山雷 （英語： volcanic lightning ）是 火山 喷出物 摩擦 产生的 静电 产生的 闪电 。"
+    },
+    {
+     "claim": "奧古斯丁火山、冰岛 2010 年埃亚菲亚德拉火山爆发时以及意大利西西里岛埃特纳火山和菲律宾的塔阿爾火山均有出現過火山雷這一情況",
+     "quote": "奧古斯丁火山 、 冰岛 2010年埃亚菲亚德拉火山爆发 時以及 意大利 西西里岛 埃特纳火山 和 菲律宾 的 塔阿爾火山 均有出現過火山雷這一情況\n\n ^ Society, National Geographic. Volcanic Lightning . National Geographic Society. 2015-10-28 [ 2022-04-23 ] . （ 原始内容 存档于2022-04-13） （英语） . \n\n ^ Handwerk, Brian. Volcanic Lightning Sparked by \"Dirty Thunderstorms \" . National Geographic. February 22, 2007 [ 2009-01-09 ] . （ 原始内容 存档于2015-05-03）. \n\n ^ Iceland Volcano Pictures: Lightning Adds Flash to Ash . National Geographic. April 19, 2010 [ 2010-04-20 ] . （ 原始内容 存档于2019-05-04）. \n\n ^ editor, Ian Sample Science. Sky lights up over Sicily as Mount Etna's Voragine crater erupts . the Guardian. [ 2015-12-03 ] . （ 原始内容 存档于2015-12-10）. \n\n ^ DI SANTOLO, ALESSANDRA SCOTTO. Philippines volcano eruption: Terrifying video of Taal volcano producing lightning strikes . [ 12 January 2020] . （ 原始内容 存档于2020-01-12）. \n\n ^ Borbon, Christian. Philippines: Volcano near Manila spews giant ash column . Gulf News. [ 12 January 2020] . （ 原始内容 存档于2022-05-22）. \n\n 隐藏分类：​ 含有英語的條目\n CS1英语来源 (en)\n\n This page is issued from Wikipedia . The text is available under Creative Commons Attribution-Share Alike 4.0 unless otherwise noted. Additional terms may apply for the media files."
+    }
+   ],
+   "dropped_claims": 1,
+   "image": "img/火山雷.png",
+   "nonce": "495f2ded68a2a4e9",
+   "built_at": "2026-11-18T01:17:32",
+   "seconds": 19.6
+  },
+  {
+   "id": "郁金香",
+   "title": "郁金香",
+   "source": "郁金香",
+   "lang": "zh",
+   "claims": [
+    {
+     "claim": "鬱金香（學名：Tulipa gesneriana）是百合科鬱金香屬的一個栽培種，又称洋荷花、旱荷花。",
+     "quote": "郁金香 \n\n 科学分类 \n\n 界： \n\n 植物界 Plantae \n\n 演化支 ： \n\n 维管植物 Tracheophyta \n\n 演化支 ： \n\n 被子植物 Angiosperms \n\n 演化支 ： \n\n 单子叶植物 Monocots \n\n 目： \n\n 百合目 Liliales \n\n 科： \n\n 百合科 Liliaceae \n\n 属： \n\n 郁金香属 Tulipa \n\n 种：\n\n 郁金香 T. gesneriana \n\n 二名法 \n\n Tulipa gesneriana \n L. \n\n 異名 \n\n Eduardoregelia Popov\n\n Liriactis Raf.\n\n Liriopogon Raf.\n\n Orithyia D.Don\n\n Podonix Raf. \n\n 鬱金香 （ 學名 ： Tulipa gesneriana ）是 百合科 鬱金香屬 的一个 栽培种 ，又称 洋荷花 、 旱荷花 。"
+    },
+    {
+     "claim": "绝大多数郁金香属栽培品种都属于本种，其起源地为中亞天山，可能起源于眼斑郁金香、亚美尼亚郁金香、准噶尔郁金香等种的杂交。",
+     "quote": "绝大多数郁金香属 栽培品种 都属于本 种 ，其起源地为 中亞 天山 ，可能起源于眼斑郁金香（ 學名 ： Tulipa agenensis ）、亚美尼亚郁金香（ 學名 ： Tulipa armena ）、准噶尔郁金香（ 學名 ： Tulipa suaveolens ）等种的杂交。"
+    },
+    {
+     "claim": "荷蘭初次引進鬱金香是在16世紀末，普遍在3月下旬至5月上旬。",
+     "quote": "為人熟知的外銷大國 荷蘭 初次引進鬱金香是在16世紀末，因生長地區 緯度 不同而花期各異，普遍在3月下旬至5月上旬。"
+    }
+   ],
+   "dropped_claims": 0,
+   "image": "img/郁金香.png",
+   "nonce": "e15381928991f655",
+   "built_at": "2026-11-18T01:17:12",
+   "seconds": 17.9
+  },
+  {
+   "id": "丝绸之路",
+   "title": "丝绸之路",
+   "source": "丝绸之路",
+   "lang": "zh",
+   "claims": [
+    {
+     "claim": "丝绸之路从欧洲经过埃及、索马里、阿拉伯半岛、伊朗、阿富汗、中亚、巴基斯坦、印度、斯里兰卡、缅甸、爪哇群岛、菲律宾直到中国",
+     "quote": "丝绸之路 丝绸之路从欧洲经过埃及、索马里、阿拉伯半岛、伊朗、阿富汗、中亚、巴基斯坦、印度、斯里兰卡、缅甸、爪哇群岛、菲律宾直到中国\n 陆上丝绸之路\n 海上丝绸之路\n 道路信息 時間周期 约公元前114年—约公元1450年 \n\n 联合国教科文组织世界遗产 官方名稱 丝绸之路：长安—天山廊道的路网 位置 中国 、 哈萨克斯坦 、 吉尔吉斯斯坦 標準 文化 ：(ii)(iii)(v)(vi) 参考编码 1442 登录年份 2014年（第38次 會議 ） \n 联合国教科文组织世界遗产 官方名稱 丝绸之路：扎拉夫尚—卡拉库姆廊道 位置 塔吉克斯坦 、 土库曼斯坦 、 乌兹别克斯坦 標準 文化 ：(ii)(iii)(v) 参考编码 1675 登录年份 2023年（第45次 會議 ） \n\n 丝绸之路 ，简称丝路，指从汉唐古都 长安 / 洛阳 出發，經 甘肅 、 新疆 ，到中亞、西亞、歐洲，並聯結 地中海 各國的陸上通道，最遠到達西亞諸國的陸上貿易通道， 東漢 時 班超 再次出使西域打通了荒廢已久的絲綢之路，将东端延伸到京师洛阳，西端延伸到歐洲（ 羅馬 ）。"
+    },
+    {
+     "claim": "“丝绸之路”一词最早来自于德意志帝国地理学家費迪南·馮·李希霍芬男爵於1877年出版的一套五卷本的地图集。",
+     "quote": "“丝绸之路”一词最早来自于 德意志帝国 地理学家 費迪南·馮·李希霍芬 男爵於1877年出版的一套五卷本的地图集。"
+    },
+    {
+     "claim": "广义的丝绸之路指从上古开始陆续形成的，遍及欧亚大陆甚至包括北非和东非在内的长途商业贸易和文化交流线路的总称。",
+     "quote": "广义的丝绸之路指从 上古 开始陆续形成的，遍及 欧亚大陆 甚至包括 北非 和 东非 在内的长途商业贸易和文化交流线路的总称。"
+    }
+   ],
+   "dropped_claims": 0,
+   "image": "img/丝绸之路.png",
+   "nonce": "03629010c8ae9116",
+   "built_at": "2026-11-18T01:16:54",
+   "seconds": 18.8
+  },
+  {
+   "id": "阿亚索菲亚",
+   "title": "阿亚索菲亚",
+   "source": "阿亚索菲亚",
+   "lang": "zh",
+   "claims": [
+    {
+     "claim": "阿亚索菲亚是位于君士坦丁堡、即现今土耳其伊斯坦布尔的宗教建筑。",
+     "quote": "希臘語 ： Ἁγία Σοφία ， 羅馬化 ： Hagía Sophía ）是位于 君士坦丁堡 、即现今 土耳其 伊斯坦布尔 的宗教建筑，因原始用途為 基督教 （ 東正教會 ） 教堂 而又譯為 聖索菲亞大教堂 ，現今則作為 伊斯蘭教 清真寺 而稱為 聖索菲亞大清真寺 （ 土耳其語 ： Ayasofya-i Kebir Cami-i Şerifi ；"
+    },
+    {
+     "claim": "阿亚索菲亚以其巨大的圆顶而闻名于世，是一幢「改变了建筑史」的拜占庭式建筑典范。",
+     "quote": "其以巨大的 圓頂 而闻名于世，是一幢「改變了建築史」的 拜占庭式建築 典範。"
+    },
+    {
+     "claim": "阿亚索菲亚位于土耳其伊斯坦布尔的法蒂赫区，是一座东正教教堂（约360–1204、1261–1453）、天主教会教堂（1204–1261）、伊斯兰教逊尼派清真寺（1453–1931、2020 年–至今）以及土耳其博物馆（1935–2020）。",
+     "quote": "阿亚索菲亚 Ἁγία Σοφία （希腊语）\n Ayasofya （土耳其语） 阿亚索菲亚一隅 位置 土耳其 伊斯坦堡 法蒂赫區 設計者 米利都的伊西多爾 \n 特拉勒斯的安提莫斯 類型 \n 東正教會 教堂（約360–1204、1261–1453）\n\n 天主教會 教堂（1204–1261）\n\n 伊斯蘭教 遜尼派 清真寺（1453–1931、2020年–至今）\n\n 土耳其博物馆（1935–2020）\n\n 材料 方石、 磚 長度 82米（269英尺） 宽度 73米（240英尺） 高度 55米（180英尺） 動工 公元346年 完工 公元360年 \n 联合国教科文组织世界遗产 類型 文化遗产 標準 i, ii, iii, iv 评定时间 1985 隶属 伊斯坦布尔历史区 參考編碼 356 地区 欧洲和北美地区 \n\n 聖索菲亞建築內景一隅，天花盡展伊斯蘭書法。"
+    }
+   ],
+   "dropped_claims": 0,
+   "image": "img/阿亚索菲亚.png",
+   "nonce": "4118c3e11982a032",
+   "built_at": "2026-11-18T01:16:35",
+   "seconds": 21.7
+  },
+  {
+   "id": "間歇泉",
+   "title": "間歇泉",
+   "source": "間歇泉",
+   "lang": "zh",
+   "claims": [
+    {
+     "claim": "間歇泉是溫泉的一種，因為地下水變成蒸氣而間歇地噴出而形成。",
+     "quote": "間歇泉噴發示意圖 \n 間歇泉 （英語： geyser ， 美國 / ɡ aɪ z ər / ， 英國 / ˈ ɡ iː z ər / )），是 溫泉 的一種，因為 地下水 變成 蒸氣 而間歇地噴出而形成。"
+    },
+    {
+     "claim": "間歇泉是冰島的大間歇泉。",
+     "quote": "間歇泉 \n\n 間歇泉 \n\n 冰島 的 大間歇泉 。"
+    },
+    {
+     "claim": "间歇泉的定义来自剑桥在线词典。",
+     "quote": "^ Definition of geyser noun from Cambridge Dictionary Online . [ 2011-07-09 ] . （原始内容 存档 于2015-07-21）. \n\n ^ geyser | Definition of geyser in English by Oxford Dictionaries . Oxford Dictionaries | English. [ 2020-08-20 ] . （原始内容 存档 于2016-09-06）. \n\n 隐藏分类：​ 自2018年4月扩充中的条目\n 需要從英語維基百科翻譯的條目\n 需要從德語維基百科翻譯的條目\n 含有英語的條目\n\n This page is issued from Wikipedia . The text is available under Creative Commons Attribution-Share Alike 4.0 unless otherwise noted. Additional terms may apply for the media files."
+    }
+   ],
+   "dropped_claims": 0,
+   "image": "img/間歇泉.png",
+   "nonce": "8c056b98f7c8a3c3",
+   "built_at": "2026-11-18T01:16:13",
+   "seconds": 16.5
+  },
+  {
+   "id": "罗马斗兽场",
+   "title": "罗马斗兽场",
+   "source": "罗马斗兽场",
+   "lang": "zh",
+   "claims": [
+    {
+     "claim": "罗马斗兽场是古罗马时期最大的椭圆形角斗场，建于公元 72 年 -82 年间，现仅存遗迹位于现今意大利罗马市的中心。",
+     "quote": "原名 弗莱文圆形剧场 ， 拉丁語 ： Anfiteatro Flavio / Amphitheatrvm falvvm ）是 古罗马 时期最大的橢圆形角鬥场，建於公元72年-82年间，现仅存遗迹位於現今 義大利 罗马市 的中心。"
+    },
+    {
+     "claim": "罗马竞技场是卵形的圆形剧场，也是目前最大的圆形剧场，使用材料包括洞石、凝灰岩及砖饰面的混凝土。",
+     "quote": "羅馬競技場是卵形的 圓形劇場 ，也是目前最大的圓形劇場，使用材料包括 洞石 、 凝灰岩 及砖饰面的 混凝土 。"
+    },
+    {
+     "claim": "罗马斗兽场估计可以容纳五万至八万名观众，平均观众约六万五千人。",
+     "quote": "羅馬競技場估計可以容納五萬至八萬名觀眾，平均觀眾約六萬五千人。"
+    }
+   ],
+   "dropped_claims": 0,
+   "image": "img/罗马斗兽场.png",
+   "nonce": "19972496e8aeba21",
+   "built_at": "2026-11-18T01:15:57",
+   "seconds": 19.2
+  },
+  {
+   "id": "竹",
+   "title": "竹",
+   "source": "竹",
+   "lang": "zh",
+   "claims": [
+    {
+     "claim": "竹，又称竹子，是竹亚科植物的通称，属于禾本目禾本科，可分为 3 族、约 123 属，是禾本科中唯一具有乔木形态的类群。",
+     "quote": "竹亚科 \n\n 日本 京都 嵐山 竹林 中的 孟宗竹 （ Phyllostachys edulis ）\n\n 科学分类 \n\n 界： \n\n 植物界 Plantae \n\n 演化支 ： \n\n 维管植物 Tracheophyta \n\n 演化支 ： \n\n 被子植物 Angiosperms \n\n 演化支 ： \n\n 单子叶植物 Monocots \n\n 演化支 ： \n\n 鸭跖草类植物 Commelinids \n\n 目： \n\n 禾本目 Poales \n\n 科： \n\n 禾本科 Poaceae \n\n 演化支 ： \n\n BOP类群 BOP \n\n 亚科： \n\n 竹亚科 Bambusoideae \n Luerss., 1893 \n\n 模式属 \n\n 簕竹属 \n Bambusa \n Schreb. , 1789 \n\n 总族\n\n 簕竹总族 Bambusodae\n\n 青篱竹总族 Arundinarodae\n\n 竹亞科分布 \n\n 竹 ，又称 竹子 ，是 竹亞科 （ 學名 ： Bambusoideae ）植物的通称，属于 禾本目 禾本科 ，可分為3族、约123属，是禾本科中唯一具有 乔木 形态的类群，如热带型的 簕竹族 与温带型的 青篱竹族 ，但也包括低矮的 草本 竹类 黍竺族 （ Olyreae ）。"
+    },
+    {
+     "claim": "此條目介紹的是植物。",
+     "quote": "竹 \n\n 竹 \n\n 此條目介紹的是植物。"
+    },
+    {
+     "claim": "关于日本插畫家，请见「 竹 (插畫家) 」。",
+     "quote": "关于日本插畫家，请见「 竹 (插畫家) 」。"
+    }
+   ],
+   "dropped_claims": 0,
+   "image": "img/竹.png",
+   "nonce": "a173b7c519b612be",
+   "built_at": "2026-11-18T01:15:37",
+   "seconds": 21.5
+  },
+  {
+   "id": "极光",
+   "title": "极光",
+   "source": "极光",
+   "lang": "zh",
+   "claims": [
+    {
+     "claim": "地球上的極光是由於來自磁層和太陽風的帶電高能粒子被地磁場導引帶進地球大氣層，並與高層大氣中的原子碰撞造成的發光現象。",
+     "quote": "現代物理學對其產生原理有詳細描述，地球上的極光是由於來自 磁層 和 太陽風 的帶電高能粒子被 地磁場 導引帶進地球大氣層，並與高層大氣（ 熱層 ）中的原子碰撞造成的發光現象。"
+    },
+    {
+     "claim": "极光是一种等离子体现象，主要发生在具有磁场的行星上的高纬度区域。",
+     "quote": "极光 \n\n 极光 \n\n 绚丽的極光 \n 極光 \n 愛沙尼亞 拍攝的極光 \n 極光 ，是一種 等離子體 現象，主要發生在具有磁场的 行星 上的高緯度區域，而在地球上的極光帶即是經度上距離地磁極10°至20°，緯度寬約3°至6°的區域。"
+    },
+    {
+     "claim": "极光不只在地球上出现，太阳系内的其他一些具有磁场的星体上也有极光。",
+     "quote": "极光不只在地球上出现， 太阳系 内的其他一些具有磁场的星體上也有极光\n\n ^ Feldstein, Y. I. Some problems concerning the morphology of auroras and magnetic disturbances at high latitudes. Geomagnetism and Aeronomy. 1963, 3 : 183–192. Bibcode:1963Ge&Ae...3..183F . \n\n ^ Feldstein, Y. I. A Quarter Century with the Auroral Oval. EOS. 1986, 67 (40): 761. Bibcode:1986EOSTr..67..761F . doi:10.1029/EO067i040p00761-02 . \n\n ^ ESA Portal - Mars Express discovers aurorae on Mars . [ 2009-05-04 ] . （原始内容 存档 于2012-10-19）. \n\n This page is issued from Wikipedia . The text is available under Creative Commons Attribution-Share Alike 4.0 unless otherwise noted. Additional terms may apply for the media files."
+    }
+   ],
+   "dropped_claims": 0,
+   "image": "img/极光.png",
+   "nonce": "cafa1a7c50d925d9",
+   "built_at": "2026-11-18T01:15:16",
+   "seconds": 18.2
+  },
+  {
+   "id": "鮟鱇",
+   "title": "鮟鱇",
+   "source": "鮟鱇",
+   "lang": "zh",
+   "claims": [
+    {
+     "claim": "鮟鱇是鮟鱇目（學名：Lophiiformes）或者刺尾鯛目鮟鱇亞目（學名：Lophioidei）魚類的通稱，俗名安康鱼，又名琵琶魚、結巴魚、燈籠魚，是條鰭魚綱真鱸形系的硬骨魚，於世界各大海洋均有分佈，如大西洋、太平洋和印度洋。",
+     "quote": "鮟鱇亞目 \n 化石时期： \n\n 圖片說明 （左上起） 釣鮟鱇 Lophius piscatorius 、 大洋長鰭角鮟鱇 Caulophryne pelagica 、 康氏躄魚 Antennarius commerson 、 大斑躄魚 Antennarius maculatus 、 迷幻躄鱼 Histiophryne psychedelica 、 棘茄鱼 Halieutaea stellata \n\n 科学分类 \n\n 界： \n\n 动物界 Animalia \n\n 门： \n\n 脊索动物门 Chordata \n\n 纲： \n\n 辐鳍鱼綱 Actinopteri \n\n 总目： \n\n 鱸形總目 Percomorpha \n\n 目： \n\n 刺尾鱼目 Acanthuriformes \n\n 亚目： \n\n 鮟鱇亞目 Lophioidei \n Garman, 1899 \n\n 下目 \n\n 鮟鱇下目 Lophioideo\n\n 躄魚下目 Antennarioideo\n\n 单棘躄鱼下目 Chaunacoideo\n\n 棘茄魚下目 Ogcocephalioideo\n\n 角鮟鱇下目 Ceratioideo\n\n 鮟鱇目 \n\n {{{1}}} \n\n 科学分类 \n\n 界： \n\n 动物界 Animalia \n\n 门： \n\n 脊索动物门 Chordata \n\n 纲： \n\n 辐鳍鱼綱 Actinopteri \n\n 总目： \n\n 鱸形總目 Percomorpha \n\n 系： \n\n 真鲈形系 Eupercaria \n\n 目： \n\n 鮟鱇目 Lophiiformes \n Garman, 1899 \n\n 亞目 \n\n 鮟鱇亞目 Lophioidei\n\n 躄魚亞目 Antennarioidei\n\n 单棘躄鱼亚目 Chaunacoidei\n\n 棘茄魚亞目 Ogcocephalioidei\n\n 角鮟鱇亞目 Ceratioidei\n\n 鮟鱇 是 鮟鱇目 （ 學名 ： Lophiiformes ）或者 刺尾鯛目 鮟鱇亞目 （ 學名 ： Lophioidei ）魚類的通稱，俗名 安康鱼 ，又名 琵琶魚 、 結巴魚 、 燈籠魚 ，是 條鰭魚綱 真鱸形系 的 硬骨魚 ，於世界各大海洋均有分佈，如 大西洋 、 太平洋 和 印度洋 。"
+    },
+    {
+     "claim": "「琵琶鱼」重定向至此。",
+     "quote": "「 琵琶鱼 」重定向至此。"
+    },
+    {
+     "claim": "鮟鱇",
+     "quote": "鮟鱇 \n\n 鮟鱇 \n\n 注意 ：本页有 Unihan 扩展B区 汉字：「 𩽾 、 𩾌 」，這些字符可能會 错误显示 ，詳见Unicode扩展汉字。"
+    }
+   ],
+   "dropped_claims": 0,
+   "image": "img/鮟鱇.png",
+   "nonce": "147e9f6954abf180",
+   "built_at": "2026-11-18T01:14:58",
+   "seconds": 18.5
+  },
+  {
+   "id": "峡湾",
+   "title": "峡湾",
+   "source": "峡湾",
+   "lang": "zh",
+   "claims": [
+    {
+     "claim": "峡湾是由由于冰川侵蚀河谷所形成的地形。",
+     "quote": "峡湾 \n\n 峡湾 \n\n 挪威的峽灣 \n 峽灣 （ 挪威語 ： fjord ， 發音： [fjuːr] ⓘ ）是由於 冰川 侵蝕 河谷 所形成的地形。"
+    },
+    {
+     "claim": "峡湾是由冰川从高山向下滑动，将山壁磨蚀成峡谷，随后被海水倒灌形成的。",
+     "quote": "冰川由高山向下滑時，不僅從河谷流入，還將山壁磨蝕，成為 峽谷 ，當這些接近海岸的峽谷被海水倒灌時，便形成峽灣。"
+    },
+    {
+     "claim": "峡湾在寒帶地方較為常見，像北歐的 挪威 便是以峽灣特多而聞名。",
+     "quote": "峡湾在寒帶地方較為常見，像北歐的 挪威 便是以峽灣特多而聞名。"
+    }
+   ],
+   "dropped_claims": 0,
+   "image": "img/峡湾.png",
+   "nonce": "6cb552924f55b57e",
+   "built_at": "2026-11-18T01:14:35",
+   "seconds": 17.7
+  },
+  {
+   "id": "珊瑚礁",
+   "title": "珊瑚礁",
+   "source": "珊瑚礁",
+   "lang": "zh",
+   "claims": [
+    {
+     "claim": "它们是成千上万個 珊瑚虫 的骨骼在数百年至数萬年的生长过程中形成的。",
+     "quote": "它们是成千上万個 珊瑚虫 的骨骼在数百年至数萬年的生长过程中形成的。"
+    },
+    {
+     "claim": "珊瑚礁是石灰岩結構的礁石，由造礁珊瑚、石灰藻以及其他鈣化生物在動植物之間既競爭又合作過程中，藉由鈣化作用與沉積作用所建造而成。",
+     "quote": "珊瑚礁 \n\n 珊瑚礁 \n\n 珊瑚礁的生物多样性 珊瑚礁 是 石灰岩 結構的礁石，由 造礁珊瑚 、 石灰 藻 以及其他鈣化生物在動植物之間既競爭又合作過程中，藉由 鈣化 作用與 沉積作用 所建造而成。"
+    },
+    {
+     "claim": "在深海和浅海中均有珊瑚礁存在，珊瑚礁形成的地質結構，甚至還構成了陸地上的島嶼。",
+     "quote": "在深海和浅海中均有珊瑚礁存在，珊瑚礁形成的地質結構，甚至還構成了陸地上的島嶼。"
+    }
+   ],
+   "dropped_claims": 0,
+   "image": "img/珊瑚礁.png",
+   "nonce": "1ba7637d27ea80bc",
+   "built_at": "2026-11-18T01:14:17",
+   "seconds": 22.9
+  },
+  {
+   "id": "Tea",
+   "title": "Tea",
+   "source": "Tea",
+   "lang": "en",
+   "claims": [
+    {
+     "claim": "Tea is an aromatic beverage prepared by infusion of hot or boiling fresh water with fresh or cured leaves of Camellia sinensis.",
+     "quote": "Tea \n\n Tea \n\n This article is about the beverage made from the tea plant. For beverages made by steeping other plants, see Herbal tea . For other uses, see Tea (disambiguation) . \n\n Tea Longjing green tea being infused in a gaiwan Type Hot or cold beverage Origin China Introduced First recorded in China in 59 BC, possibly originated earlier \n\n Tea is an aromatic beverage prepared by infusion of hot or boiling fresh water with fresh or cured leaves of Camellia sinensis , an evergreen shrub native to East Asia that originated in the borderlands of southwestern China , northeast India and northern Myanmar . Tea has a stimulant effect in humans primarily due to its caffeine content.\n\n After plain drinking water , tea is the most widely consumed beverage in the world. There are many varieties of tea according to differences in cultivars , processing and blends ;",
+     "claim_zh": "茶是用热水或沸水冲泡新鲜或干燥的茶叶制成的芳香饮料，其原料为山茶科植物（Camellia sinensis）的叶子。"
+    },
+    {
+     "claim": "Tea is the most widely consumed beverage in the world after plain drinking water.",
+     "quote": "some have a cooling, slightly bitter and astringent flavor , while others have taste profiles that include sweet, nutty, floral or grassy notes .\n\n Traditionally, tea is made by steeping loose tea leaves in hot water (usually in a teapot or teacup ) for a period of time, or in the case of compressed and fermented tea , via decoction ( simmering ) in a kettle . Convenient preparations, such as tea bag , infuser and press as well as powdered instant tea such as matcha , konacha and chai latte , are also common. Tea is most commonly consumed as a hot beverage in a plain hot water infusion, although it can also be in mixed drink forms, such as milk tea and butter tea , sometimes sweetened with added sugar or sugar substitutes , or alternatively flavored with salt and spices . In modern times, tea can also be served as a cold beverage in the form of iced tea or in soft drink mixtures such as bubble tea .\n\n Early credible record of tea drinking dates to the 3rd century AD, in a Chinese medical text written by Eastern Han dynasty physician Hua Tuo . Tea was consumed as a recreational and social beverage during the Tang dynasty , and Chinese tea culture -inspired ceremonial drinking spread to other Sinospheric countries such as Japan (where it is known as chado ), Korea (known as darye ) and Vietnam (typically as part of a wedding ritual ). Tea drinking also spread into Inner Asia and South Asia via the Silk Road and the Tea Horse Road , particularly during the expansion of the Mongols , for whom the salted milk tea ( süütei tsai ) has remained part of the staple diet. Outside of the Far East , Portuguese priests and merchants introduced tea drinking to Europe during the 16th century. During the 17th century, drinking tea became fashionable in Western Europe as part of the rise of Chinoiserie influence, especially among the British , who had such a high import demand of tea that they later started to cultivate tea on a large scale in colonial India and Ceylon , where tea had previously been used only as a herbal medicine .\n\n Hidden categories: Articles with short description\n Short description is different from Wikidata\n Wikipedia indefinitely semi-protected pages\n Use dmy dates from September 2022\n Use British English from January 2014\n All Wikipedia articles written in British English\n Articles with hRecipes\n Articles with hProducts\n Pages with reference errors\n\n This page is issued from Wikipedia . The text is available under Creative Commons Attribution-Share Alike 4.0 unless otherwise noted. Additional terms may apply for the media files.",
+     "claim_zh": "茶是世界上仅次于白开水的最广泛饮用的饮料。"
+    }
+   ],
+   "dropped_claims": 1,
+   "image": "img/Tea.png",
+   "nonce": "ca4d478ecd8a17f6",
+   "built_at": "2026-11-18T01:10:02",
+   "seconds": 23.0
+  },
+  {
+   "id": "Tulip",
+   "title": "Tulip",
+   "source": "Tulip",
+   "lang": "en",
+   "claims": [
+    {
+     "claim": "Tulips are spring-blooming perennial herbaceous bulbiferous geophytes in the Tulipa genus.",
+     "quote": "Tulip \n\n Tulip \n\n This article is about the plant. For other uses, see Tulip (disambiguation) . \n\n Tulip \n\n Tulipa gesneriana \n\n Scientific classification \n\n Kingdom: \n Plantae \n\n Clade : \n Tracheophytes \n\n Clade : \n Angiosperms \n\n Clade : \n Monocots \n\n Order: \n Liliales \n\n Family: \n Liliaceae \n\n Subfamily: \n Lilioideae \n\n Tribe: \n Lilieae \n\n Genus: \n Tulipa \n L. \n\n Type species \n\n Tulipa gesneriana \n L. \n\n Subgenera \n\n Clusianae \n\n Orithyia \n\n Tulipa \n\n Eriostemones \n\n Diversity \n\n About 75 species \n\n Distribution of Tulipa : Natural (red) and Introduced (yellow) \n\n Synonyms \n\n Orithyia D.Don \n\n Liriactis Raf. \n\n Liriopogon Raf.\n\n Podonix Raf.\n\n Eduardoregelia Popov \n\n Tulipa alberti in Kazakhstan \n\n Tulips are spring-blooming perennial herbaceous bulbiferous geophytes in the Tulipa genus . Their flowers are usually large, showy, and brightly coloured, generally red, orange, pink, yellow, or white . They often have a different coloured blotch at the base of the tepals , internally. Because of a degree of variability within the populations and a long history of cultivation, classification has been complex and controversial. The tulip is a member of the lily family , Liliaceae , along with 14 other genera, where it is most closely related to Amana , Erythronium , and Gagea in the tribe Lilieae .\n\n There are about 75 species , and these are divided among four subgenera . The name \"tulip\" is thought to be derived from a Turkish word for turban , which it may have been thought to resemble by those who discovered it. Tulips were originally found in a band stretching from Southern Europe to Central Asia, but since the seventeenth century have become widely naturalised and cultivated ( see map ). In their natural state, they are adapted to steppes and mountainous areas with temperate climates . Flowering in the spring, they become dormant in the summer once the flowers and leaves die back, emerging above ground as a shoot from the underground bulb in early spring.\n\n Growing wild over much of the Near East and Central Asia, the Persian and Turkish people were the first to cultivate tulips. The cultivation of tulips dates back to 10th-century Persia. Tulips were probably introduced into Anatolia with the advance of the Seljuks . By the 15th century, tulips were among the most prized flowers;",
+     "claim_zh": "郁金香是郁金香属的多年生草本球茎植物。"
+    },
+    {
+     "claim": "Tulips were originally found in a band stretching from Southern Europe to Central Asia.",
+     "quote": "becoming the symbol of the later Ottomans. Tulips were cultivated in Byzantine Constantinople as early as 1055 but they did not come to the attention of Northern Europeans until the sixteenth century, when Northern European diplomats to the Ottoman court observed and reported on them. They were rapidly introduced into Northern Europe and became the subject of an investment bubble during the Dutch tulip mania of 1634–1637. Tulips were frequently depicted in Dutch Golden Age paintings , and have become associated with the Netherlands , the major producer for world markets, ever since. \n\n In the seventeenth-century Netherlands, during the time of the tulip mania, an infection of tulip bulbs by the tulip breaking virus created variegated patterns in the tulip flowers that were much admired and valued. While truly broken tulips are not cultivated anymore, the closest available specimens today are part of the group known as the Rembrandts – so named because Rembrandt painted some of the most admired breaks of his time.\n\n Breeding programmes have produced thousands of hybrid and cultivars in addition to the original species (known in horticulture as botanical tulips). They are popular throughout the world, both as ornamental garden plants and as cut flowers .\n\n Hidden categories: Articles with short description\n Short description matches Wikidata\n Use dmy dates from January 2021\n Use British English from January 2021\n All Wikipedia articles written in British English\n Articles using diversity taxobox\n Articles with 'species' microformats\n Pages with reference errors\n\n This page is issued from Wikipedia . The text is available under Creative Commons Attrib",
+     "claim_zh": "郁金香最初发现于从南欧延伸至中亚的一个带状区域。"
+    }
+   ],
+   "dropped_claims": 1,
+   "image": "img/Tulip.png",
+   "nonce": "30c31aad983fa1e8",
+   "built_at": "2026-11-18T01:08:48",
+   "seconds": 27.7
+  },
+  {
+   "id": "Silk-Road",
+   "title": "Silk Road",
+   "source": "Silk_Road",
+   "lang": "en",
+   "claims": [
+    {
+     "claim": "The Silk Road was a network of Asian trade routes active from the second century BCE until the mid-15th century.",
+     "quote": "ou 1 chih 1 lu 4 \n\n The Silk Road was a network of Asian trade routes active from the second century BCE until the mid-15th century. Spanning over 6,400 km (4,000 mi) on land, it played a central role in facilitating economic, cultural, political, and religious interactions between the Eastern and Western worlds . The name \"Silk Road\" was coined in the late 19th century, but some 20th- and 21st-century historians instead prefer the term Silk Routes , on the grounds that it more accurately describes the intricate web of land and sea routes connecting Central , East , South , Southeast , and West Asia as well as East Africa and Southern Europe . In fact, some scholars criticise or even dismiss the idea of silk roads and call for a new definition or alternate term. According to them, the literature using this term has \"privileged the sedentary and literate empires at either end of Eurasia \" thereby ignoring the contributions of steppe nomads. In addition, the classic definition sidelines prominent civilisations such as India and Iran .\n\n The Silk Road derives its name from the highly lucrative trade of silk textiles that were primarily produced in China . The network began with the expansion of the Han dynasty (202 BCE – 220 CE) into Central Asia around 114 BCE, through the missions and explorations of the Chinese imperial envoy Zhang Qian , which brought the region under unified control . The Chinese took great interest in the security of their trade products, and extended the Great Wall of China to ensure the protection of the trade route. The Parthian Empire provided a vital bridge connecting the network to the Mediterranean . Meanwhile, the rise of the Roman Empire in the west further established the western terminus of the interconnected trade system. By the first century CE, Chinese silk was widely sought after in Rome , Egypt , and Greece . Other lucrative commodities from the East included tea, dyes, perfumes, and porcelain ;",
+     "claim_zh": "丝绸之路是公元前二世纪至公元 15 世纪中期活跃的亚洲贸易网络。"
+    },
+    {
+     "claim": "Aside from generating substantial wealth for emerging mercantile classes, the proliferation of goods such as paper and gunpowder greatly affected the trajectory of political history in several theatres in Eurasia and beyond.",
+     "quote": "among Western exports were horses, camels, honey, wine, and gold. Aside from generating substantial wealth for emerging mercantile classes, the proliferation of goods such as paper and gunpowder greatly affected the trajectory of political history in several theatres in Eurasia and beyond.\n\n The Silk Road was utilized over a period that saw immense political variation across the continent, exemplified by major events such as the Black Death and the Mongol conquests . The network was highly decentralized, and security was sparse: travelers faced constant threats of banditry and nomadic raiders, and long expanses of inhospitable terrain. Few individuals traveled the entire length of the Silk Road, instead relying on a succession of middlemen based at various stopping points along the way. In addition to goods, the network facilitated an unprecedented exchange of religious ( especially Buddhist ), philosophical, and scientific thought, much of which was syncretised by societies along the way. Likewise, a wide variety of people used the routes. Diseases such as plague also sp",
+     "claim_zh": "除了为新兴商人阶层创造巨额财富外，纸张和火药等商品的普及极大地影响了欧亚大陆及更广泛地区政治历史的走向。"
+    }
+   ],
+   "dropped_claims": 1,
+   "image": "img/Silk-Road.png",
+   "nonce": "853e673247785581",
+   "built_at": "2026-11-18T01:08:20",
+   "seconds": 31.3
+  },
+  {
+   "id": "Lighthouse",
+   "title": "Lighthouse",
+   "source": "Lighthouse",
+   "lang": "en",
+   "claims": [
+    {
+     "claim": "A lighthouse is a tower, building, or other type of physical structure designed to emit light from a system of lamps and lenses and to serve as a beacon for navigational aid for maritime pilots at sea or on inland waterways.",
+     "quote": "Lighthouse \n\n Lighthouse \n\n For other uses, see Lighthouse (disambiguation) . \n Roter Sand Lighthouse in the Weser estuary, Germany, facing the North Sea \n Barnegat Lighthouse at the coast of Ocean County , New Jersey , U.S., facing the Atlantic Ocean at sunrise \n\n A lighthouse is a tower, building, or other type of physical structure designed to emit light from a system of lamps and lenses and to serve as a beacon for navigational aid for maritime pilots at sea or on inland waterways.\n\n Lighthouses mark dangerous coastlines, hazardous shoals , reefs , rocks, and safe entries to harbors ;",
+     "claim_zh": "灯塔是一种塔楼、建筑物或其他类型的物理结构，其设计目的是通过灯和透镜系统发出光线，并为海上或内河航行的航海人员提供导航助航标志。"
+    },
+    {
+     "claim": "Lighthouses mark dangerous coastlines, hazardous shoals, reefs, rocks, and safe entries to harbors.",
+     "quote": "they also assist in aerial navigation . Once widely used, the number of operational lighthouses has declined due to the expense of maintenance and the advent of much cheaper, more sophisticated, and more effective electronic navigational systems.\n Hidden categories: Articles with short description\n Short description matches Wikidata\n\n This page is issued from Wikipedia . The text is available under Creative Commons Attribution-Share Alike 4.0 unless otherwise noted. Additional terms may apply for the media files.",
+     "claim_zh": "灯塔标示危险海岸线、危险浅滩、礁石、岩石以及港口安全入口。"
+    }
+   ],
+   "dropped_claims": 1,
+   "image": "img/Lighthouse.png",
+   "nonce": "bb5235da8c42a68b",
+   "built_at": "2026-11-18T01:07:08",
+   "seconds": 21.2
+  },
+  {
+   "id": "Hagia-Sophia",
+   "title": "Hagia Sophia",
+   "source": "Hagia_Sophia",
+   "lang": "en",
+   "claims": [
+    {
+     "claim": "Hagia Sophia is a mosque, major cultural and historical site in Istanbul, Turkey.",
+     "quote": "Hagia Sophia \n\n Hagia Sophia \n\n Several terms redirect here. For other uses, see Hagia Sophia (disambiguation) , List of churches dedicated to Holy Wisdom , and Sophia of Rome#Churches . \n\n Hagia Sophia Ayasofya ( Turkish ) \n Ἁγία Σοφία ( Greek ) \n Sancta Sapientia ( Latin ) \n آیا صوفیا ( Ottoman Turkish ) \n Hagia Sophia in 2014 Religion Affiliation Sunni Islam Status \n Eastern Orthodox church ( c.   360 AD –1204;",
+     "claim_zh": "圣索菲亚大教堂是土耳其伊斯坦布尔的一座清真寺，也是重要的文化和历史遗址。"
+    },
+    {
+     "claim": "The current structure was completed in AD 537 and designed by Isidore of Miletus and Anthemius of Tralles.",
+     "quote": "1261–1453)\n\n Catholic church (1204–1261)\n\n Mosque (1453–1935;",
+     "claim_zh": "该建筑于公元 537 年建成，由米利都的伊西多尔和特拉勒斯的安提米乌斯设计。"
+    },
+    {
+     "claim": "The site became a museum in 1935 and was redesignated as a mosque in 2020.",
+     "quote": "2020–present)\n\n Museum (1935–2020)\n\n Location Location Fatih , Istanbul , Turkey Interactive map of Hagia Sophia Coordinates 41°00′30″N 28°58′48″E ﻿ / ﻿ 41.00833°N 28.98000°E ﻿ / 41.00833;",
+     "claim_zh": "该遗址于 1935 年成为博物馆，并于 2020 年重新指定为清真寺。"
+    }
+   ],
+   "dropped_claims": 0,
+   "image": "img/Hagia-Sophia.png",
+   "nonce": "9d24000b12a3f951",
+   "built_at": "2026-11-18T01:06:47",
+   "seconds": 28.7
+  },
+  {
+   "id": "Geyser",
+   "title": "Geyser",
+   "source": "Geyser",
+   "lang": "en",
+   "claims": [
+    {
+     "claim": "A geyser is a spring with an intermittent water discharge ejected turbulently and accompanied by steam.",
+     "quote": "Geyser \n\n Geyser \n\n This article is about volcanic geysers. For CO 2 -driven geysers, see Cold-water geyser . For other uses, see Geyser (disambiguation) . \n\n Old Faithful erupting at Yellowstone National Park \n\n A geyser ( / ˈ ɡ aɪ z ər / , UK : / ˈ ɡ iː z ər / ) is a spring with an intermittent water discharge ejected turbulently and accompanied by steam. The formation of geysers is fairly rare and is caused by particular hydrogeological conditions that exist only in a few places on Earth.\n\n Generally, geyser field sites are located near active volcanic areas, and the geyser effect is due to the proximity of magma . Surface water works its way down to an average depth of around 2,000 metres (6,600 ft) where it contacts hot rocks. The pressurized water boils, and this causes the geyser effect of hot water and steam spraying out of the geyser's surface vent.\n\n A geyser's eruptive activity may change or cease due to ongoing deposition of minerals within their plumbing, exchange of functions with nearby hot springs , earthquake influences, and human intervention. Like many other natural phenomena, geysers are not unique to Earth. Jet-like eruptions, often called cryogeysers, have been observed on several of the moons of the outer Solar System. Due to the low ambient pressures, these eruptions consist of vapour without liquid;",
+     "claim_zh": "间歇泉是一种伴有蒸汽喷发的、以湍流形式间歇性喷出的泉水。"
+    },
+    {
+     "claim": "Generally, geyser field sites are located near active volcanic areas.",
+     "quote": "they are made more easily visible by particles of dust and ice carried aloft by the gas. Water vapour jets have been observed near the south pole of Saturn 's moon Enceladus , while nitrogen eruptions have been observed on Neptune 's moon Triton . There are also signs of carbon dioxide eruptions from the southern polar ice cap of Mars .\n\n In the case of Enceladus, the plumes are believed to be driven by internal energy. In the cases of the venting on Mars and Triton, the activity may result from solar heating via a solid-state greenhouse effect . In all three cases, there is no evidence of the subsurface hydrological system which differentiates terrestrial geysers from other sorts of venting, such as fumaroles .\n\n Hidden categories: Articles with short description\n Short description is different from Wikidata\n Use Oxford spelling from October 2024\n All Wikipedia articles written in British English with Oxford spelling\n Use dmy dates from October 2024\n\n This page is issued from Wikipedia . The text is available under Creative Commons Attribution-Share Alike 4.0 unless otherwise noted. Additional terms may apply for the media files.",
+     "claim_zh": "通常，间歇泉场地位于活跃火山区域附近。"
+    }
+   ],
+   "dropped_claims": 1,
+   "image": "img/Geyser.png",
+   "nonce": "c62c875f26eb5f60",
+   "built_at": "2026-11-18T01:06:18",
+   "seconds": 26.3
+  },
+  {
+   "id": "Fjord",
+   "title": "Fjord",
+   "source": "Fjord",
+   "lang": "en",
+   "claims": [
+    {
+     "claim": "A fjord is a long, relatively narrow sea inlet with steep sides or cliffs in a valley created by a former glacier.",
+     "quote": "also spelled fiord , a variant most common in New Zealand English ) is a long, relatively narrow sea inlet with steep sides or cliffs in a valley created by a former glacier , which has since become inundated with water. They are the glacial equivalent of drowned river valleys , known as rias . Fjords exist on the coasts of Antarctica , the Arctic , and surrounding landmasses of the northern and southern hemispheres. Areas with extensive fjords demonstrate an extreme example of the coastline paradox ;",
+     "claim_zh": "峡湾是冰川侵蚀形成的谷地中，两侧陡峭或为悬崖的狭长海蚀湾。"
+    },
+    {
+     "claim": "Norway's coastline is estimated to be 29,000 km long with its nearly 1,200 fjords.",
+     "quote": "Norway's coastline is estimated to be 29,000 km (18,000 mi) long with its nearly 1,200 fjords, but only 2,500 km (1,600 mi) long when excluding the fjords.\n\n Hidden categories: Articles with short description\n Short description is different from Wikidata\n Use American English from October 2024\n All Wikipedia articles written in American English\n Pages using the Phonos extension\n Pages including recorded pronunciations\n\n This page is issued from Wikipedia . The text is available under Creative Commons Attribution-Share Alike 4.0 unless otherwise noted. Additional terms may apply for the media files.",
+     "claim_zh": "挪威海岸线全长约 29,000 公里，拥有近 1,200 个峡湾。"
+    }
+   ],
+   "dropped_claims": 0,
+   "image": "img/Fjord.png",
+   "nonce": "68d50c6eb04f6bc8",
+   "built_at": "2026-11-18T01:05:52",
+   "seconds": 20.0
+  },
+  {
+   "id": "1947-48-Fort-Wayne-Zollner-Pistons-season",
+   "title": "1947–48 Fort Wayne Zollner Pistons season",
+   "source": "1947–48_Fort_Wayne_Zollner_Pistons_season",
+   "lang": "en",
+   "claims": [
+    {
+     "claim": "The 1947–48 Fort Wayne Zollner Pistons season was the seventh season of the franchise in the National Basketball League (NBL).",
+     "quote": "1947–48 Fort Wayne Zollner Pistons season \n\n 1947–48 Fort Wayne Zollner Pistons season \n\n 1947–48 Fort Wayne Zollner Pistons season Head coach Carl Bennett Owner Fred Zollner Arena North Side High School Gym , Fort Wayne, Indiana Results Record 40 – 20 (.667) Place Division: 3rd ( Eastern ) Playoff finish Lost Eastern Division opening round to Rochester Royals , 3–1 Stats at Basketball Reference \n The 1947–48 Fort Wayne Zollner Pistons season was the seventh season of the franchise in the National Basketball League (NBL). It would be the final season that the franchise would play in the NBL, as well as the final season with the Zollner name representing team owner Fred Zollner and his company name being included in the team name;",
+     "claim_zh": "Thinking Process: 1. **Analyze the Request:** * Task: Translate a given English sentence into natural Simplified Chinese. * Constraints: * Keep names, numbers, and technical terms exact. * Reply with the translation only. * No quotes. * No explanation. 2. **Analyze the Source Sentence:** * \"The 1947–48 Fort Wayne Zollner Pistons season was the seventh season of the franchise in the National Basketball League (NBL).\" * Key entities: * 1947–48 (Year range) * Fort Wayne Zollner Pistons (Team name) * season (Season) * seventh season (Ordinal number) * franchise (Franchise/球队) * National Basketball League (NBL) (League name"
+    },
+    {
+     "claim": "Following the conclusion of this season, the franchise would join the Minneapolis Lakers, Rochester Royals, and Indianapolis Kautskys in order to play in the Basketball Association of America (now known as the National Basketball Association), starting in the 1948–49 BAA season.",
+     "quote": "following the conclusion of this season, they would join the newest NBL champions in the Minneapolis Lakers , their newest NBL rivals in the Rochester Royals (who turned out to only remain as competitive rivals while out in the NBL), and the Indianapolis Kautskys (who ended up rebranding themselves to the Indianapolis Jets immediately upon entry, though only lasted for one season there themselves) in order to play in the Basketball Association of America (now known as the National Basketball Association ), starting in the 1948–49 BAA season , with the Pistons removing the Zollner part of their team name due to that league not allowing sponsorships being a part of their team names. This was also the last season in Fort Wayne for both Blackie Towery and Jake Pelkington , who had both decided to leave the team prior to the start of the next season out in the BAA.\n\n Throughout the entire season, the Zollner Pistons would struggle trying to catch up with the two best teams in their entire division, the Rochester Royals and the Anderson Duffey Packers , due to them being both an older and smaller team than those two franchises. However, Fred Zollner would try his best to make sure his team didn't fall behind the rest of the pack by picking up rookies Ralph Hamilton and Jack Smiley early on in the season, as well as Milo Komenich later on in the season in order to help out with those woes. Despite his best efforts, the early struggles in the season combined with the missing presence of their star veteran players from their earlier NBL days would ultimately doom Fort Wayne to a third-place finish in the Eastern Division (meaning they still qualified for the NBL Playoffs yet again, but had to go up against the #1 seeded Rochester Royals in the process instead of hoping to move up for the more desirable #4 seeded Syracuse Nationals ). From there, the Zollner Pistons would end their run in the NBL with an Eastern Division opening round elimination by being defeated 3–1 to the Rochester Royals in the quarterfinal round of the playoffs.\n Hidden categories: Articles with short description\n Short description matches Wikidata\n Use American English from March 2026\n All Wikipedia articles written in American English\n Short description is different from Wikidata\n\n This page is issued from Wikipedia . The text is available under Creative Commons Attribution-Share Alike 4.0 unless otherwise noted. Additional terms may apply for the media files.",
+     "claim_zh": "Thinking Process: 1. **Analyze the Request:** * Task: Translate the given English sentence into natural Simplified Chinese. * Constraints: * Keep names, numbers, and technical terms exact (e.g., proper nouns, specific terms). * Reply with the translation only. * No quotes. * No explanation. 2. **Analyze the Source Text:** * \"Following the conclusion of this season, the franchise would join the Minneapolis Lakers, Rochester Royals, and Indianapolis Kautskys in order to play in the Basketball Association of America (now known as the National Basketball Association), starting in the 1948–49 BAA season.\" * Key entities/terms: * \"this season\" -> 本赛季 (or 本赛季) * \"the franchise\" -> 该球队/该联盟 (Context suggests"
+    }
+   ],
+   "dropped_claims": 1,
+   "image": "img/1947-48-Fort-Wayne-Zollner-Pistons-season.png",
+   "nonce": "29fe140df1780569",
+   "built_at": "2026-11-18T01:01:16",
+   "seconds": 32.8
+  },
+  {
+   "id": "Bramble-Cay-melomys",
+   "title": "Bramble Cay melomys",
+   "source": "Bramble_Cay_melomys",
+   "lang": "en",
+   "claims": [
+    {
+     "claim": "The Bramble Cay melomys is an extinct species of rodent in the family Muridae.",
+     "quote": "Bramble Cay melomys \n\n Bramble Cay melomys \n\n Bramble Cay melomys \n\n Conservation status \n\n Extinct ( IUCN 3.1 ) [ 1 ] [ 2 ] [ 3 ] \n\n Scientific classification \n\n Kingdom: \n Animalia \n\n Phylum: \n Chordata \n\n Class: \n Mammalia \n\n Order: \n Rodentia \n\n Family: \n Muridae \n\n Genus: \n Melomys \n\n Species: \n M. rubicola \n\n Binomial name \n\n Melomys rubicola \n Thomas , 1924 [ 4 ] \n\n The Bramble Cay melomys , or Bramble Cay mosaic-tailed rat ( Melomys rubicola ), is an extinct species of rodent in the family Muridae . While it was similar to the Cape York melomys it had some protein differences and a coarser tail. [ 5 ] It was genetically different to species from Australia and New Guinea . [ 6 ] It lived in burrows it had dug among plants, or under branches and leaves on the ground. [ 6 ] It was a nocturnal animal, and scientists believe it was an herbivore . [ 6 ] \n\n The Bramble Cay melomys was known only from a small population in Bramble Cay, a vegetated coral cay of 340 by 150 metres (1,120 ft × 490 ft) . [ 7 ] The cay is in the eastern part of Torres Strait , off the northern tip of Australia. It is only 50 km from New Guinea. The melomys were probably trapped on the island by rising sea levels after the last ice age . [ 6 ] It is also possible to have come from the Fly River, perhaps floating on branches. [ 6 ] Scientists do not know much about the animals that live in the Fly River area. [ 6 ] \n\n In the 1800s, there were lots of melomys on the island. A search in 1998 found 42 animals. [ 6 ] Another search in 2002 found 10 animals. [ 6 ] In 2004 a search found 12, but the melomys have not been seen since. [ 6 ] During this time, the sea level has risen, making the island smaller, and turtles and sea birds have eaten most of the plants. Scientists believe the Bramble Cay melomys is extinct . [ 8 ] It is possible that the species may be found on nearby islands as many of these have never been searched. [ 6 ] However, in June 2016, researchers from Queensland's Department of Environment and Heritage Protection, and the University of Queensland reported that the species had indeed become extinct. [ 2 ] \n\n References\n\n ↑ Woinarski, J.;",
+     "claim_zh": "Thinking Process: 1. **Analyze the Request:** * Task: Translate a given English sentence into natural Simplified Chinese. * Constraint 1: Keep names, numbers, and technical terms exact. * Constraint 2: Reply with the translation only. * Constraint 3: No quotes, no explanation. * Source Sentence: \"The Bramble Cay melomys is an extinct species of rodent in the family Muridae.\" 2. **Analyze the Source Sentence:** * Subject: \"The Bramble Cay melomys\" (Specific animal name). * Verb/State: \"is\" (is). * Description 1: \"an extinct species\" (extinct species). * Description 2: \"of rodent\" (rodent). * Description 3: \"in the family Muridae\" ("
+    },
+    {
+     "claim": "The Bramble Cay melomys was known only from a small population in Bramble Cay, a vegetated coral cay of 340 by 150 metres.",
+     "quote": "Burbidge, A.A. (2016). \" Melomys rubicola \" . The IUCN Red List of Threatened Species . 2016 . IUCN : e.T13132A97448475. doi : 10.2305/IUCN.UK.2016-2.RLTS.T13132A97448475.en . Retrieved 20 February 2019 . \n\n 1 2 Gynther, Ian;",
+     "claim_zh": "Thinking Process: 1. **Analyze the Request:** * Task: Translate a given English sentence into natural Simplified Chinese. * Constraints: * Keep names, numbers, and technical terms exact. * Reply with the translation only. * No quotes. * No explanation. 2. **Analyze the Source Sentence:** * \"The Bramble Cay melomys was known only from a small population in Bramble Cay, a vegetated coral cay of 340 by 150 metres.\" * Subject: The Bramble Cay melomys (动物名称，专有名词) * Verb: was known only from (状态描述) * Object/Location: a small population in Bramble Cay (地点，专有名词) * Description of Location: a vegetated coral cay of 340 by"
+    },
+    {
+     "claim": "In June 2016, researchers reported that the species had indeed become extinct.",
+     "quote": "Waller, Natalie;",
+     "claim_zh": "Thinking Process: 1. **Analyze the Request:** * Task: Translate the given English sentence into natural Simplified Chinese. * Constraint 1: Keep names, numbers, and technical terms exact (e.g., \"June 2016\" should be translated appropriately but numbers kept as is or standard Chinese format, names unchanged). * Constraint 2: Reply with the translation only. * Constraint 3: No quotes, no explanation. 2. **Analyze the Source Sentence:** * \"In June 2016, researchers reported that the species had indeed become extinct.\" * Key components: * Time: \"In June 2016\" -> 2016 年 6 月 * Subject: \"researchers\" -> 研究人员 * Verb: \"reported\" -> 报告/称/"
+    }
+   ],
+   "dropped_claims": 0,
+   "image": "img/Bramble-Cay-melomys.png",
+   "nonce": "1f3a2a0a3f2c1b38",
+   "built_at": "2026-11-18T00:57:34",
+   "seconds": 35.8
+  },
+  {
+   "id": "Clinical-lycanthropy",
+   "title": "Clinical lycanthropy",
+   "source": "Clinical_lycanthropy",
+   "lang": "en",
+   "claims": [
+    {
+     "claim": "People with clinical lycanthropy believe they are a wolf or werewolf.",
+     "quote": "Benoit, Laelia;"
+    },
+    {
+     "claim": "Clinical lycanthropy is a rare mental health disorder.",
+     "quote": "Minassian, Sevan;"
+    },
+    {
+     "claim": "A 2021 study noted that clinical lycanthropy may be a culture-specific syndrome.",
+     "quote": "Mallet, Jasmina;"
+    }
+   ],
+   "dropped_claims": 0,
+   "image": "img/Clinical-lycanthropy.png",
+   "nonce": "31a9bd4f866a3ad7",
+   "built_at": "2026-11-18T00:56:58",
+   "seconds": 19.2
+  },
+  {
+   "id": "Linux-distribution",
+   "title": "Linux distribution",
+   "source": "Linux_distribution",
+   "lang": "en",
+   "claims": [
+    {
+     "claim": "Linux distributions are made of the Linux kernel and a collection of applications.",
+     "quote": "Linux distribution \n\n Linux distribution \n\n Linux distributions (often abbreviated as distros ) are made of the Linux kernel and a collection of applications. The operating system will be made up of the Linux kernel and, usually, a set of libraries and utilities from the GNU project, with graphics that come from the X Window System . Small distributions may not contain big window systems full of features like KDE or GNOME , but use small window systems like busybox, uclibc or dietlibc. There are more than three hundred Linux distributions . Most of them are still in development , constantly being improved and changed.\n\n History\n\n Before the first Linux distributions, a user needed to be an expert on UNIX , knowing what libraries and executables were needed to get the system to boot and run.\n\n Linux distributions started to form after the Linux kernel began to be used by people besides the first Linux programmers .\n\n Early distributions included: \n\n H J Lu's \"Boot-root\" a two disk pair with the kernel and the absolute minimal tools to get started.\n\n MCC Interim Linux, which was made available to the public for download on the FTP server of University of Manchester in February, 1992;"
+    },
+    {
+     "claim": "There are more than three hundred Linux distributions.",
+     "quote": "TAMU, created by individuals at Texas A&M University about the same time, and\n\n SLS (Softlanding Linux System).\n\n Yggdrasil Linux/GNU/X, created the first CD-ROM based Linux distribution.\n\n SLS was not well-maintained, so Patrick Volkerding created a distribution based on SLS, which he called Slackware ;"
+    },
+    {
+     "claim": "Most of them are still in development, constantly being improved and changed.",
+     "quote": "released July 16, 1993. [ 1 ] This is the oldest being developed.\n\n People who used computers wanted to use Linux distributions as replacements to Microsoft Windows operating systems on the PC , Mac OS on the Apple Macintosh and proprietary versions of Unix .\n\n Package management\n\n Distributions are normally split into packages . Each package has a certain application or service. Examples of packages include a collection of fonts, or a web browser .\n\n The package is usually given as compiled code, with installation and removal of packages done by a package management system . \nLinux distributions usually contain much more software than Microsoft Windows or Mac OS X .\n\n Popular distributions\n\n Well-known Linux distributions include: \n\n Debian \n\n Arch \n\n Fedora \n\n Gentoo \n\n Knoppix , a Live CD \n\n Mandriva \n\n openSUSE \n\n PCLinuxOS \n\n Slackware \n\n Ubuntu \n\n Tools for choosing a Linux distribution\n\n There are tools available to help people make the decision easier. [ 2 ] [ 3 ] [ 4 ] \n\n Screenshots of common distributions\n\n A few screenshots of common distributions just after installation: \n\n Mandriva 2008.1 Spring \n\n Fedora 9 \n\n Ubuntu 9.10 \n\n Debian GNU/Linux 4.0 \n\n Super OS 9.04 \n\n Related pages\n\n List of Linux distributions \n\n Live CD \n\n References\n\n ↑ The Slackware Linux Project: Slackware Release Announcement \n\n ↑ \"zegenie Studios Linux Distribution Chooser\" . Archived from the original on 2009-05-23 . Retrieved 2008-07-14 . \n\n ↑ \"(:^tuxs.org) Linux Distribution Chooser\" . Archived from the original on 2008-08-20 . Retrieved 2008-07-14 . \n\n ↑ \"Desktop Linux At Home - Distro Selector\" . Archived from the original on 2011-07-22 . Retrieved 2008-07-14 . \n\n Other websites\n\n Distribution Reviews \n\n Hardware support by Linux distribution Archived 2009-05-13 at the Wayback Machine \n\n Linux Distribution Chooser Archived 2009-05-23 at the Wayback Machine by Zegenie Studios\n\n The Linux Mirror Project Archived 2009-06-03 at the Wayback Machine Download Linux Distributions over BitTorrent \n\n Category: Linux distributions\n Hidden category: Webarchive template wayback links\n\n This page is issued from Wikipedia . The text is available under Creative Commons Attribution-Share Alike 4.0 unless otherwise noted. Additional terms may apply for the media files."
+    }
+   ],
+   "dropped_claims": 0,
+   "image": "img/Linux-distribution.png",
+   "nonce": "b7cf32422229c030",
+   "built_at": "2026-11-18T00:55:52",
+   "seconds": 21.7
+  },
+  {
+   "id": "Lyda-Ann-Thomas",
+   "title": "Lyda Ann Thomas",
+   "source": "Lyda_Ann_Thomas",
+   "lang": "en",
+   "claims": [
+    {
+     "claim": "Lyda Ann Thomas was the mayor of Galveston, Texas from 2004 to 2010.",
+     "quote": "November 20, 1936 – April 19, 2017) was an American politician. She served as the mayor of Galveston, Texas from 2004 to 2010. She was first elected in 2004 to replace Roger \"Bo\" Quiroga. Thomas was the third female mayor of Galveston. [ 1 ] She serve three terms as mayor, and stepped down in 2010 after reaching her a city-imposed term-limit. [ 2 ] She was a member of the Democratic Party .\n\n Thomas is known for being mayor of Galveston during Hurricane Ike on September 10, 2008 and ordered in a full evacuation.\n\n Thomas was born in Galveston. She studied at The Hockaday School in Dallas . Thomas died at her Galveston home on April 19, 2017 at the age of 80 from cancer . [ 3 ] \n\n References\n\n ↑ Torgovnick, Kate (2008-08-13). \"The Cities Where Women Rule\" . Time Magazine . Archived from the original on 2008-09-12 . Retrieved 2008-09-13 . \n\n ↑ Meyers, Rhiannon. \"Jaworski replaces a tearful Thomas as mayor\" . Galveston Daily News . Archived from the original on 2010-05-17 . Retrieved 2010-05-17 . \n\n ↑ Cochran, Amanda (19 April 2017). \"Former Galveston Mayor Lyda Ann Thomas dies at 80\" . KPRC . \n\n Other websites\n\n Media related to Lyda Ann Thomas at Wikimedia Commons \n\n The City Council of Galveston, Texas Archived 2006-06-26 at the Wayback Machine \n\n Evacuation worked, but created a highway horror Archived 2012-09-07 at the Wayback Machine O'Driscoll, Patrick;"
+    },
+    {
+     "claim": "Lyda Ann Thomas was the third female mayor of Galveston.",
+     "quote": "Richard Wolf and Rick Hampson (9/26/2005 7:47 PM). USA Today\n\n With Rita strengthening, Galveston orders evacuation \n\n Gulf Coast residents watch surprise tropical storm \n\n Ike's changing course delayed Galveston's evacuation call, city says \n\n Categories: 1936 births\n 2017 deaths\n Cancer deaths in Texas\n American mayors\n Politicians from Texas\n Democratic Party (United States) politicians\n People from Galveston, Texas\n Hidden categories: Webarchive template wayback links\n American people stubs\n\n This page is issued from Wikipedia . The text is available under Creative Commons Attribution-Share Alike 4.0 unless otherwise noted. Additional terms may apply for the media files."
+    }
+   ],
+   "dropped_claims": 1,
+   "image": "img/Lyda-Ann-Thomas.png",
+   "nonce": "f94f7d54655d6560",
+   "built_at": "2026-11-18T00:53:42",
+   "seconds": 27.2
+  }
+ ]
+}
