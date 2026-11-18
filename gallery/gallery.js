@@ -23,7 +23,9 @@ function card(e) {
   const art = el("article");
   const img = el("img", { src: e.image, alt: e.title, loading: "lazy" });
   const body = el("div", { class: "body" });
-  body.append(el("h2", {}, e.title));
+  const h2 = el("h2", {}, e.title);
+  if (e.rev && e.rev > 1) h2.append(el("span", { class: "rev" }, `重做 v${e.rev}`));
+  body.append(h2);
 
   const ol = el("ol");
   for (const c of e.claims) {
