@@ -62,9 +62,12 @@ function card(e) {
   score.append(status, avg);
 
   let timer = null;
+  let inflight = false;
   async function submit() {
     clearTimeout(timer);
     timer = setTimeout(async () => {
+      if (inflight) return;
+      inflight = true;
       status.className = "status";
       status.textContent = "提交中…";
       try {
@@ -83,8 +86,10 @@ function card(e) {
       } catch (err) {
         status.className = "status err";
         status.textContent = `未记录：${err.message}`;
+      } finally {
+        inflight = false;
       }
-    }, 180);
+    }, 700);
   }
 
   async function refreshAvg() {
