@@ -31,7 +31,9 @@ npx wrangler deploy
 
 将实际 HTTPS Worker 地址加上 `/api/register`，写入 `gallery/play/registration-config.js`。生产 Worker 的浏览器来源限定为 `https://play.dev-lu.com`。在自定义来源测试时，同时调整 Worker 的 `GALLERY_ORIGIN`。部署路径若执行 CSP，允许已配置的登记端点作为游戏页的 `connect-src`。在合并到 GitHub Pages 的发布分支之前，用本地测试和专用测试邮箱检查一轮。
 
-邮箱和登记时间存于单独的 D1 表。每日任务删除已过 30 天的记录。接口支持安全重试，重复填写不会生成第二条记录。角色卡证据和盲听选择留在浏览器内存中。下一阶段若接入密码或会话，请在身份确认后再把此表的记录关联到用户。
+邮箱和登记时间存于单独的 D1 表。清理任务每天 03:17 UTC 运行，删除超过 30 天的活动记录。D1 的时间点恢复窗口另计，按生产账户的方案核对。[Cloudflare D1 恢复期限](https://developers.cloudflare.com/d1/platform/limits/)
+
+接口支持安全重试，重复填写不会生成第二条记录。角色卡证据和盲听选择留在浏览器内存中。下一阶段若接入密码或会话，请在身份确认后再把此表的记录关联到用户。
 
 ## 声音评分与回退
 

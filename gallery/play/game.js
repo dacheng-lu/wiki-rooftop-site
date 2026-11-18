@@ -368,7 +368,7 @@ function finishActivity(run, evidence) {
           <input id="registration-email" name="email" type="email" maxlength="254" autocomplete="email" required aria-describedby="privacy-copy">
           <button class="button" type="submit">登记并领取</button>
         </div>
-        <p id="privacy-copy" class="subtle">邮箱仅用于登记领取角色卡，保存 30 天。无需收邮件，也不会订阅邮件。</p>
+        <p id="privacy-copy" class="subtle">邮箱仅用于登记领取角色卡。登记满 30 天后随每日任务清理。无需收邮件，也不会订阅邮件。</p>
         <p class="error status-line" role="status"></p>
       </form>
     </section>`
