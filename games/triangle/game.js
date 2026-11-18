@@ -1044,26 +1044,31 @@
         renderQuestion();
       }
 
-      function normalizeScore(raw) {
-        const clamped = Math.max(0, Math.min(18, raw + 1));
-        return Math.round(24 + (clamped / 18) * 72);
+      // Each dimension can score at most this much across the seven questions.
+      // Percentages are taken against those maxima, not against 18 — the old
+      // 24..96 scale made the HEXAGON threshold unreachable.
+      const MAX_RAW = { smart: 21, diligent: 19, obedient: 20 };
+
+      function normalizeScore(raw, dim) {
+        const pct = (100 * raw) / MAX_RAW[dim];
+        return Math.max(0, Math.min(100, Math.round(pct)));
       }
 
       function revealResults() {
         const rawScores = getScoresFromHistory();
-        const s = normalizeScore(rawScores.smart);
-        const d = normalizeScore(rawScores.diligent);
-        const o = normalizeScore(rawScores.obedient);
+        const s = normalizeScore(rawScores.smart, "smart");
+        const d = normalizeScore(rawScores.diligent, "diligent");
+        const o = normalizeScore(rawScores.obedient, "obedient");
 
         state.percentages = { smart: s, diligent: d, obedient: o };
 
-        const avg = (s + d + o) / 3;
+        const level = (rawScores.smart + rawScores.diligent + rawScores.obedient) / 60;
         const spread = Math.max(s, d, o) - Math.min(s, d, o);
 
-        if (avg >= 72 && spread <= 16) {
-          state.archetypeKey = "HEXAGON";
-        } else if (avg <= 50 && spread <= 18) {
-          state.archetypeKey = "CHAOS_FREE";
+        if (Math.min(s, d, o) >= 38 && spread <= 20) {
+          state.archetypeKey = "HEXAGON";        // no weak corner: ~5% of plays
+        } else if (level <= 0.33 && Math.max(s, d, o) <= 70) {
+          state.archetypeKey = "CHAOS_FREE";     // disengaged on every axis: ~2%
         } else if (d <= s && d <= o) {
           state.archetypeKey = "SMART_OBEDIENT";
         } else if (s <= d && s <= o) {
