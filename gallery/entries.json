@@ -1,7 +1,63 @@
 {
- "built_at": "2026-11-18T01:19:05",
- "count": 28,
+ "built_at": "2026-11-18T01:24:08",
+ "count": 30,
  "entries": [
+  {
+   "id": "Colosseum",
+   "title": "Colosseum",
+   "source": "Colosseum",
+   "lang": "en",
+   "claims": [
+    {
+     "claim": "The Colosseum is an elliptical amphitheatre in the centre of the city of Rome, Italy, just east of the Roman Forum.",
+     "quote": "Italian : Colosseo [ kolosˈsɛːo ] ) is an elliptical amphitheatre in the centre of the city of Rome , Italy , just east of the Roman Forum . It is the largest ancient amphitheatre ever built, and is the largest standing amphitheatre in the world. Construction began under the Emperor Vespasian ( r.   69–79 AD ) in 72 and was completed in AD 80 under his successor and heir, Titus ( r.   79–81 ). Further modifications were made during the reign of Domitian ( r.   81–96 ). The three emperors who were patrons of the work are known as the Flavian dynasty , and the amphitheatre was named the Flavian Amphitheatre ( Latin : Amphitheatrum Flavium ;",
+     "claim_zh": "斗兽场是位于意大利罗马市中心的椭圆形圆形剧场，位于罗马广场以东。"
+    },
+    {
+     "claim": "The Colosseum is built of travertine, Roman concrete, and tuff.",
+     "quote": "Italian: Anfiteatro Flavio [ aɱfiteˈaːtro ˈflaːvjo ] ) by later classicists and archaeologists for its association with their family name ( Flavius ).\n\n The Colosseum is built of travertine , Roman concrete (foundations, corridors vaults and secondary brick walls), and tuff (volcanic rock). It could hold an estimated 50,000 to 80,000 spectators at various points in its history, having an average audience of some 65,000;",
+     "claim_zh": "斗兽场由石灰华、罗马混凝土和凝灰岩建造而成。"
+    },
+    {
+     "claim": "The Colosseum was used for gladiatorial contests and public spectacles including animal hunts, executions, re-enactments of famous battles, dramas based on Roman mythology, and briefly mock sea battles.",
+     "quote": "it was used for gladiatorial contests and public spectacles including animal hunts , executions, re-enactments of famous battles, dramas based on Roman mythology , and briefly mock sea battles . The building ceased to be used for entertainment in the early medieval era. It was later reused for such purposes as housing, workshops, quarters for a religious order, a fortress , a quarry , and a Christian shrine.\n\n Although substantially ruined by earthquakes and stone robbers taking spolia , the Colosseum is still a renowned symbol of Imperial Rome and was listed as one of the New 7 Wonders of the World . It is one of Rome's most popular tourist attractions and each Good Friday the Pope leads a torchlit Catholic \"Way of the Cross\" procession that starts in the area around the Colosseum. The Colosseum is depicted on the Italian version of the 5 euro cent coin .\n\n Hidden categories: Articles with short description\n Short description is different from Wikidata\n Wikipedia indefinitely semi-protected pages\n Use dmy dates from April 2022\n Pages using gadget WikiMiniAtlas\n Coordinates on Wikidata\n Articles containing Italian-language text\n Pages with Italian IPA\n Articles containing Latin-language text\n Pages using the Kartographer extension\n\n This page is issued from Wikipedia . The text is available under Creative Commons Attribution-Share Alike 4.0 unless otherwise noted. Additional terms may apply for the media files.",
+     "claim_zh": "斗兽场曾用于角斗士竞技及公共娱乐活动，包括动物狩猎、处决、著名战役的重演、基于罗马神话的戏剧以及短暂的滑稽海战表演。"
+    }
+   ],
+   "dropped_claims": 0,
+   "image": "img/Colosseum.png",
+   "nonce": "6a3d7ccb40c5ad19",
+   "built_at": "2026-11-18T01:21:02",
+   "seconds": 24.4
+  },
+  {
+   "id": "Anglerfish",
+   "title": "Anglerfish",
+   "source": "Anglerfish",
+   "lang": "en",
+   "claims": [
+    {
+     "claim": "Anglerfish are ray-finned fish in the order Lophiiformes.",
+     "quote": "Anglerfish \n\n Anglerfish \n\n Anglerfish\n Temporal range: Probable Cretaceous origin \n\n Type species of 4 lophiiform suborders \n\n Scientific classification \n\n Kingdom: \n Animalia \n\n Phylum: \n Chordata \n\n Class: \n Actinopterygii \n\n Division: \n Teleostei \n\n Clade : \n Percomorpha \n\n Order: \n Lophiiformes \n Sedgwick et al., 1905 \n\n Type species \n\n Lophius piscatorius \n Linnaeus , 1758 \n\n Synonyms \n\n Pediculati Müller , 1839 ( pro parte )\n\n The anglerfish are ray-finned fish in the order Lophiiformes ( / ˌ l ɒ f i ɪ ˈ f ɔːr m iː z / ). Both the order's common and scientific name comes from the characteristic mode of predation, in which a modified dorsal fin ray acts as a lure for prey (akin to a human angler , and likened to a crest or \" lophos \"). The modified fin ray, with the very tip being the esca and the length of the structure the illicium , is adapted to attract specific prey items across the families of anglerfish by using different luring methods.\n\n Anglerfish occur in marine waters worldwide and occupy both bottom associated and open water habitats. Most species are benthic or demersal, including monkfishes, batfishes, frogfishes, and sea toads . Many use enlarged pectoral and pelvic fins to rest on or move across the seabed. The deep-sea anglerfish are pelagic and different from other anglerfish in their lack of pelvic fins. Shallow-water species occur in habitats including reefs, seagrass beds, and floating Sargassum, while other species live in continental slopes and the deep sea.\n\n Anglerfish are notable for their sexual dimorphism , which is sometimes extremely pronounced;",
+     "claim_zh": "鮟鱇鱼属于辐鳍鱼纲 Lophiiformes 目。"
+    },
+    {
+     "claim": "Sexual parasitism is the attachment of male to the much larger female, sometimes fusing together as an example of natural parabiosis.",
+     "quote": "sexual parasitism is the attachment of male to the much larger female, sometimes fusing together as an example of natural parabiosis .\n\n Anglerfish are of some commercial value, with some species being of interest to aquaria . But the lophiid anglerfish (marketed as monkfish, goosefish, or simply angler) are much more valued for their meat, which is considered a delicacy throughout their range.\n\n Hidden categories: Articles with short description\n Short description is different from Wikidata\n Articles needing cleanup from March 2025\n All pages needing cleanup\n Wikipedia pages needing cleanup from March 2025\n Use dmy dates from July 2026\n Articles with 'species' microformats\n Pages with reference errors\n\n This page is issued from Wikipedia . The text is available under Creative Commons Attribution-Share Alike 4.0 unless otherwise noted. Additional terms may apply for the media files.",
+     "claim_zh": "性寄生是指雄性附着于体型大得多的雌性身上，有时两者融合，这是自然双合现象的一个例子。"
+    },
+    {
+     "claim": "Females of the deep-sea anglerfish can be significantly larger in mass than males.",
+     "quote": "the females may be several orders of magnitude larger in mass than males. This dimorphism has enabled a unique reproductive method in the deep-sea anglerfish;",
+     "claim_zh": "深海鮟鱇鱼雌性个体的质量可显著大于雄性。"
+    }
+   ],
+   "dropped_claims": 0,
+   "image": "img/Anglerfish.png",
+   "nonce": "9abf4083aadb14ac",
+   "built_at": "2026-11-18T01:19:43",
+   "seconds": 23.5
+  },
   {
    "id": "冰川",
    "title": "冰川",
